@@ -24,7 +24,8 @@ public class MD5Utils {
         BigInteger bi = new BigInteger(code);
         return bi.abs().toString(32).toUpperCase();
 	}
-	
+
+
 	/**
 	 * 对字符串进行Md5加密
 	 * 

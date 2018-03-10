@@ -2,12 +2,14 @@ package cn.white.bysj.user;
 
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.ComponentHelper;
+import cn.white.bysj.utils.Cors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -18,10 +20,10 @@ import java.util.concurrent.Future;
  *
  * @date 2017-12-28 16:04
  */
-@CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
+//@CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Controller
 @RequestMapping(value = "user/")
-public class UserController {
+public class UserController extends Cors{
     @Autowired
     private UserService userService;
 
@@ -35,7 +37,7 @@ public class UserController {
     //退出登录
     @RequestMapping(value = "logout.do")
     @ResponseBody
-    public ServerResponse<User> logout(HttpServletRequest request) {
+    public ServerResponse<User> logout( HttpServletRequest request) {
         Map<String, Object> map = ComponentHelper.requestToMap(request);
         return userService.logout(map, request.getSession());
     }
@@ -97,6 +99,7 @@ public class UserController {
         Map<String,Object> map = ComponentHelper.requestToMap(request);
         return userService.updateInfo(map,request.getSession());
     }
+
 
 }
 

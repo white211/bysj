@@ -60,6 +60,7 @@ public class ResourceController extends BaseController {
 		try {
 			resourceService.saveOrUpdate(resource);
 		} catch (Exception e) {
+			e.printStackTrace();
 			return JsonResult.failure(e.getMessage());
 		}
 		return JsonResult.success();

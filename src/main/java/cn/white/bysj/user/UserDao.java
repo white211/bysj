@@ -31,7 +31,7 @@ public interface UserDao extends JpaRepository<User,Integer>{
     int selectUserByEmail(String email);
 
     //根据用户账号查找用户
-    @Query(value = "select * from user where cn_user_email=?1 or cn_user_telephone=?1 and cn_user_actived=1",nativeQuery = true)
+    @Query(value = "select * from user where cn_user_email=?1 and cn_user_actived=1",nativeQuery = true)
     User selectUserByAccount(String account);
 
     //通过邮箱更新密码
@@ -42,7 +42,6 @@ public interface UserDao extends JpaRepository<User,Integer>{
 
     @Query(value = "select cn_user_password from user where email=?1",nativeQuery = true)
     String findPasswordByCn_user_email(String email);
-
 
 }
 

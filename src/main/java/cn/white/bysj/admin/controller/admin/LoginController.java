@@ -22,6 +22,7 @@ public class LoginController extends BaseController {
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         ModelMap model) {
+
         try {
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
@@ -39,5 +40,8 @@ public class LoginController extends BaseController {
         subject.logout();
         return redirect("admin/login");
     }
-
 }
+
+
+
+

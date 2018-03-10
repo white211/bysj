@@ -40,11 +40,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="${ctx!}/admin/index" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>dmin</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>CloudNote</b>Admin</span>
+      <span class="logo-lg"><b>云笔记</b>Admin</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -62,26 +62,26 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="<@shiro.principal property="avatar"/>" class="user-image" alt="User Image">
-                      <span class="hidden-xs"><@shiro.principal property="nickName"/></span>
+                      <img src="<@shiro.principal property="cn_user_avatar"/>" class="user-image" alt="User Image">
+                      <span class="hidden-xs"><@shiro.principal property="cn_user_nickname"/></span>
                   </a>
                   <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
-                          <img src="<@shiro.principal property="avatar"/>" class="img-circle" alt="User Image">
+                          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="User Image">
 
                           <p>
-                              <@shiro.principal property="description"/>
-                              <small><@shiro.principal property="createTime"/></small>
+                              <@shiro.principal property="cn_user_description"/>
+                              <small><@shiro.principal property="cn_user_createTime"/></small>
                           </p>
                       </li>
                       <!-- Menu Footer-->
                       <li class="user-footer">
                           <div class="pull-left">
-                              <a href="${ctx!}/admin/user/updatePwd" class="btn btn-default btn-flat">Change pass</a>
+                              <a href="${ctx!}/admin/user/updatePwd" class="btn btn-default btn-flat">ChangPass</a>
                           </div>
                           <div class="pull-right">
-                              <a href="${ctx!}/admin/logout" class="btn btn-default btn-flat">Sign out</a>
+                              <a href="${ctx!}/admin/logout" class="btn btn-default btn-flat">SignOut</a>
                           </div>
                       </li>
                   </ul>
@@ -100,10 +100,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<@shiro.principal property="avatar"/>" class="img-circle" alt="User Image">
+          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><@shiro.principal property="nickName"/></p>
+          <p><@shiro.principal property="cn_user_nickname"/></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -128,8 +128,26 @@
             <@shiro.hasPermission name="system:resource:index">
                 <li <#if active=="resource">class="active"</#if>><a href="${ctx!}/admin/resource/index"><i class="fa fa-file-o"></i> 资源管理</a></li>
             </@shiro.hasPermission>
+
           </ul>
         </li>
+        <li class="treeview <#if active=="note" || active=="tran" >active</#if>">
+              <a href="#">
+                  <i class="fa fa-database"></i> <span>内容管理</span>
+                  <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                  <@shiro.hasPermission name="system:note:index">
+                      <li <#if active=="note">class="active"</#if>><a href="${ctx!}/admin/note/index"><i class="fa fa-pencil"></i> 笔记管理</a></li>
+                  </@shiro.hasPermission>
+                  <@shiro.hasPermission name="system:tran:index">
+                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/tran/index"><i class="fa fa-chain"></i> 转载审核</a></li>
+                  </@shiro.hasPermission>
+
+              </ul>
+          </li>
 
       </ul>
     </section>

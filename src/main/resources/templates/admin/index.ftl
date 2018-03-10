@@ -1,5 +1,5 @@
 <#include "/admin/layout/layout.ftl">
-<@layout title="主页" active="home">
+<@layout title="后台主页" active="home">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>

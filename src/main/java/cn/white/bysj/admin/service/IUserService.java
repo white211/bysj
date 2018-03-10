@@ -1,8 +1,9 @@
 package cn.white.bysj.admin.service;
 
 
-import cn.white.bysj.admin.entity.User;
+
 import cn.white.bysj.admin.service.support.IBaseService;
+import cn.white.bysj.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 

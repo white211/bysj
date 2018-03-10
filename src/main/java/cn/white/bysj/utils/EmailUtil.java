@@ -35,14 +35,16 @@ public class EmailUtil implements Runnable{
                 MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage,true,"UTF-8");
                 mimeMessageHelper.setFrom(Constant.MAIL_FROM);
                 mimeMessageHelper.setTo(email);
-                mimeMessageHelper.setSubject("一封激活邮件");
+                mimeMessageHelper.setSubject("欢迎注册CloudNote在线云笔记系统");
                 StringBuilder sb  = new StringBuilder();
                 sb.append("<html><head></head><body>");
 
                 if(operation==1){
-                    sb.append("<a href="+Constant.DOMAIN_NAME+"user/activate.do?code=");
+                    sb.append("<div>感谢注册该在线云笔记系统，请点击链接进行激活，我们将竭力带给你最好的体验！！！</div>");
+                    sb.append("<a href="+Constant.DOMAIN_NAME+"/user/activate/");
                     sb.append(code);
                     sb.append(">点击激活</a></body>");
+
                 }else{
                     sb.append("是否将您的密码修改为:");
                     sb.append(code.substring(0,8));

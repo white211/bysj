@@ -1,7 +1,7 @@
 package cn.white.bysj.admin.controller.web;
 
 import cn.white.bysj.admin.controller.BaseController;
-import cn.white.bysj.admin.entity.User;
+import cn.white.bysj.user.User;
 import cn.white.bysj.admin.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

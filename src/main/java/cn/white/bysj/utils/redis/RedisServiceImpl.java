@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class RedisServiceImpl implements RedisService{
     @Resource
-    private RedisTemplate<String,Object> redisTemplate;
+    private RedisTemplate<String,Object> redisTemplate ;
 
     public void set(String key, Object value) {
         ValueOperations<String,Object> vo = redisTemplate.opsForValue();

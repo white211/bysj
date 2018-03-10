@@ -3,7 +3,7 @@ package cn.white.bysj.admin.config.shiro;
 import cn.white.bysj.admin.common.utils.MD5Utils;
 import cn.white.bysj.admin.entity.Resource;
 import cn.white.bysj.admin.entity.Role;
-import cn.white.bysj.admin.entity.User;
+import cn.white.bysj.user.User;
 import cn.white.bysj.admin.service.IUserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.AllowAllCredentialsMatcher;
@@ -41,7 +41,7 @@ public class MyRealm extends AuthorizingRealm {
 			PrincipalCollection principals) {
 		User user = (User) principals.getPrimaryPrincipal();
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-		User dbUser = userService.findByUserName(user.getUserName());
+		User dbUser = userService.findByUserName(user.getCn_user_name());
 		Set<String> shiroPermissions = new HashSet<>();
 		Set<String> roleSet = new HashSet<String>();
 		Set<Role> roles = dbUser.getRoles();
@@ -74,11 +74,11 @@ public class MyRealm extends AuthorizingRealm {
 		}
 		String password = new String((char[]) credentials);
 		// 密码错误
-		if (!MD5Utils.md5(password).equals(user.getPassword())) {
+		if (!MD5Utils.md5(password).equals(user.getCn_user_password())) {
 			throw new IncorrectCredentialsException("账号或密码不正确");
 		}
 		// 账号锁定
-		if (user.getLocked() == 1) {
+		if (user.getCn_user_locked() == 1) {
 			throw new LockedAccountException("账号已被锁定,请联系管理员");
 		}
 

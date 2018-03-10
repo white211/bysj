@@ -9,7 +9,7 @@
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "${ctx!}/admin/user/grant/" + ${user.id},
+            url: "${ctx!}/admin/user/grant/" + ${user.cn_user_id},
             data: $(".form-grant").serialize(),
             success: function (res) {
                 layer.msg(res.message, {time: 2000}, function () {
@@ -41,7 +41,7 @@
             <div class="box  box-primary">
                 <form class="form-horizontal form-grant" method="post" action="${ctx!}/admin/user/save">
                     <div class="box-body">
-                        <input type="hidden" id="id" name="id" value="${user.id}">
+                        <input type="hidden" id="id" name="id" value="${user.cn_user_id}">
                         <div class="form-group">
                             <#list roles as role>
                                 <div class="col-sm-12">

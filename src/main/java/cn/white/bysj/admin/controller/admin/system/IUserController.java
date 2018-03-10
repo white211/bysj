@@ -3,7 +3,7 @@ package cn.white.bysj.admin.controller.admin.system;
 import cn.white.bysj.admin.common.JsonResult;
 import cn.white.bysj.admin.controller.BaseController;
 import cn.white.bysj.admin.entity.Role;
-import cn.white.bysj.admin.entity.User;
+import cn.white.bysj.user.User;
 import cn.white.bysj.admin.service.IRoleService;
 import cn.white.bysj.admin.service.IUserService;
 import org.apache.shiro.SecurityUtils;
@@ -42,9 +42,9 @@ public class IUserController extends BaseController {
         return "admin/user/form";
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public String edit(@PathVariable Integer id, ModelMap map) {
-        User user = userService.find(id);
+    @RequestMapping(value = "/edit/{cn_user_id}", method = RequestMethod.GET)
+    public String edit(@PathVariable Integer cn_user_id, ModelMap map) {
+        User user = userService.find(cn_user_id);
         map.put("user", user);
         return "admin/user/form";
     }
@@ -60,11 +60,11 @@ public class IUserController extends BaseController {
         return JsonResult.success();
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/delete/{cn_user_id}", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult delete(@PathVariable Integer id, ModelMap map) {
+    public JsonResult delete(@PathVariable Integer cn_user_id, ModelMap map) {
         try {
-            userService.delete(id);
+            userService.delete(cn_user_id);
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResult.failure(e.getMessage());
@@ -72,9 +72,9 @@ public class IUserController extends BaseController {
         return JsonResult.success();
     }
 
-    @RequestMapping(value = "/grant/{id}", method = RequestMethod.GET)
-    public String grant(@PathVariable Integer id, ModelMap map) {
-        User user = userService.find(id);
+    @RequestMapping(value = "/grant/{cn_user_id}", method = RequestMethod.GET)
+    public String grant(@PathVariable Integer cn_user_id, ModelMap map) {
+        User user = userService.find(cn_user_id);
         map.put("user", user);
 
         Set<Role> set = user.getRoles();
@@ -90,10 +90,10 @@ public class IUserController extends BaseController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/grant/{id}", method = RequestMethod.POST)
-    public JsonResult grant(@PathVariable Integer id, String[] roleIds, ModelMap map) {
+    @RequestMapping(value = "/grant/{cn_user_id}", method = RequestMethod.POST)
+    public JsonResult grant(@PathVariable Integer cn_user_id, String[] roleIds, ModelMap map) {
         try {
-            userService.grant(id, roleIds);
+            userService.grant(cn_user_id, roleIds);
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResult.failure(e.getMessage());

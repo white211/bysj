@@ -45,7 +45,6 @@ public class UserService {
     private UserDao userDao;
     @Autowired
     private RedisService redisService;
-
     @Autowired
     private JavaMailSender javaMailSender;
     @Autowired
@@ -55,11 +54,8 @@ public class UserService {
     public ServerResponse<User> login(HttpSession session, Map<String, Object> map) {
 
         List<String> list = Arrays.asList("account", "password");
-//         List<String> list= new ArrayList<>();
-//         list.add("account");
-//         list.add("password");
-        if (!CollectionUtils.isEmpty(ValidatorUtil.validator(map, list))) {
-            return ServerResponse.createByErrorMessage("缺少参数");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数,应该包括account，password");
         }
 
         if (CollectionUtils.isEmpty(map)) {
@@ -76,7 +72,7 @@ public class UserService {
 
         User user = userDao.selectUserByAccount(map.get("account").toString());
         if (user == null) {
-            return ServerResponse.createByErrorMessage("用户不存在");
+            return ServerResponse.createByErrorMessage("用户不存在或尚未激活");
         } else {
             if (user.getCn_user_password().equals(map.get("password").toString())) {
                 //登陆成功保存到session
@@ -106,42 +102,40 @@ public class UserService {
     //发送邮箱验证
     @Async("myExecutor")
     public Future<ServerResponse<User>> register(Map<String, Object> map) {
-
-        if (map.get("email").toString() == null || map.get("email").toString() == "") {
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("输入邮箱不能为空"));
+        //判断前台传递参数是否正确
+        List<String> list = Arrays.asList("email","password","telephone","checkNum");
+        if (ValidatorUtil.validator(map,list).size()>0){
+            return   new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("缺少参数，必须包括email，password" +
+                    "telephone,checKNum"));
         }
-        if (map.get("telephone").toString() == null || map.get("telephone").toString() == "") {
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("输入手机号不能为空"));
-        }
-        if (map.get("password").toString() == null || map.get("password").toString() == "") {
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("输入密码不能为空"));
-        }
-        if (map.get("checkNum").toString() == null || map.get("checkNum").toString() == "") {
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("输入验证码不能为空"));
-        }
-
         //判断邮箱的正确性
-        if (map.get("email").toString() != null && map.get("email").toString() != "") {
-//            String[] email = map.get("email").toString().split("@");
+        if (!StringUtils.isEmpty(map.get("email").toString())) {
             if (userDao.selectUserByEmail(map.get("email").toString()) > 0) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱已经被注册"));
             }
             if (CheckEmailUtil.checkEmail(map.get("email").toString())) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱格式错误"));
             }
+        }else{
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱不能为空"));
         }
         //判断密码的正确性
-        if (map.get("password").toString() != null && map.get("password").toString() != "") {
+        if (!StringUtils.isEmpty(map.get("password").toString())) {
             if (map.get("password").toString().length() < 6) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码长度不能小于6"));
             }
+        }else{
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码不能为空"));
         }
-
+        if (StringUtils.isEmpty(map.get("telephone").toString())){
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码不能为空"));
+        }else if (map.get("telephone").toString().length() != 11){
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码长度必须为11位"));
+        }
         //判断验证码
-        if (map.get("checkNum").toString() == null || map.get("checkNum").toString() == "") {
+        if (StringUtils.isEmpty(map.get("checkNum").toString())) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码不能为空"));
         }
-
         User user = new User();
         user.setCn_user_actived_code(UUIDutils.getUUID());
         user.setCn_user_actived("0");
@@ -179,7 +173,7 @@ public class UserService {
         User user = selectUserByCode(map.get("code").toString());
         if (user != null) {
             userDao.updateUserState(map.get("code").toString());
-            return ServerResponse.createBySuccessMessags("激活成功");
+            return ServerResponse.createBySuccessMessags("激活成功,请前往登陆");
         } else {
             return ServerResponse.createByErrorMessage("激活码错误，请重新注册");
         }
@@ -188,21 +182,25 @@ public class UserService {
     //发送手机验证码
     public ServerResponse sendCheckNum(Map<String, Object> map) {
         HashMap<String, String> re = null;
-        try {
-            if (!map.containsKey("telephone")) {
-                throw new MyException(1, "传入参数名错误，必须为telephone");
+        List<String> list = Arrays.asList("telephone");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("参数名出错，必须为telephone");
+        }
+        if (StringUtils.isEmpty(map.get("telephone").toString())) {
+            return ServerResponse.createByErrorMessage("电话号码不能为空");
+        } else {
+            try {
+                re = SmsUtil.getCode(map.get("telephone").toString());
+                System.out.println(re);
+                if (re.containsKey("code")) {
+                    redisService.set(map.get("telephone").toString(), re.get("code"));
+                    System.out.println(redisService.get(map.get("telephone").toString()));
+                    return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return ServerResponse.createByErrorCodeMessage(-1, "服务器出现异常");
             }
-            re = SmsUtil.getCode(map.get("telephone").toString());
-            System.out.println(re);
-            if (re.containsKey("code")) {
-                redisService.set(map.get("telephone").toString(), re.get("code"));
-                System.out.println(redisService.get(map.get("telephone").toString()));
-                return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
-            }
-        } catch (MyException e) {
-            return ServerResponse.createByErrorCodeMessage(e.getStatus(), e.getMessage());
-        } catch (Exception e) {
-            return ServerResponse.createByErrorCodeMessage(-1, "服务器出现异常");
         }
         return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
     }
@@ -314,6 +312,7 @@ public class UserService {
     public ServerResponse<User> updateIcon(Map<String, Object> map, HttpSession session) {
         return null;
     }
+
 
 }
 

@@ -11,7 +11,7 @@ public class Constant {
     public static final String MAIL_FROM = "up_white0211@163.com";
 
     //域名
-    public static final String DOMAIN_NAME = "http://127.0.0.1:8080/";
+    public static final String DOMAIN_NAME = "http://127.0.0.1:8082";
 
     //秒滴科技相关参数
     public static final String QUERY_PATH = "https://api.miaodiyun.com/20150822/industrySMS/sendSMS";

@@ -30,7 +30,7 @@
 <body class="hold-transition login-page">
 <div class="login-box" id="app">
     <div class="login-logo">
-        <a href="../../index2.html"><b>云笔记后台管理系统</b></a>
+        <a href="../../index.html"><b>Cloud Note</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

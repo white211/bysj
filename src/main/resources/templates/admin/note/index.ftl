@@ -22,7 +22,7 @@
     }
 </script>
 </#assign>
-<@layout title="用户管理" active="user">
+<@layout title="笔记管理" active="note">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -31,8 +31,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-cog"></i> 系统</a></li>
-        <li><a href="#"><i class="fa fa-list-ul"></i> 用户管理</a></li>
-        <li class="active"><i class="fa fa-table"></i> 用户列表</li>
+        <li><a href="#"><i class="fa fa-list-ul"></i> 内容管理</a></li>
+        <li class="active"><i class="fa fa-table"></i> 笔记列表</li>
     </ol>
 </section>
 

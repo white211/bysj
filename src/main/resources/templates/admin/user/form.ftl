@@ -42,29 +42,29 @@
             <div class="box  box-primary">
                 <form class="form-horizontal form-edit" method="post" action="${ctx!}/admin/user/edit">
                     <div class="box-body">
-                        <input type="hidden" id="id" name="id" value="${user.id}">
+                        <input type="hidden" id="cn_user_id" name="cn_user_id" value="${user.cn_user_id}">
                         <div class="form-group">
                             <label class="col-sm-2 control-label">账户名：</label>
                             <div class="col-sm-10">
-                                <input id="userName" name="userName" class="form-control" type="text" value="${user.userName}" <#if user?exists> readonly="readonly"</#if> >
+                                <input id="cn_user_name" name="cn_user_name" class="form-control" type="text" value="${user.cn_user_name}" <#if user?exists> readonly="readonly"</#if> >
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">昵称：</label>
                             <div class="col-sm-10">
-                                <input id="nickName" name="nickName" class="form-control" type="text" value="${user.nickName}">
+                                <input id="cn_user_nickname" name="cn_user_nickname" class="form-control" type="text" value="${user.cn_user_nickname}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">头像URL：</label>
                             <div class="col-sm-10">
-                                <input id="avatar" name="avatar" class="form-control" type="url" value="${user.avatar}">
+                                <input id="cn_user_avatar" name="cn_user_avatar" class="form-control" type="url" value="${user.cn_user_avatar}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">性别：</label>
                             <div class="col-sm-10">
-                                <select name="sex" class="form-control">
+                                <select name="cn_user_sex" class="form-control">
                                     <option value="0" <#if user.sex == 0>selected="selected"</#if>>女</option>
                                     <option value="1" <#if user.sex == 1>selected="selected"</#if>>男</option>
                                 </select>
@@ -73,40 +73,40 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">出生日期：</label>
                             <div class="col-sm-10">
-                                <input id="birthday" name="birthday" readonly="readonly" class="laydate-icon form-control layer-date" value="${user.birthday}">
+                                <input id="cn_user_birthday" name="cn_user_birthday" readonly="readonly" class="laydate-icon form-control layer-date" value="${user.cn_user_birthday}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">电话：</label>
                             <div class="col-sm-10">
-                                <input id="telephone" name="telephone" class="form-control" value="${user.telephone}">
+                                <input id="cn_user_telephone" name="cn_user_telephone" class="form-control" value="${user.cn_user_telephone}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">E-mail：</label>
                             <div class="col-sm-10">
-                                <input id="email" name="email" class="form-control" value="${user.email}">
+                                <input id="cn_user_email" name="cn_user_email" class="form-control" value="${user.cn_user_email}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">地址：</label>
                             <div class="col-sm-10">
-                                <input id="address" name="address" class="form-control" value="${user.address}">
+                                <input id="cn_user_address" name="cn_user_address" class="form-control" value="${user.cn_user_address}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">状态：</label>
                             <div class="col-sm-10">
-                                <select name="locked" class="form-control">
-                                    <option value="0" <#if user.locked == 0>selected="selected"</#if>>未锁定</option>
-                                    <option value="1" <#if user.locked == 1>selected="selected"</#if>>锁定</option>
+                                <select name="cn_user_locked" class="form-control">
+                                    <option value="0" <#if user.cn_user_locked == 0>selected="selected"</#if>>未锁定</option>
+                                    <option value="1" <#if user.cn_user_locked == 1>selected="selected"</#if>>锁定</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">描述：</label>
                             <div class="col-sm-10">
-                                <textarea id="description" name="description" class="form-control" rows="6">${user.description}</textarea>
+                                <textarea id="cn_user_description" name="cn_user_description" class="form-control" rows="6">${user.cn_user_description}</textarea>
                             </div>
                         </div>
                     </div>

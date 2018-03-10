@@ -4,6 +4,7 @@ package cn.white.bysj.admin.entity;
 
 import cn.white.bysj.admin.entity.support.BaseEntity;
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -17,6 +18,7 @@ import java.util.Date;
  * @since 2016-12-28
  */
 @Entity
+@Data
 @Table(name = "tb_resource")
 public class Resource extends BaseEntity {
 
@@ -93,108 +95,6 @@ public class Resource extends BaseEntity {
 	@JoinColumn(name = "parent_id")
 	private Resource parent;
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSourceKey() {
-		return sourceKey;
-	}
-
-	public void setSourceKey(String sourceKey) {
-		this.sourceKey = sourceKey;
-	}
-
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public String getSourceUrl() {
-		return sourceUrl;
-	}
-
-	public void setSourceUrl(String sourceUrl) {
-		this.sourceUrl = sourceUrl;
-	}
-
-	public Integer getLevel() {
-		return level;
-	}
-
-	public void setLevel(Integer level) {
-		this.level = level;
-	}
-
-	public Integer getSort() {
-		return sort;
-	}
-
-	public void setSort(Integer sort) {
-		this.sort = sort;
-	}
-
-	public String getIcon() {
-		return icon;
-	}
-
-	public void setIcon(String icon) {
-		this.icon = icon;
-	}
-
-	public Integer getIsHide() {
-		return isHide;
-	}
-
-	public void setIsHide(Integer isHide) {
-		this.isHide = isHide;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getUpdateTime() {
-		return updateTime;
-	}
-
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	public Resource getParent() {
-		return parent;
-	}
-
-	public void setParent(Resource parent) {
-		this.parent = parent;
-	}
 
 }
