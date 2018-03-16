@@ -1,0 +1,264 @@
+2018-03-09 19:54:00.200 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 10824 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-09 19:54:00.216 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-09 19:54:00.216 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-09 19:54:00.792 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-09 19:54:04.568 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-09 19:54:04.572 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-09 19:54:04.658 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.white.bysj]' package. Please check your configuration.
+2018-03-09 19:54:08.988 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-09 19:54:14.706 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-09 19:54:15.681 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-09 19:54:15.683 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-09 19:54:15.965 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-09 19:54:17.840 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-09 19:54:17.907 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-09 19:54:17.908 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-09 19:54:17.910 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-09 19:54:17.970 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-09 19:54:17.982 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-09 19:54:17.994 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-09 19:54:18.044 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 19:54:18.044 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 19:54:18.044 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 19:54:18.055 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 19:54:18.056 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 19:54:18.056 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 19:54:18.087 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-09 19:54:18.087 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-09 19:54:18.107 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 19:54:18.119 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-09 19:54:18.119 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 19:54:18.185 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-09 19:54:18.186 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-09 19:54:18.187 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-09 19:54:18.187 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-09 19:54:18.187 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-09 19:54:18.199 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-09 19:54:18.200 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-09 19:54:18.201 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-09 19:54:18.202 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-09 19:54:18.202 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-09 19:54:18.203 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-09 19:54:18.203 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-09 19:54:18.204 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-09 19:54:18.209 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-09 19:54:18.209 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-09 19:54:18.210 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-09 19:54:20.796 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-09 19:54:20.859 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-09 19:54:20.922 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-09 19:54:22.084 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-09 19:54:22.255 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-09 19:54:22.272 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-09 19:54:22.292 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-09 19:54:22.331 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 24.688 seconds (JVM running for 34.747)
+2018-03-09 19:55:19.499 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-09 19:55:19.656 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-09 19:55:29.629 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-09 19:55:37.371 [mqExecutor-1] DEBUG org.hibernate.SQL - select count(0) from user where cn_user_email=? AND cn_user_actived=1
+2018-03-09 19:56:01.572 [mqExecutor-2] DEBUG org.hibernate.SQL - select count(0) from user where cn_user_email=? AND cn_user_actived=1
+2018-03-09 19:56:02.311 [mqExecutor-2] DEBUG org.hibernate.SQL - insert into user (cn_user_actived, cn_user_actived_code, cn_user_address, cn_user_avatar, cn_user_birthday, cn_user_create_time, cn_user_delete_status, cn_user_description, cn_user_email, cn_user_locked, cn_user_name, cn_user_nickname, cn_user_password, cn_user_sex, cn_user_telephone, cn_user_token, cn_user_update_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-03-09 19:56:33.914 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from USER where cn_user_actived_code=?
+2018-03-09 19:56:33.929 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - update user SET cn_user_actived=1,cn_user_actived_code=NULL WHERE cn_user_actived_code=?
+2018-03-09 19:56:51.454 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-09 19:56:51.469 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 21:30:58.509 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 8520 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-09 21:30:58.513 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-09 21:30:58.513 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-09 21:30:58.803 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-09 21:31:00.113 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-09 21:31:00.115 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-09 21:31:00.166 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.white.bysj]' package. Please check your configuration.
+2018-03-09 21:31:01.924 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-09 21:31:06.861 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-09 21:31:07.754 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-09 21:31:07.755 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-09 21:31:07.946 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-09 21:31:09.039 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-09 21:31:09.057 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-09 21:31:09.057 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-09 21:31:09.059 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-09 21:31:09.073 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-09 21:31:09.075 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-09 21:31:09.081 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-09 21:31:09.127 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 21:31:09.127 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 21:31:09.127 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 21:31:09.134 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 21:31:09.135 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 21:31:09.135 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 21:31:09.146 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-09 21:31:09.146 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-09 21:31:09.153 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 21:31:09.161 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-09 21:31:09.162 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 21:31:09.216 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-09 21:31:09.217 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-09 21:31:09.218 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-09 21:31:09.218 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-09 21:31:09.218 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-09 21:31:09.230 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-09 21:31:09.231 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-09 21:31:09.231 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-09 21:31:09.232 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-09 21:31:09.233 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-09 21:31:09.233 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-09 21:31:09.234 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-09 21:31:09.234 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-09 21:31:09.239 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-09 21:31:09.239 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-09 21:31:09.239 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-09 21:31:10.930 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-09 21:31:10.972 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-09 21:31:11.024 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-09 21:31:11.927 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-09 21:31:12.044 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-09 21:31:12.056 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-09 21:31:12.071 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-09 21:31:12.097 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 14.129 seconds (JVM running for 16.371)
+2018-03-09 21:32:46.075 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-09 21:32:46.197 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-09 21:32:46.568 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:20:43.657 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 7560 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-09 23:20:43.673 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-09 23:20:43.673 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-09 23:20:44.271 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-09 23:20:47.766 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-09 23:20:47.769 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-09 23:20:47.826 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.white.bysj]' package. Please check your configuration.
+2018-03-09 23:20:51.347 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-09 23:20:58.305 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-09 23:20:59.546 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-09 23:20:59.548 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-09 23:20:59.833 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-09 23:21:01.478 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-09 23:21:01.530 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-09 23:21:01.530 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-09 23:21:01.531 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-09 23:21:01.546 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-09 23:21:01.549 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-09 23:21:01.557 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-09 23:21:01.615 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 23:21:01.616 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 23:21:01.616 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 23:21:01.624 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-09 23:21:01.625 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-09 23:21:01.625 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-09 23:21:01.678 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-09 23:21:01.678 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-09 23:21:01.682 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 23:21:01.697 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-09 23:21:01.698 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-09 23:21:01.786 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-09 23:21:01.787 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-09 23:21:01.787 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-09 23:21:01.788 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-09 23:21:01.788 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-09 23:21:01.803 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-09 23:21:01.804 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-09 23:21:01.804 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-09 23:21:01.805 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-09 23:21:01.805 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-09 23:21:01.805 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-09 23:21:01.806 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-09 23:21:01.806 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-09 23:21:01.812 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-09 23:21:01.812 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-09 23:21:01.812 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-09 23:21:04.418 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-09 23:21:04.527 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-09 23:21:04.623 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-09 23:21:05.674 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-09 23:21:05.832 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-09 23:21:05.846 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-09 23:21:05.864 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-09 23:21:05.908 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 23.063 seconds (JVM running for 26.445)
+2018-03-09 23:21:14.590 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-09 23:21:31.753 [mqExecutor-1] DEBUG org.hibernate.SQL - select count(0) from user where cn_user_email=? AND cn_user_actived=1
+2018-03-09 23:21:32.080 [mqExecutor-1] DEBUG org.hibernate.SQL - insert into user (cn_user_actived, cn_user_actived_code, cn_user_address, cn_user_avatar, cn_user_birthday, cn_user_create_time, cn_user_delete_status, cn_user_description, cn_user_email, cn_user_locked, cn_user_name, cn_user_nickname, cn_user_password, cn_user_sex, cn_user_telephone, cn_user_token, cn_user_update_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2018-03-09 23:22:47.339 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from USER where cn_user_actived_code=?
+2018-03-09 23:22:47.371 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - update user SET cn_user_actived=1,cn_user_actived_code=NULL WHERE cn_user_actived_code=?
+2018-03-09 23:23:05.877 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-09 23:23:05.890 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:39.062 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:39.094 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:39.100 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:39.401 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:39.403 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:39.405 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:39.413 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:39.419 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:39.425 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:39.431 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.860 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select user0_.cn_user_id as cn_user_1_7_, user0_.cn_user_actived as cn_user_2_7_, user0_.cn_user_actived_code as cn_user_3_7_, user0_.cn_user_address as cn_user_4_7_, user0_.cn_user_avatar as cn_user_5_7_, user0_.cn_user_birthday as cn_user_6_7_, user0_.cn_user_create_time as cn_user_7_7_, user0_.cn_user_delete_status as cn_user_8_7_, user0_.cn_user_description as cn_user_9_7_, user0_.cn_user_email as cn_user10_7_, user0_.cn_user_locked as cn_user11_7_, user0_.cn_user_name as cn_user12_7_, user0_.cn_user_nickname as cn_user13_7_, user0_.cn_user_password as cn_user14_7_, user0_.cn_user_sex as cn_user15_7_, user0_.cn_user_telephone as cn_user16_7_, user0_.cn_user_token as cn_user17_7_, user0_.cn_user_update_time as cn_user18_7_ from user user0_ limit ?
+2018-03-09 23:31:41.958 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.960 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:41.962 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:41.970 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.976 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.981 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.985 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:41.989 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.048 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.052 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.057 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.064 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.072 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.078 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.128 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.136 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.141 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.148 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.153 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:42.156 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.032 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select role0_.id as id1_4_, role0_.create_time as create_t2_4_, role0_.description as descript3_4_, role0_.name as name4_4_, role0_.role_key as role_key5_4_, role0_.status as status6_4_, role0_.update_time as update_t7_4_ from tb_role role0_ limit ?
+2018-03-09 23:31:43.102 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.105 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:43.107 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:43.114 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.118 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.122 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.126 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.129 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.139 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.142 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.145 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.150 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.154 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:43.160 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.291 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select role0_.id as id1_4_, role0_.create_time as create_t2_4_, role0_.description as descript3_4_, role0_.name as name4_4_, role0_.role_key as role_key5_4_, role0_.status as status6_4_, role0_.update_time as update_t7_4_ from tb_role role0_ limit ?
+2018-03-09 23:31:44.301 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.304 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:44.305 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:44.312 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.317 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.321 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.325 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.328 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.332 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.335 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.338 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.341 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.346 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.352 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.868 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select user0_.cn_user_id as cn_user_1_7_, user0_.cn_user_actived as cn_user_2_7_, user0_.cn_user_actived_code as cn_user_3_7_, user0_.cn_user_address as cn_user_4_7_, user0_.cn_user_avatar as cn_user_5_7_, user0_.cn_user_birthday as cn_user_6_7_, user0_.cn_user_create_time as cn_user_7_7_, user0_.cn_user_delete_status as cn_user_8_7_, user0_.cn_user_description as cn_user_9_7_, user0_.cn_user_email as cn_user10_7_, user0_.cn_user_locked as cn_user11_7_, user0_.cn_user_name as cn_user12_7_, user0_.cn_user_nickname as cn_user13_7_, user0_.cn_user_password as cn_user14_7_, user0_.cn_user_sex as cn_user15_7_, user0_.cn_user_telephone as cn_user16_7_, user0_.cn_user_token as cn_user17_7_, user0_.cn_user_update_time as cn_user18_7_ from user user0_ limit ?
+2018-03-09 23:31:44.878 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.881 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-09 23:31:44.883 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-09 23:31:44.889 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.892 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.897 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.902 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.904 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.908 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.911 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.915 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.921 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.926 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.929 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.961 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.970 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.977 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.984 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.988 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-09 23:31:44.992 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?

@@ -1,5 +1,7 @@
 package cn.white.bysj.user;
 
+import cn.white.bysj.base.BaseService;
+import cn.white.bysj.base.BaseServiceImpl;
 import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.MyException;
 import cn.white.bysj.commons.ServerResponse;
@@ -24,6 +26,8 @@ import javax.jws.soap.SOAPBinding;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.xml.crypto.Data;
+import java.io.Serializable;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executor;
@@ -49,6 +53,8 @@ public class UserService {
     private JavaMailSender javaMailSender;
     @Autowired
     private Executor executor;
+    @Autowired
+    private BaseService baseService;
 
     //登录
     public ServerResponse<User> login(HttpSession session, Map<String, Object> map) {
@@ -83,6 +89,10 @@ public class UserService {
                 System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
                 System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
                 user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
+
+//                String token = MD5.md5(user.getCn_user_name());
+//                redisService.set(token,user);
+//                redisService.expire(token,10);
                 return ServerResponse.createBySuccess("登陆成功", user);
             } else {
                 return ServerResponse.createByErrorMessage("登陆密码错误");
@@ -194,6 +204,7 @@ public class UserService {
                 System.out.println(re);
                 if (re.containsKey("code")) {
                     redisService.set(map.get("telephone").toString(), re.get("code"));
+                    redisService.expire(map.get("telephone").toString(),60);
                     System.out.println(redisService.get(map.get("telephone").toString()));
                     return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
                 }
@@ -230,10 +241,14 @@ public class UserService {
         if (StringUtils.isEmpty(map.get("checkNum").toString())) {
             return ServerResponse.createByErrorMessage("请输入验证码");
         }
-        if (redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
-            return ServerResponse.createBySuccessMessags("验证成功");
-        } else {
-            return ServerResponse.createByErrorMessage("验证码错误，请重新输入");
+        try {
+            if (redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
+                return ServerResponse.createBySuccessMessags("验证成功");
+            } else {
+                return ServerResponse.createByErrorMessage("验证码错误，请重新输入");
+            }
+        }catch (Exception e){
+            return ServerResponse.createByErrorMessage("验证密码已经过期，请重新获取");
         }
     }
 

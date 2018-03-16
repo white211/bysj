@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2018-03-02 21:42
  */
 public interface LabelDao extends JpaRepository<Label,Integer> {
+
 }

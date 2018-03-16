@@ -6,6 +6,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 
 /**
  * Create by @author white
@@ -24,6 +26,11 @@ public class RedisServiceImpl implements RedisService{
     public Object get(String key) {
         ValueOperations<String,Object> vo = redisTemplate.opsForValue();
         return vo.get(key);
+    }
+
+    public void expire(String key,Integer timeout){
+         Long time = timeout.longValue();
+         redisTemplate.expire(key,timeout,TimeUnit.SECONDS);
     }
 
 }

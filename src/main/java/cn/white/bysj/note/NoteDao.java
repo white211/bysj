@@ -1,6 +1,9 @@
 package cn.white.bysj.note;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
 
 /**
  * Create by @author white
@@ -9,6 +12,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface NoteDao  extends JpaRepository<Note,Integer>{
 
+    @Query(value = "select * from note where cn_user_title LIKE %?1%  or cn_user_conetnt like %?1%",nativeQuery = true)
+    List<Note> findNoteByTitleOrContent(String searchText);
 
+    @Query(value = "select * from note where cn_note_book_id = ?1",nativeQuery = true)
+    List<Note> findNoteByNoteBookId(Integer notebookid);
+
+    @Query(value = "select count(*) from note where cn_note_book_id = ?1",nativeQuery = true)
+    int countByNoteBookId(Integer notebookid);
 }
 

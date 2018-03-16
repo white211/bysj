@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.concurrent.Future;
 //@CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Controller
 @RequestMapping(value = "user/")
-public class UserController extends Cors{
+public class UserController extends Cors  {
     @Autowired
     private UserService userService;
 

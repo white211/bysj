@@ -6,6 +6,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
@@ -17,22 +18,22 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "user")
-public class User extends BaseEntity {
+public class User extends BaseEntity  {
 
   private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "cn_user_id",nullable = false)
-    private Integer cn_user_id;//用户id
-    private String cn_user_name;//用户名
-    private String cn_user_email;//用户邮箱
-    private String cn_user_password;//用户密码
-    private String cn_user_telephone;//用户手机号
-    private String cn_user_token;//用户令牌
-    private String cn_user_nickname;//用户昵称
-    private String cn_user_actived;//用户激活状态
-    private String cn_user_actived_code;//用户激活码
+    private Integer cn_user_id = null;//用户id
+    private String cn_user_name = null;//用户名
+    private String cn_user_email = null;//用户邮箱
+    private String cn_user_password = null;//用户密码
+    private String cn_user_telephone = null;//用户手机号
+    private String cn_user_token = null;//用户令牌
+    private String cn_user_nickname = null;//用户昵称
+    private String cn_user_actived = null;//用户激活状态
+    private String cn_user_actived_code = null;//用户激活码
 
     private Integer cn_user_sex;//用户性别 0 女 1 男
     private String cn_user_avatar;//头像地址

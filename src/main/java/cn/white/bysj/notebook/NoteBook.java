@@ -1,10 +1,14 @@
 package cn.white.bysj.notebook;
 
+import cn.white.bysj.note.Note;
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Create by @author white
@@ -15,13 +19,16 @@ import javax.persistence.Id;
 @Data
 public class NoteBook {
     @Id @GeneratedValue
-    private Integer cn_notebook_id;//笔记本id
-    private Integer cn_notebook_type_id;//笔记本类型id
-    private Integer cn_user_id;//用户id
-    private String cn_notebook_name;//笔记本名称
-    private String  cn_notebook_desc;//笔记本说明
-    private String cn_notebook_createTime;//笔记本创建时间
-    private String cn_notebook_lastupdateTime;//笔记本最后更新时间
-    private String cn_notebook_label;//笔记本所属标签
+    private Integer cn_notebook_id =null;//笔记本id
+    private Integer cn_notebook_type_id=null;//笔记本类型id
+    private Integer cn_user_id=null;//用户id
+    private String cn_notebook_name=null;//笔记本名称
+    private String  cn_notebook_desc=null;//笔记本说明
+    @JSONField(format = "yyyy-MM-dd")
+    private Date cn_notebook_createTime=null;//笔记本创建时间
+    @JSONField(format = "yyyy-MM-dd")
+    private Date cn_notebook_lastupdateTime=null;//笔记本最后更新时间
+    private Integer cn_notebook_label_id=null;//笔记本所属标签id
+
 }
 

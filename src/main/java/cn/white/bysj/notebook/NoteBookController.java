@@ -1,7 +1,15 @@
 package cn.white.bysj.notebook;
 
+import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.utils.ComponentHelper;
+import cn.white.bysj.utils.Cors;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * Create by @author white
@@ -10,8 +18,51 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/notebook")
-public class NoteBookController {
+public class NoteBookController extends Cors {
 
+    @Autowired
+    private NoteBookService noteBookService;
 
+    @RequestMapping(value = "newNoteBook.do")
+    @ResponseBody
+    public ServerResponse newNoteBook(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.newNoteBook(map);
+    }
+
+    @RequestMapping(value = "noteBookList.do")
+    @ResponseBody
+    public ServerResponse noteBookList(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.findAll(map);
+    }
+
+    @RequestMapping(value = "deleteNoteBook.do")
+    @ResponseBody
+    public ServerResponse deleteByNoteBookIdAndUserId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.deleteByNoteBookIdAndUserId(map);
+    }
+
+    @RequestMapping(value = "setNoteBookType.do")
+    @ResponseBody
+    public ServerResponse setNoteBookType(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.setNoteBookType(map);
+    }
+
+    @RequestMapping(value = "resetName.do")
+    @ResponseBody
+    public ServerResponse resetName(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.resetName(map);
+    }
+
+    @RequestMapping(value = "findNoteBook.do")
+    @ResponseBody
+    public ServerResponse findNoteBook(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.findNoteBookByName(map);
+    }
 
 }
