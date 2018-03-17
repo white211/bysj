@@ -15,9 +15,14 @@ public interface NoteService {
     ServerResponse newNote(Map<String,Object> map);
 
     //删除笔记
-    ServerResponse deleteNote(Map<String,Object> map);
+    ServerResponse updateNoteTypeId(Map<String,Object> map);
 
     //通过笔记标题或者内容查找笔记
     ServerResponse<List<Note>> findNoteByTitleOrContent(Map<String,Object> map);
 
+    //笔记列表
+    ServerResponse<List<Note>> noteList(Map<String,Object> map);
+
+    //更新笔记
+    ServerResponse updateNote(Map<String,Object> map);
 }

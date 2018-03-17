@@ -1,7 +1,7 @@
 package cn.white.bysj.user;
 
-import cn.white.bysj.base.BaseService;
-import cn.white.bysj.base.BaseServiceImpl;
+//import cn.white.bysj.base.BaseService;
+//import cn.white.bysj.base.BaseServiceImpl;
 import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.MyException;
 import cn.white.bysj.commons.ServerResponse;
@@ -54,7 +54,7 @@ public class UserService {
     @Autowired
     private Executor executor;
     @Autowired
-    private BaseService baseService;
+//    private BaseService baseService;
 
     //登录
     public ServerResponse<User> login(HttpSession session, Map<String, Object> map) {
@@ -202,9 +202,9 @@ public class UserService {
             try {
                 re = SmsUtil.getCode(map.get("telephone").toString());
                 System.out.println(re);
+                long timeout = 60;
                 if (re.containsKey("code")) {
-                    redisService.set(map.get("telephone").toString(), re.get("code"));
-                    redisService.expire(map.get("telephone").toString(),60);
+                    redisService.set(map.get("telephone").toString(), re.get("code"),timeout);
                     System.out.println(redisService.get(map.get("telephone").toString()));
                     return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
                 }

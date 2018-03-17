@@ -18,10 +18,12 @@ import java.util.Date;
 public class Note {
      @Id @GeneratedValue
     private Integer cn_note_id=null;//笔记id
+    private Integer cn_user_id=null;//笔记创造者id
     private Integer cn_note_book_id=null;//所属笔记本id
     private String cn_note_content=null;//笔记内容
     private String cn_note_title=null;//笔记标题
     private String cn_note_desc=null;//笔记描述
+    private Integer cn_note_type_id;//笔记所属类型id
     @JSONField(format = "yyyy-MM-dd")
     private Date cn_note_creatTime =null;//笔记创建时间
     @JSONField(format = "yyyy-MM-dd")

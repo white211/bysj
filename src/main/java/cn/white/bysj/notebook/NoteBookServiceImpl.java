@@ -29,10 +29,14 @@ public class NoteBookServiceImpl implements NoteBookService {
     @Autowired
     private NoteDao noteDao;
 
-    /*
-     新建笔记本
-     参数包括
-     */
+   /**
+    * TODO: 新增笔记本
+    * @author white
+    * @date 2018-03-17 13:18
+      @param "userId", "noteBookName"
+    * @return
+    * @throws
+    */
     @Override
     public ServerResponse newNoteBook(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId", "noteBookName");
@@ -60,9 +64,13 @@ public class NoteBookServiceImpl implements NoteBookService {
         }
     }
 
-    /*
-    查找全部笔记记录
-    参数包括
+    /**
+     * TODO: 笔记本列表包括笔记
+     * @author white
+     * @date 2018-03-17 13:19
+       @param "userId"
+     * @return
+     * @throws
      */
     @Override
     public ServerResponse<List<NoteListVo>> findAll(Map<String, Object> map) {
@@ -94,9 +102,13 @@ public class NoteBookServiceImpl implements NoteBookService {
         }
     }
 
-    /*
-    删除笔记本
-    参数包括
+    /**
+     * TODO: 通过用户id和笔记本id删除笔记本
+     * @author white
+     * @date 2018-03-17 13:19
+       @param  "userId", "noteBookId"
+     * @return
+     * @throws
      */
     public ServerResponse deleteByNoteBookIdAndUserId(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId", "noteBookId");
@@ -116,9 +128,13 @@ public class NoteBookServiceImpl implements NoteBookService {
         }
     }
 
-    /*
-    重命名笔记本
-    参数包括
+    /**
+     * TODO: 重命名笔记本
+     * @author white
+     * @date 2018-03-17 13:20
+       @param "userId", "noteBookId", "newName"
+     * @return
+     * @throws
      */
     @Override
     public ServerResponse resetName(Map<String, Object> map) {
@@ -138,7 +154,7 @@ public class NoteBookServiceImpl implements NoteBookService {
             int userId = Integer.parseInt(map.get("userId").toString());
             int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
 
-            int count = noteBookDao.findNoteBookByNameAndUserId(map.get("newName").toString(), notebookId);
+            int count = noteBookDao.findNoteBookByNameAndUserId(map.get("newName").toString(), notebookId,userId);
             if (count > 0) {
                 return ServerResponse.createByErrorMessage("新名称已经存在");
             } else {
@@ -148,9 +164,13 @@ public class NoteBookServiceImpl implements NoteBookService {
         }
     }
 
-    /*
-    更新笔记本类型
-    参数包括
+    /**
+     * TODO: 更新笔记本类型
+     * @author white
+     * @date 2018-03-17 13:21
+       @param "userId", "noteBookId", "noteBookType"
+     * @return
+     * @throws
      */
     @Override
     public ServerResponse setNoteBookType(Map<String, Object> map) {
@@ -174,9 +194,13 @@ public class NoteBookServiceImpl implements NoteBookService {
         }
     }
 
-    /*
-     通过笔记本名查找笔记本
-     参数包括
+    /**
+     * TODO: 模糊查询笔记本包含笔记
+     * @author white
+     * @date 2018-03-17 13:22
+       @param "userId", "searchText"
+     * @return
+     * @throws
      */
     @Override
     public ServerResponse<List<NoteListVo>> findNoteBookByName(Map<String, Object> map) {
@@ -191,7 +215,7 @@ public class NoteBookServiceImpl implements NoteBookService {
             return ServerResponse.createByErrorMessage("查找内容不能为空");
         } else {
             List<NoteListVo> noteList = new ArrayList<>();
-            List<NoteBook> noteBookList = noteBookDao.SearchNoteBook(map.get("searchText").toString(), Integer.parseInt(map.get("userId").toString()),1);
+            List<NoteBook> noteBookList = noteBookDao.SearchNoteBook(map.get("searchText").toString(), Integer.parseInt(map.get("userId").toString()),4);
             for (NoteBook notebooklist : noteBookList) {
                 NoteListVo noteListVo = new NoteListVo();
                 noteListVo.setCn_notebook_id(notebooklist.getCn_notebook_id());

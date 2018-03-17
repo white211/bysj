@@ -30,8 +30,8 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
     @Query(value = "update  note_book  set cn_notebook_type_id= 4 where cn_user_id = ?1 and cn_notebook_id =?2",nativeQuery = true)
     void  deleteByNoteBookIdAndUserId(int userId,int noteBookId);
 
-    @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_notebook_id != ?2",nativeQuery = true)
-    int findNoteBookByNameAndUserId(String noteBookName,int noteBookId);
+    @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_user_id =?3 and cn_notebook_id != ?2",nativeQuery = true)
+    int findNoteBookByNameAndUserId(String noteBookName,int noteBookId,int userId);
 
     @Transactional
     @Modifying(clearAutomatically = true)
@@ -43,7 +43,7 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
     @Query(value = "update note_book set cn_notebook_type_id = ?3 where cn_notebook_id = ?2 and cn_user_id=?1",nativeQuery = true)
     void updateNoteBookType(int userId,int notebookid,int noteBookType);
 
-    @Query(value = "select * from note_book where cn_notebook_name like %?1% and cn_user_id = ?2 AND cn_notebook_type_id=?3",nativeQuery = true)
+    @Query(value = "select * from note_book where cn_notebook_name like %?1% and cn_user_id = ?2 AND cn_notebook_type_id !=?3",nativeQuery = true)
     List<NoteBook>  SearchNoteBook(String searchText,int userId,int noteBookTypeId);
 
 

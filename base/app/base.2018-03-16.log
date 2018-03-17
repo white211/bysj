@@ -3118,3 +3118,777 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.session.hazelca
 2018-03-16 16:42:01.380 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
 2018-03-16 16:42:01.382 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
 2018-03-16 16:42:01.384 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 16:48:16.865 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 24844 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-16 16:48:16.869 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-16 16:48:16.869 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-16 16:48:17.386 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-16 16:48:19.364 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-16 16:48:19.367 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-16 16:48:19.416 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-16 16:48:19.424 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-16 16:48:19.425 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-16 16:48:21.708 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-16 16:48:27.593 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-16 16:48:28.202 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-16 16:48:28.203 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-16 16:48:28.401 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-16 16:48:29.946 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-16 16:48:29.960 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-16 16:48:29.961 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-16 16:48:29.961 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-16 16:48:29.974 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-16 16:48:29.976 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-16 16:48:29.983 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-16 16:48:30.016 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 16:48:30.016 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 16:48:30.016 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 16:48:30.022 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 16:48:30.022 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 16:48:30.022 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 16:48:30.032 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-16 16:48:30.033 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-16 16:48:30.038 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 16:48:30.047 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-16 16:48:30.047 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 16:48:30.092 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-16 16:48:30.093 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-16 16:48:30.094 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-16 16:48:30.094 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-16 16:48:30.094 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-16 16:48:30.106 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-16 16:48:30.108 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-16 16:48:30.108 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-16 16:48:30.109 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-16 16:48:30.110 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-16 16:48:30.110 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-16 16:48:30.111 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-16 16:48:30.111 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-16 16:48:30.117 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-16 16:48:30.118 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-16 16:48:30.118 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-16 16:48:31.720 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-16 16:48:31.759 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-16 16:48:31.800 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-16 16:48:32.252 [restartedMain] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.session.SessionAutoConfiguration$SessionRepositoryValidator': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spring.session-org.springframework.boot.autoconfigure.session.SessionProperties': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.session.SessionProperties]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/session/hazelcast/HazelcastFlushMode
+2018-03-16 16:48:32.285 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-03-16 16:48:32.288 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2018-03-16 16:48:32.320 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.session.SessionAutoConfiguration$SessionRepositoryValidator': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spring.session-org.springframework.boot.autoconfigure.session.SessionProperties': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.session.SessionProperties]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/session/hazelcast/HazelcastFlushMode
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at cn.white.bysj.BysjApplication.main(BysjApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spring.session-org.springframework.boot.autoconfigure.session.SessionProperties': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.session.SessionProperties]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/session/hazelcast/HazelcastFlushMode
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:279)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.session.SessionProperties]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/session/hazelcast/HazelcastFlushMode
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:271)
+	... 37 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/session/hazelcast/HazelcastFlushMode
+	at org.springframework.boot.autoconfigure.session.SessionProperties$Hazelcast.<init>(SessionProperties.java:99)
+	at org.springframework.boot.autoconfigure.session.SessionProperties.<init>(SessionProperties.java:43)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.session.hazelcast.HazelcastFlushMode
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 46 common frames omitted
+2018-03-16 17:07:14.099 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 12364 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-16 17:07:14.105 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-16 17:07:14.105 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-16 17:07:14.521 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-16 17:07:17.034 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-16 17:07:17.038 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-16 17:07:17.185 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-16 17:07:17.209 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-16 17:07:17.209 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-16 17:07:20.972 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-16 17:07:30.062 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-16 17:07:30.812 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-16 17:07:30.814 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-16 17:07:31.061 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-16 17:07:33.174 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-16 17:07:33.196 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-16 17:07:33.197 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-16 17:07:33.198 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-16 17:07:33.215 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-16 17:07:33.218 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-16 17:07:33.226 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-16 17:07:33.277 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 17:07:33.277 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 17:07:33.277 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 17:07:33.285 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 17:07:33.285 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 17:07:33.285 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 17:07:33.305 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-16 17:07:33.305 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-16 17:07:33.306 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.data
+2018-03-16 17:07:33.306 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 17:07:33.318 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-16 17:07:33.319 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 17:07:33.380 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-16 17:07:33.382 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-16 17:07:33.383 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-16 17:07:33.384 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-16 17:07:33.384 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-16 17:07:33.411 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-16 17:07:33.413 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-16 17:07:33.414 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-16 17:07:33.418 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-16 17:07:33.418 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-16 17:07:33.419 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-16 17:07:33.420 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-16 17:07:33.421 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-16 17:07:33.430 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-16 17:07:33.430 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-16 17:07:33.431 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-16 17:07:35.381 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-16 17:07:35.433 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-16 17:07:35.488 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-16 17:07:36.405 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-16 17:07:36.527 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-16 17:07:36.543 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-16 17:07:36.562 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-16 17:07:36.593 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 23.116 seconds (JVM running for 27.245)
+2018-03-16 17:17:27.141 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-16 17:17:27.608 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-16 17:17:27.746 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 17:17:30.916 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 17:17:30.916 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 17:17:30.929 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.935 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.940 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.947 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.958 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.966 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.966 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.969 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.969 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.973 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.974 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.981 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.982 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.984 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.985 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.988 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:30.991 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:30.996 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.007 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.008 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.010 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.015 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.019 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.021 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.023 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.026 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.026 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.031 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.034 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.034 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.036 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.036 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.038 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.038 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.040 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.040 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.041 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.042 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.043 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.043 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.050 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.052 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.055 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.056 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.059 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.069 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.074 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.074 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.078 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.086 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.089 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.091 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.093 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.093 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.098 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.098 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.105 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.109 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 17:17:31.122 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 17:17:31.139 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:11.337 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-16 18:27:11.377 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 18:27:12.182 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:27:12.183 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:27:12.189 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.193 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.197 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.199 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.201 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.203 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.204 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.204 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.205 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.206 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.206 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.207 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.208 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.210 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.210 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.211 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.211 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.212 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.213 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.218 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.219 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.222 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.224 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.226 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.226 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.229 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.229 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.230 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.231 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.232 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.233 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.234 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.235 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.237 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.238 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.239 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.240 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.240 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.242 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.243 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.244 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.244 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.245 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.248 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.249 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.250 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.250 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.251 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.251 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.253 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.253 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.255 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.255 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.257 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.257 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.259 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.259 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.261 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:27:12.261 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:27:12.262 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:33.990 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:52:33.990 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:52:33.997 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:33.997 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:33.998 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:33.999 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.001 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.001 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.003 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.003 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.004 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.004 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.006 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.006 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.008 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.008 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.009 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.009 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.011 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.011 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.012 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.012 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.014 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.039 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.040 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.041 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.043 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.045 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.045 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.047 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.049 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.052 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.054 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.055 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.057 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.057 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.059 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.059 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.061 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.063 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.064 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.066 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.066 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.067 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.069 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.070 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.075 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.077 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.080 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.087 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.089 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.091 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.101 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.103 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.109 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.113 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.115 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.117 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.120 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.133 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:34.137 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:34.144 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.072 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:52:56.074 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 18:52:56.083 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.083 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.086 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.088 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.096 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.100 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.105 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.106 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.108 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.108 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.110 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.111 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.112 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.112 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.113 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.113 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.115 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.115 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.117 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.118 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.121 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.121 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.122 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.122 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.123 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.123 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.124 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.124 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.125 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.125 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.127 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.127 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.128 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.128 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.130 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.130 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.131 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.131 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.132 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.132 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.135 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.135 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.139 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.140 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.140 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.142 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.145 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.145 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.146 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.146 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.147 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.147 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.148 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.149 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.150 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.150 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.151 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.151 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 18:52:56.154 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 18:52:56.163 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:27.864 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 19300 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-16 21:21:27.866 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-16 21:21:27.867 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-16 21:21:28.224 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-16 21:21:30.623 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-16 21:21:30.625 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-16 21:21:30.683 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-16 21:21:30.701 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-16 21:21:30.701 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-16 21:21:32.692 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-16 21:21:38.028 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-16 21:21:38.956 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-16 21:21:38.957 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-16 21:21:39.123 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-16 21:21:40.568 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-16 21:21:40.604 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-16 21:21:40.604 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-16 21:21:40.605 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-16 21:21:40.619 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-16 21:21:40.622 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-16 21:21:40.632 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-16 21:21:40.678 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 21:21:40.679 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 21:21:40.679 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 21:21:40.686 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 21:21:40.687 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 21:21:40.687 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 21:21:40.744 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-16 21:21:40.744 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-16 21:21:40.750 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 21:21:40.759 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-16 21:21:40.759 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 21:21:40.850 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-16 21:21:40.852 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-16 21:21:40.853 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-16 21:21:40.854 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-16 21:21:40.854 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-16 21:21:40.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-16 21:21:40.880 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-16 21:21:40.881 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-16 21:21:40.882 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-16 21:21:40.884 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-16 21:21:40.885 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-16 21:21:40.887 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-16 21:21:40.889 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-16 21:21:40.898 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-16 21:21:40.899 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-16 21:21:40.899 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-16 21:21:42.479 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-16 21:21:42.518 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-16 21:21:42.557 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-16 21:21:43.357 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-16 21:21:43.466 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-16 21:21:43.494 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-16 21:21:43.508 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-16 21:21:43.534 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 16.13 seconds (JVM running for 19.732)
+2018-03-16 21:21:56.045 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-16 21:21:56.650 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-16 21:21:56.847 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 21:21:59.713 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 21:21:59.713 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 21:21:59.723 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.725 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.728 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.730 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.735 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.735 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.737 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.737 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.738 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.738 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.741 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.742 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.743 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.743 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.745 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.745 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.746 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.746 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.748 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.748 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.749 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.749 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.751 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.751 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.753 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.753 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.754 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.754 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.756 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.756 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.758 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.758 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.759 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.759 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.761 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.761 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.762 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.762 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.764 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.764 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.765 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.765 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.767 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.767 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.768 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.768 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.770 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.770 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.771 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.771 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.773 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.773 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.775 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.775 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.777 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.777 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.778 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.778 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:21:59.780 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:21:59.780 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:14.369 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-03-16 21:26:14.375 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 21:26:15.171 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 21:26:15.173 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 21:26:15.179 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.179 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.181 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.182 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.183 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.183 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.185 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.185 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.186 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.186 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.188 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.188 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.190 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.190 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.191 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.191 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.193 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.196 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.198 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.200 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.203 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.203 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.205 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.206 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.206 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.208 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.208 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.209 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.209 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.211 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.211 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.212 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.212 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.214 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.214 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.215 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.215 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.219 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.221 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.222 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.224 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.224 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.226 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.227 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.227 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.229 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.229 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.231 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.231 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.233 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.233 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.237 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.238 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.240 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.240 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.242 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.243 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.244 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 21:26:15.245 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 21:26:15.249 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:43:42.558 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 20648 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-16 23:43:42.561 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-16 23:43:42.562 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-16 23:43:42.843 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-16 23:43:44.334 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-16 23:43:44.337 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-16 23:43:44.383 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-16 23:43:44.396 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-16 23:43:44.396 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-16 23:43:46.298 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-16 23:43:52.358 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-16 23:43:53.635 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-16 23:43:53.637 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-16 23:43:53.846 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-16 23:43:55.402 [restartedMain] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.white.bysj.base.BaseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-03-16 23:43:55.411 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-03-16 23:43:55.414 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2018-03-16 23:43:56.741 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field baseService in cn.white.bysj.user.UserService required a bean of type 'cn.white.bysj.base.BaseService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.white.bysj.base.BaseService' in your configuration.
+
+2018-03-16 23:45:34.109 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 23820 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-16 23:45:34.113 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-16 23:45:34.113 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-16 23:45:34.361 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-16 23:45:35.829 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-16 23:45:35.832 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-16 23:45:35.883 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-16 23:45:35.897 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-16 23:45:35.897 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-16 23:45:37.907 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-16 23:45:43.750 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_3_, resource0_.create_time as create_t2_3_, resource0_.description as descript3_3_, resource0_.icon as icon4_3_, resource0_.is_hide as is_hide5_3_, resource0_.level as level6_3_, resource0_.name as name7_3_, resource0_.parent_id as parent_13_3_, resource0_.sort as sort8_3_, resource0_.source_key as source_k9_3_, resource0_.source_url as source_10_3_, resource0_.type as type11_3_, resource0_.update_time as update_12_3_ from tb_resource resource0_
+2018-03-16 23:45:44.491 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-16 23:45:44.492 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-16 23:45:44.731 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-16 23:45:46.537 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-16 23:45:46.558 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-16 23:45:46.558 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-16 23:45:46.560 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-16 23:45:46.576 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-16 23:45:46.579 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-16 23:45:46.589 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-16 23:45:46.631 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 23:45:46.631 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 23:45:46.631 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 23:45:46.638 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-16 23:45:46.638 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-16 23:45:46.638 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-16 23:45:46.650 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-16 23:45:46.650 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-16 23:45:46.655 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 23:45:46.664 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-16 23:45:46.665 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-16 23:45:46.724 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-16 23:45:46.726 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-16 23:45:46.727 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-16 23:45:46.727 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-16 23:45:46.728 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-16 23:45:46.748 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-16 23:45:46.750 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-16 23:45:46.751 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-16 23:45:46.752 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-16 23:45:46.753 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-16 23:45:46.753 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-16 23:45:46.754 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-16 23:45:46.755 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-16 23:45:46.762 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-16 23:45:46.762 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-16 23:45:46.762 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-16 23:45:48.914 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-16 23:45:48.956 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-16 23:45:49.004 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-16 23:45:50.060 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2018-03-16 23:45:50.069 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-16 23:45:50.202 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-16 23:45:50.216 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-16 23:45:50.232 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-16 23:45:50.259 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 16.651 seconds (JVM running for 19.498)
+2018-03-16 23:46:18.252 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-16 23:46:29.281 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:29.458 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 23:46:29.466 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-16 23:46:30.321 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:30.324 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.id as id1_4_1_, role1_.create_time as create_t2_4_1_, role1_.description as descript3_4_1_, role1_.name as name4_4_1_, role1_.role_key as role_key5_4_1_, role1_.status as status6_4_1_, role1_.update_time as update_t7_4_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-03-16 23:46:30.326 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_5_0_, resources0_.resource_id as resource2_5_0_, resource1_.id as id1_3_1_, resource1_.create_time as create_t2_3_1_, resource1_.description as descript3_3_1_, resource1_.icon as icon4_3_1_, resource1_.is_hide as is_hide5_3_1_, resource1_.level as level6_3_1_, resource1_.name as name7_3_1_, resource1_.parent_id as parent_13_3_1_, resource1_.sort as sort8_3_1_, resource1_.source_key as source_k9_3_1_, resource1_.source_url as source_10_3_1_, resource1_.type as type11_3_1_, resource1_.update_time as update_12_3_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-03-16 23:46:30.339 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:30.345 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:30.350 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:30.357 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-03-16 23:46:54.942 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 23:46:54.953 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-16 23:46:54.962 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:54.966 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:54.977 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:54.980 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:54.982 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:54.985 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:54.990 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:54.992 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:54.997 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:54.999 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.004 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.006 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.009 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.027 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.032 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.036 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.038 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.040 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.046 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.047 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.049 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.052 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.054 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.055 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.057 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.060 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.062 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.064 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.064 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.065 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.066 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.068 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.069 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.070 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.070 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.072 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.072 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.073 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.074 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.075 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.076 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.077 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.077 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.078 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.079 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.080 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.080 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.082 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.084 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.086 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.087 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.089 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.091 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.093 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.094 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.096 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.097 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.099 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?
+2018-03-16 23:46:55.101 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-16 23:46:55.103 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ?

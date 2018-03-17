@@ -26,6 +26,13 @@ public class NoteController extends Cors {
     @Autowired
     private NoteServiceImpl noteService;
 
+    @RequestMapping(value = "noteList.do")
+    @ResponseBody
+    public ServerResponse noteList(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.noteList(map);
+    }
+
     @RequestMapping(value = "newNote.do")
     @ResponseBody
     public ServerResponse newNote(HttpServletRequest request){
@@ -33,11 +40,11 @@ public class NoteController extends Cors {
         return noteService.newNote(map);
     }
 
-    @RequestMapping(value = "deleteNote.do")
+    @RequestMapping(value = "updateNoteTypeId.do")
     @ResponseBody
-    public ServerResponse deleteNote(HttpServletRequest request){
+    public ServerResponse updateNoteTypeId(HttpServletRequest request){
         Map<String,Object> map = ComponentHelper.requestToMap(request);
-        return noteService.deleteNote(map);
+        return noteService.updateNoteTypeId(map);
      }
 
     @RequestMapping(value = "findNoteByTitleOrContent.do")
@@ -47,6 +54,17 @@ public class NoteController extends Cors {
         return noteService.findNoteByTitleOrContent(map);
     }
 
+    @RequestMapping(value = "updateNote.do")
+    @ResponseBody
+    public ServerResponse updateNote(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.updateNote(map);
+    }
 
-
+    @RequestMapping(value = "findNoteById.do")
+    @ResponseBody
+    public ServerResponse findNoteById(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.findNoteById(map);
+    }
 }
