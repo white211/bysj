@@ -23,4 +23,10 @@ public class Constant {
     public static final String CURRENT_USER_ACCOUNT ="account";
     public static final String CURRENT_USER_ID = "cn_user_id";
 
+    //七牛云相关配置
+    public static final String QINIU_ACCESS_KEY ="R2s07DxzycnzR7gNbgf9-6zSDdXqQ7VAE4e7C1tj";
+    public static final String QINIU_SECRET_KEY ="BDMFX3QIr67ERsv7fsBbGvZxSgzE6tUyCx4H-na2";
+    public static final String QINIU_BUCKET_NAME ="test";
+    public static final String QINIU_DOMAIN_NAME = "http://oxdypxsie.bkt.clouddn.com/";
+
 }

@@ -1,33 +1,22 @@
 package cn.white.bysj.user;
 
-//import cn.white.bysj.base.BaseService;
-//import cn.white.bysj.base.BaseServiceImpl;
+
 import cn.white.bysj.commons.Constant;
-import cn.white.bysj.commons.MyException;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.*;
 import cn.white.bysj.utils.redis.RedisService;
-
+import org.apache.commons.lang3.StringUtils;
+import groovy.util.logging.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ServerProperties;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.data.redis.connection.ConnectionUtils;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-import sun.rmi.transport.ObjectTable;
 
-import javax.jws.soap.SOAPBinding;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.xml.crypto.Data;
-import java.io.Serializable;
-import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executor;
@@ -39,6 +28,7 @@ import java.util.concurrent.Future;
  * @date 2017-12-28 16:03
  */
 @Service
+@Slf4j
 public class UserService {
     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     SimpleDateFormat tf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -53,10 +43,18 @@ public class UserService {
     private JavaMailSender javaMailSender;
     @Autowired
     private Executor executor;
+
     @Autowired
 //    private BaseService baseService;
 
-    //登录
+    /**
+     * TODO: 用户登陆
+     * @author white
+     * @date 2018-03-19 13:24
+     @params "account", "password"
+      * @return cn.white.bysj.commons.ServerResponse<cn.white.bysj.user.User>
+     * @throws
+     */
     public ServerResponse<User> login(HttpSession session, Map<String, Object> map) {
 
         List<String> list = Arrays.asList("account", "password");
@@ -100,7 +98,15 @@ public class UserService {
         }
     }
 
-    //退出登录
+    /**
+     * TODO: 用户退出登陆
+     *
+     * @param
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:25
+     */
     public ServerResponse<User> logout(Map<String, Object> map, HttpSession session) {
         session.removeAttribute("cn_user_id");
         session.removeAttribute("account");
@@ -109,13 +115,21 @@ public class UserService {
         return ServerResponse.createBySuccessMessags("注销成功");
     }
 
-    //发送邮箱验证
+    /**
+     * TODO: 注册之后 发邮箱功能
+     *
+     * @param "email","password","telephone","checkNum"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:26
+     */
     @Async("myExecutor")
     public Future<ServerResponse<User>> register(Map<String, Object> map) {
         //判断前台传递参数是否正确
-        List<String> list = Arrays.asList("email","password","telephone","checkNum");
-        if (ValidatorUtil.validator(map,list).size()>0){
-            return   new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("缺少参数，必须包括email，password" +
+        List<String> list = Arrays.asList("email", "password", "telephone", "checkNum");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("缺少参数，必须包括email，password" +
                     "telephone,checKNum"));
         }
         //判断邮箱的正确性
@@ -126,7 +140,7 @@ public class UserService {
             if (CheckEmailUtil.checkEmail(map.get("email").toString())) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱格式错误"));
             }
-        }else{
+        } else {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱不能为空"));
         }
         //判断密码的正确性
@@ -134,12 +148,12 @@ public class UserService {
             if (map.get("password").toString().length() < 6) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码长度不能小于6"));
             }
-        }else{
+        } else {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码不能为空"));
         }
-        if (StringUtils.isEmpty(map.get("telephone").toString())){
+        if (StringUtils.isEmpty(map.get("telephone").toString())) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码不能为空"));
-        }else if (map.get("telephone").toString().length() != 11){
+        } else if (map.get("telephone").toString().length() != 11) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码长度必须为11位"));
         }
         //判断验证码
@@ -173,12 +187,28 @@ public class UserService {
         return new AsyncResult<ServerResponse<User>>(ServerResponse.createBySuccess("注册成功,请到邮箱激活", user));
     }
 
-    //根据code选择用户
+    /**
+     * TODO: 通过用户注册生成的code查找用户
+     *
+     * @param code
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:26
+     */
     public User selectUserByCode(String code) {
         return userDao.selectUserByCode(code);
     }
 
-    //更新激活后的用户状态
+    /**
+     * TODO: 用户激活更新userState
+     *
+     * @param "code"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:28
+     */
     public ServerResponse updateUserState(Map<String, Object> map) {
         User user = selectUserByCode(map.get("code").toString());
         if (user != null) {
@@ -189,7 +219,15 @@ public class UserService {
         }
     }
 
-    //发送手机验证码
+    /**
+     * TODO: 发送验证码
+     *
+     * @param "telephone"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:33
+     */
     public ServerResponse sendCheckNum(Map<String, Object> map) {
         HashMap<String, String> re = null;
         List<String> list = Arrays.asList("telephone");
@@ -204,7 +242,7 @@ public class UserService {
                 System.out.println(re);
                 long timeout = 60;
                 if (re.containsKey("code")) {
-                    redisService.set(map.get("telephone").toString(), re.get("code"),timeout);
+                    redisService.set(map.get("telephone").toString(), re.get("code"), timeout);
                     System.out.println(redisService.get(map.get("telephone").toString()));
                     return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
                 }
@@ -216,7 +254,15 @@ public class UserService {
         return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
     }
 
-    //判断邮箱是否存在
+    /**
+     * TODO: 判断注册邮箱是否存在
+     *
+     * @param "email"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:33
+     */
     public ServerResponse<User> checkEmailIsExist(Map<String, Object> map) {
         if (StringUtils.isEmpty(map.get("email").toString())) {
             return ServerResponse.createByErrorMessage("邮箱不能为空");
@@ -233,7 +279,15 @@ public class UserService {
         return null;
     }
 
-    //验证手机验证码
+    /**
+     * TODO: 发送手机验证码
+     *
+     * @param "telephone" "checkNum"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:34
+     */
     public ServerResponse checkTelephoneCheckNum(Map<String, Object> map) {
         if (StringUtils.isEmpty(map.get("telephone").toString())) {
             return ServerResponse.createByErrorMessage("手机号不能为空");
@@ -247,12 +301,20 @@ public class UserService {
             } else {
                 return ServerResponse.createByErrorMessage("验证码错误，请重新输入");
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             return ServerResponse.createByErrorMessage("验证密码已经过期，请重新获取");
         }
     }
 
-    //未登陆状态下-忘记密码
+    /**
+     * TODO: 未登陆状态下 更新密码
+     *
+     * @param "email", "password"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:35
+     */
     public ServerResponse<User> forgetResetPassword(Map<String, Object> map) {
         List<String> list = Arrays.asList("email", "password");
         User user = null;
@@ -279,7 +341,15 @@ public class UserService {
 
     }
 
-    //登陆状态下
+    /**
+     * TODO: 登陆状态下更新密码
+     *
+     * @param "email", "oldPassword", "newPassword"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:35
+     */
     public ServerResponse<User> resetPassword(Map<String, Object> map) {
         List<String> list = Arrays.asList("email", "oldPassword", "newPassword");
 //        User user = null;
@@ -291,9 +361,9 @@ public class UserService {
         }
         if (StringUtils.isEmpty(map.get("email").toString())) {
             return ServerResponse.createByErrorMessage("邮箱不能为空");
-        } else if (StringUtils.isEmpty(map.get("oldPassword"))) {
+        } else if (StringUtils.isBlank(map.get("oldPassword").toString())) {
             return ServerResponse.createByErrorMessage("旧密码不能为空");
-        } else if (StringUtils.isEmpty(map.get("newPassword"))) {
+        } else if (StringUtils.isBlank(map.get("newPassword").toString())) {
             return ServerResponse.createByErrorMessage("新密码不能为空");
         } else {
             try {
@@ -311,10 +381,18 @@ public class UserService {
         }
     }
 
-    //更新个人信息
+    /**
+     * TODO: 更新个人信息
+     *
+     * @param
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 13:36
+     */
     public ServerResponse<User> updateInfo(Map<String, Object> map, HttpSession session) {
         User user = null;
-        if (StringUtils.isEmpty(session.getAttribute(Constant.CURRENT_USER_ID))) {
+        if (StringUtils.isBlank(session.getAttribute(Constant.CURRENT_USER_ID).toString())) {
             return ServerResponse.createByErrorMessage("未登录状态下不能进行修改");
         } else {
             user.setCn_user_id(Integer.parseInt(Constant.CURRENT_USER_ID));
@@ -328,6 +406,55 @@ public class UserService {
         return null;
     }
 
+    /**
+     * TODO: 对比输入旧密码是否正确
+     *
+     * @param "email",'oldPassword'
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-19 15:53
+     */
+    public ServerResponse checkOldPassword(Map<String, Object> map) {
+        List<String> list = Arrays.asList("email", "oldPassword");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括email,oldPassword");
+        }
+        if (StringUtils.isBlank(map.get("email").toString())) {
+            return ServerResponse.createByErrorMessage("邮箱不能为空");
+        } else if (StringUtils.isBlank(map.get("oldPassword").toString())) {
+            return ServerResponse.createByErrorMessage("旧密码不能为空");
+        } else {
+            String password = userDao.findPasswordByCn_user_email(map.get("email").toString());
+            if (!password.equals(map.get("oldPassword").toString())) {
+                return ServerResponse.createByErrorMessage("旧密码错误");
+            } else {
+                return ServerResponse.createBySuccessMessags("密码正确");
+            }
+        }
+    }
+
+    /**
+     * TODO: 通过id查找用户
+     * @author white
+     * @date 2018-03-20 18:41
+       @param "userId"
+     * @return
+     * @throws
+     */
+    public ServerResponse<User> findUserById(Map<String, Object> map){
+        List<String> list = Arrays.asList("userId");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括userId");
+        }
+        if (StringUtils.isBlank(map.get("userId").toString())){
+            return ServerResponse.createByErrorMessage("用户id不能为空");
+        }else{
+            int userId = Integer.parseInt(map.get("userId").toString());
+            User user = userDao.findOne(userId);
+            return ServerResponse.createBySuccess("用户信息",user);
+        }
+    }
 
 }
 

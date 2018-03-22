@@ -40,8 +40,9 @@ public interface UserDao extends JpaRepository<User,Integer>{
     @Query(value = "update user set cn_user_password =?1 where cn_user_email = ?2",nativeQuery = true)
     void forgetResetPassword(String password,String email);
 
-    @Query(value = "select cn_user_password from user where email=?1",nativeQuery = true)
+    @Query(value = "select cn_user_password from user where cn_user_email=?1",nativeQuery = true)
     String findPasswordByCn_user_email(String email);
+
 
 }
 

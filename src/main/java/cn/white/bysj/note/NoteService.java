@@ -25,4 +25,7 @@ public interface NoteService {
 
     //更新笔记
     ServerResponse updateNote(Map<String,Object> map);
+
+    //笔记阅读量
+    ServerResponse addRead(Map<String,Object> map);
 }

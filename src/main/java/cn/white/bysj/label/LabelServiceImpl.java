@@ -1,16 +1,16 @@
 package cn.white.bysj.label;
 
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.note.NoteDao;
+import cn.white.bysj.utils.FirstFontUtil;
 import cn.white.bysj.utils.ValidatorUtil;
+import cn.white.bysj.vo.LabelListVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Create by @author white
@@ -23,6 +23,9 @@ public class LabelServiceImpl implements LabelService {
     @Autowired
     private LabelDao labelDao;
 
+    @Autowired
+    private NoteDao noteDao;
+
     /**
      * TODO: 标签列表
      * @author white
@@ -32,7 +35,7 @@ public class LabelServiceImpl implements LabelService {
      * @throws
      */
     @Override
-    public ServerResponse<List<Label>> labelList(Map<String, Object> map) {
+    public ServerResponse<List<LabelListVo>> labelList(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId");
         if (ValidatorUtil.validator(map,list).size()>0){
             return ServerResponse.createByErrorMessage("缺少参数，必须包括userId");
@@ -41,8 +44,26 @@ public class LabelServiceImpl implements LabelService {
             return ServerResponse.createByErrorMessage("用户id不能为空");
         }else {
             int userId = Integer.parseInt(map.get("userId").toString());
+            List<LabelListVo> labelListVo = new ArrayList<>();
             List<Label> labelList = labelDao.findLabelByUserId(userId);
-            return ServerResponse.createBySuccess("标签列表",labelList);
+            for(Label label:labelList){
+                LabelListVo labelVo = new LabelListVo();
+                labelVo.setCn_user_id(label.getCn_user_id());
+                labelVo.setCn_label_id(label.getCn_label_id());
+                labelVo.setCn_label_desc(label.getCn_label_desc());
+                labelVo.setCn_label_name(label.getCn_label_name());
+                labelVo.setCn_label_createTime(label.getCn_label_createTime());
+                labelVo.setCn_label_last_updateTime(label.getCn_label_last_updateTime());
+                //计算该标签下tyoe=1的笔记条数
+                int count = noteDao.countByLabelId(label.getCn_label_id());
+                labelVo.setNoteCount(count);
+                //提取收个字
+                String firstFont = FirstFontUtil.getFirstFont(label.getCn_label_name());
+                labelVo.setLabel_first_font(firstFont);
+                labelListVo.add(labelVo);
+            }
+
+            return ServerResponse.createBySuccess("标签列表",labelListVo);
         }
     }
 
@@ -117,7 +138,7 @@ public class LabelServiceImpl implements LabelService {
      * @throws 
      */
     @Override
-    public ServerResponse findLabelByName(Map<String, Object> map) {
+    public ServerResponse<List<LabelListVo>> findLabelByName(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId","searchText");
         if(ValidatorUtil.validator(map,list).size()>0){
             return ServerResponse.createByErrorMessage("缺少参数，应包括userId,searchText");
@@ -128,9 +149,26 @@ public class LabelServiceImpl implements LabelService {
             return ServerResponse.createByErrorMessage("查询内容不能为空");
         }else{
             int userId = Integer.parseInt(map.get("userId").toString());
-
+            List<LabelListVo> labelListVo = new ArrayList<>();
             List<Label> labelList = labelDao.findLabelByName(userId,map.get("searchText").toString());
-            return ServerResponse.createBySuccess("列表",labelList);
+            for(Label label:labelList){
+                LabelListVo labelVo = new LabelListVo();
+                labelVo.setCn_user_id(label.getCn_user_id());
+                labelVo.setCn_label_id(label.getCn_label_id());
+                labelVo.setCn_label_desc(label.getCn_label_desc());
+                labelVo.setCn_label_name(label.getCn_label_name());
+                labelVo.setCn_label_createTime(label.getCn_label_createTime());
+                labelVo.setCn_label_last_updateTime(label.getCn_label_last_updateTime());
+                //计算该标签下tyoe=1的笔记条数
+                int count = noteDao.countByLabelId(label.getCn_label_id());
+                labelVo.setNoteCount(count);
+                //提取收个字
+                String firstFont = FirstFontUtil.getFirstFont(label.getCn_label_name());
+                labelVo.setLabel_first_font(firstFont);
+                labelListVo.add(labelVo);
+            }
+
+            return ServerResponse.createBySuccess("列表",labelListVo);
         }
     }
 

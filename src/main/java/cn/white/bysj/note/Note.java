@@ -29,5 +29,7 @@ public class Note {
     @JSONField(format = "yyyy-MM-dd")
     private Date cn_notebook_lastupdateTime =null;//笔记本最后更新时间
     private Integer cn_note_label_id = null;//笔记所属标签id
+    private Integer cn_note_read=0;//分享笔记阅读量
+
 
 }

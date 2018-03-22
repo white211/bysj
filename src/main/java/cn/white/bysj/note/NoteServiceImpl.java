@@ -85,7 +85,7 @@ public class NoteServiceImpl implements NoteService {
             return ServerResponse.createByErrorMessage("缺少参数，应该包括noteID,noteTypeId");
         }
         if (StringUtils.isBlank(map.get("noteId").toString())) {
-            return ServerResponse.createByErrorMessage("删除笔记id不能为空");
+            return ServerResponse.createByErrorMessage("笔记id不能为空");
         } else if (StringUtils.isBlank(map.get("noteTypeId").toString())){
             return ServerResponse.createByErrorMessage("笔记类型不能为空");
         }else{
@@ -196,6 +196,30 @@ public class NoteServiceImpl implements NoteService {
         }else{
             Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
             return ServerResponse.createBySuccess("查询成功",note);
+        }
+    }
+
+    /**
+     * TODO: 修改阅读量
+     * @author white
+     * @date 2018-03-21 13:57
+       @param “noteId”
+     * @return
+     * @throws
+     */
+    public ServerResponse addRead(Map<String,Object> map){
+        List<String> list = Arrays.asList("noteId");
+        if (ValidatorUtil.validator(map,list).size()>0){
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括noteId");
+        }
+
+        if (StringUtils.isBlank(map.get("noteId").toString())){
+            return ServerResponse.createByErrorMessage("笔记本id不能为空");
+        }else{
+            Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+            int NoteRead = note.getCn_note_read()+1;
+            noteDao.updateNoteReadById(Integer.parseInt(map.get("noteId").toString()),NoteRead);
+            return ServerResponse.createBySuccessMessags("修改成功");
         }
     }
 }

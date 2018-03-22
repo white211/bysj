@@ -101,6 +101,22 @@ public class UserController extends Cors  {
         return userService.updateInfo(map,request.getSession());
     }
 
+    //验证旧密码
+    @RequestMapping(value = "checkOldPassword.do")
+    @ResponseBody
+    public ServerResponse checkOldPassword(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return userService.checkOldPassword(map);
+    }
+
+    //通过id查找个人用户
+    @RequestMapping(value = "findUserById.do")
+    @ResponseBody
+    public  ServerResponse findUserById(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return userService.findUserById(map);
+    }
+
 
 }
 

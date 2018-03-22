@@ -1,5 +1,8 @@
 package cn.white.bysj.utils;
 
+import org.thymeleaf.util.ObjectUtils;
+
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,16 +28,26 @@ public class ValidatorUtil {
        return result;
     }
 
+    public static String toString(Object object){
+         return object == null  ? "null" : object.toString();
+    }
+
     public static void main(String[] args) {
-        Map<String,Object> map = new HashMap<>();
-        List<String> list = new ArrayList<>();
+        int[] arr = {1,2,3,4};
+        System.out.println(toString("text"));
+        System.out.println(toString(123));
 
-        list.add("password");
-        list.add("account");
-        list.add("email");
-        map.put("password",123456);
-//        map.put("account","18814142741");
 
-        System.out.println(validator(map,list));
+//        Map<String,Object> map = new HashMap<>();
+//        List<String> list = new ArrayList<>();
+//
+//        list.add("password");
+//        list.add("account");
+//        list.add("email");
+//        map.put("password",123456);
+////        map.put("account","18814142741");
+//
+//        System.out.println(validator(map,list));
+//
     }
 }

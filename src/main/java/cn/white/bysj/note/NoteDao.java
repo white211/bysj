@@ -31,5 +31,12 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "UPDATE note SET cn_note_type_id =?1 where cn_note_id = ?2",nativeQuery = true)
      void updateNoteTypeId(int typeId,int noteId);
 
+    @Query(value = "select count(*) from note where cn_note_label_id =?1 and cn_note_type_id =1 ",nativeQuery = true)
+    int countByLabelId(int labelId);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "UPDATE note SET cn_note_read =?2 where cn_note_id = ?1",nativeQuery = true)
+    void updateNoteReadById(int noteId,int read);
 }
 
