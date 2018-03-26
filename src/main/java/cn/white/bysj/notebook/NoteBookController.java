@@ -37,11 +37,11 @@ public class NoteBookController extends Cors {
         return noteBookService.findAll(map);
     }
 
-    @RequestMapping(value = "deleteNoteBook.do")
+    @RequestMapping(value = "deleteByNoteBookId.do")
     @ResponseBody
     public ServerResponse deleteByNoteBookIdAndUserId(HttpServletRequest request){
         Map<String,Object> map = ComponentHelper.requestToMap(request);
-        return noteBookService.deleteByNoteBookIdAndUserId(map);
+        return noteBookService.deleteByNoteBookId(map);
     }
 
     @RequestMapping(value = "setNoteBookType.do")
@@ -63,6 +63,13 @@ public class NoteBookController extends Cors {
     public ServerResponse findNoteBook(HttpServletRequest request){
         Map<String,Object> map = ComponentHelper.requestToMap(request);
         return noteBookService.findNoteBookByName(map);
+    }
+
+    @RequestMapping(value = "findNoteBookByTypeId.do")
+    @ResponseBody
+    public ServerResponse findNoteBookByTypeId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteBookService.findNoteBookByTypeId(map);
     }
 
 }

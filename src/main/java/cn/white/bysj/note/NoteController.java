@@ -85,6 +85,19 @@ public class NoteController extends Cors {
         return noteService.addRead(map);
     }
 
+    @RequestMapping(value = "findNoteByTypeId.do")
+    @ResponseBody
+    public ServerResponse findNoteByTypeId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.findNoteByTypeId(map);
+    }
+
+    @RequestMapping(value = "deleteByNoteId.do")
+    @ResponseBody
+    public ServerResponse deleteByNoteId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.deleteByNoteId(map);
+    }
     /**
      * TODO: 用于上传图片到七牛云
      * @author white
@@ -117,3 +130,5 @@ public class NoteController extends Cors {
     }
 
 }
+
+

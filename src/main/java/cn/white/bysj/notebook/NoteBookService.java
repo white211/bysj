@@ -15,7 +15,7 @@ public interface NoteBookService {
 
     ServerResponse findAll(Map<String,Object> map);
 
-    ServerResponse deleteByNoteBookIdAndUserId(Map<String,Object> map);
+    ServerResponse deleteByNoteBookId(Map<String,Object> map);
 
     ServerResponse resetName(Map<String,Object> map);
 
@@ -23,5 +23,6 @@ public interface NoteBookService {
 
     ServerResponse findNoteBookByName(Map<String,Object> map);
 
+   ServerResponse findNoteBookByTypeId(Map<String,Object> map);
 
 }

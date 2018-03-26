@@ -27,8 +27,8 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query(value = "update  note_book  set cn_notebook_type_id= 4 where cn_user_id = ?1 and cn_notebook_id =?2",nativeQuery = true)
-    void  deleteByNoteBookIdAndUserId(int userId,int noteBookId);
+    @Query(value = "DELETE FROM note_book where cn_notebook_id =?1",nativeQuery = true)
+    void  deleteByNoteBookId(int noteBookId);
 
     @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_user_id =?3 and cn_notebook_id != ?2",nativeQuery = true)
     int findNoteBookByNameAndUserId(String noteBookName,int noteBookId,int userId);
@@ -46,5 +46,6 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
     @Query(value = "select * from note_book where cn_notebook_name like %?1% and cn_user_id = ?2 AND cn_notebook_type_id !=?3",nativeQuery = true)
     List<NoteBook>  SearchNoteBook(String searchText,int userId,int noteBookTypeId);
 
-
+   @Query(value = "SELECT * FROM note_book where cn_user_id = ?1 AND  cn_notebook_type_id = ?2",nativeQuery = true)
+    List<NoteBook> findNoteBookByTypeId(int userId,int noteBookTypeId);
 }

@@ -44,6 +44,13 @@ public interface UserDao extends JpaRepository<User,Integer>{
     String findPasswordByCn_user_email(String email);
 
 
+    //更新用户头像
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update user set cn_user_avatar =?2 where cn_user_id = ?1",nativeQuery = true)
+    void updateUserAvatar(int userId,String url);
+
+
 }
 
 

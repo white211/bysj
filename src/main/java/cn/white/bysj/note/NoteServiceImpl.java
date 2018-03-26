@@ -1,13 +1,17 @@
 package cn.white.bysj.note;
 
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.user.UserService;
 import cn.white.bysj.utils.ValidatorUtil;
 import groovy.util.logging.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.weaver.ast.Not;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.websocket.server.ServerEndpoint;
 import java.util.Arrays;
 import java.util.Date;
@@ -26,7 +30,7 @@ public class NoteServiceImpl implements NoteService {
     @Autowired
     private NoteDao noteDao;
 
-    @Override
+    private static Logger logger = LoggerFactory.getLogger(NoteServiceImpl.class);
 
     /**
      * TODO: 新增笔记、更新笔记
@@ -50,22 +54,28 @@ public class NoteServiceImpl implements NoteService {
         } else if (StringUtils.isBlank(map.get("noteContent").toString())) {
             return ServerResponse.createByErrorMessage("笔记内容不能为空");
         } else {
-            if (StringUtils.isBlank(map.get("noteId").toString())) {
-                Note note = new Note();
-                note.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
-                note.setCn_note_title(map.get("noteTitle").toString());
-                note.setCn_note_content(map.get("noteContent").toString());
-                note.setCn_note_book_id(Integer.parseInt(map.get("noteBookId").toString()));
-                note.setCn_note_desc(map.get("noteDesc").toString());
-                note.setCn_note_label_id(Integer.parseInt(map.get("noteLabel").toString()));
-                note.setCn_note_type_id(1);
-                note.setCn_note_creatTime(new Date());
-                note.setCn_notebook_lastupdateTime(new Date());
-                noteDao.save(note);
-                return ServerResponse.createBySuccess("新建笔记成功", note);
-            } else {
-                return updateNote(map);
+            try{
+                if (StringUtils.isBlank(map.get("noteId").toString())) {
+                    Note note = new Note();
+                    note.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
+                    note.setCn_note_title(map.get("noteTitle").toString());
+                    note.setCn_note_content(map.get("noteContent").toString());
+                    note.setCn_note_book_id(Integer.parseInt(map.get("noteBookId").toString()));
+                    note.setCn_note_desc(map.get("noteDesc").toString());
+                    note.setCn_note_label_id(Integer.parseInt(map.get("noteLabel").toString()));
+                    note.setCn_note_type_id(1);
+                    note.setCn_note_creatTime(new Date());
+                    note.setCn_notebook_lastupdateTime(new Date());
+                    noteDao.save(note);
+                    return ServerResponse.createBySuccess("新建笔记成功", note);
+                } else {
+                    return updateNote(map);
+                }
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
             }
+
         }
     }
 
@@ -89,8 +99,14 @@ public class NoteServiceImpl implements NoteService {
         } else if (StringUtils.isBlank(map.get("noteTypeId").toString())){
             return ServerResponse.createByErrorMessage("笔记类型不能为空");
         }else{
-            noteDao.updateNoteTypeId(Integer.parseInt(map.get("noteTypeId").toString()),Integer.parseInt(map.get("noteId").toString()));
-            return ServerResponse.createBySuccessMessags("操作成功");
+            try{
+                noteDao.updateNoteTypeId(Integer.parseInt(map.get("noteTypeId").toString()),Integer.parseInt(map.get("noteId").toString()));
+                return ServerResponse.createBySuccessMessags("操作成功");
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
     }
 
@@ -98,26 +114,33 @@ public class NoteServiceImpl implements NoteService {
     * TODO: 通过笔记标题或者笔记内容查找某用户笔记
     * @author white
     * @date 2018-03-17 10:32
-      @Params "searchText,userId"
+      @Params "searchText,userId,noteBookId"
     * @return
     * @throws
     */
     @Override
     public ServerResponse<List<Note>> findNoteByTitleOrContent(Map<String, Object> map) {
-        List<String> list = Arrays.asList("searchText","userId");
+        List<String> list = Arrays.asList("searchText","userId","noteBookId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数，应该包括searchText");
+            return ServerResponse.createByErrorMessage("缺少参数，应该包括searchText,userId,noteBookId");
         }
         if (StringUtils.isBlank(map.get("userId").toString())){
             return ServerResponse.createByErrorMessage("用户id不能为空");
         }
 
-        if (StringUtils.isBlank(map.get("SearchText").toString())) {
+        if (StringUtils.isBlank(map.get("searchText").toString())) {
             return ServerResponse.createByErrorMessage("搜索内容不能为空");
         } else {
-            int userId = Integer.parseInt(map.get("userId").toString());
-            List<Note> noteList = noteDao.findNoteByTitleOrContent(map.get("SearchText").toString(),userId);
-            return ServerResponse.createBySuccess("搜索结果", noteList);
+            try{
+                int userId = Integer.parseInt(map.get("userId").toString());
+                int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
+                List<Note> noteList = noteDao.findNoteByTitleOrContent(map.get("searchText").toString(),userId,noteBookId);
+                return ServerResponse.createBySuccess("搜索结果", noteList);
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
     }
 
@@ -137,9 +160,15 @@ public class NoteServiceImpl implements NoteService {
         if (StringUtils.isBlank(map.get("userId").toString())){
             return ServerResponse.createByErrorMessage("用户id不能为空");
         }else{
-            int userId = Integer.parseInt(map.get("userId").toString());
-            List<Note>  noteList=  noteDao.findNoteByUserId(userId);
-            return ServerResponse.createBySuccess("笔记列表",noteList);
+            try{
+                int userId = Integer.parseInt(map.get("userId").toString());
+                List<Note>  noteList=  noteDao.findNoteByUserId(userId);
+                return ServerResponse.createBySuccess("笔记列表",noteList);
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
     }
 
@@ -163,18 +192,24 @@ public class NoteServiceImpl implements NoteService {
         }else if(StringUtils.isBlank(map.get("noteTitle").toString())){
             return  ServerResponse.createByErrorMessage("笔记标题不能为空");
         }else{
-           Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
-           note.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
-           note.setCn_note_id(Integer.parseInt(map.get("noteId").toString()));
-           note.setCn_note_book_id(Integer.parseInt(map.get("noteBookId").toString()));
-           note.setCn_note_title(map.get("noteTitle").toString());
-           note.setCn_note_content(map.get("noteContent").toString());
-           note.setCn_note_label_id(Integer.parseInt(map.get("noteLabel").toString()));
-           note.setCn_note_desc(map.get("noteDesc").toString());
-           note.setCn_note_type_id(1);
-           note.setCn_notebook_lastupdateTime(new Date());
-           noteDao.save(note);
-           return ServerResponse.createBySuccess("更新成功",note);
+            try{
+                Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+                note.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
+                note.setCn_note_id(Integer.parseInt(map.get("noteId").toString()));
+                note.setCn_note_book_id(Integer.parseInt(map.get("noteBookId").toString()));
+                note.setCn_note_title(map.get("noteTitle").toString());
+                note.setCn_note_content(map.get("noteContent").toString());
+                note.setCn_note_label_id(Integer.parseInt(map.get("noteLabel").toString()));
+                note.setCn_note_desc(map.get("noteDesc").toString());
+                note.setCn_note_type_id(1);
+                note.setCn_notebook_lastupdateTime(new Date());
+                noteDao.save(note);
+                return ServerResponse.createBySuccess("更新成功",note);
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
     }
 
@@ -194,9 +229,46 @@ public class NoteServiceImpl implements NoteService {
         if (StringUtils.isBlank(map.get("noteId").toString())){
             return ServerResponse.createByErrorMessage("笔记本id不能为空");
         }else{
-            Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
-            return ServerResponse.createBySuccess("查询成功",note);
+            try{
+                Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+                return ServerResponse.createBySuccess("查询成功",note);
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
+    }
+
+    /**
+     * TODO: 通过typeid查找笔记本
+     * @author white
+     * @date 2018-03-23 11:10
+       @param "userId,typeId"
+     * @return
+     * @throws
+     */
+    public ServerResponse<List<Note>> findNoteByTypeId(Map<String,Object> map){
+        List<String> list = Arrays.asList("userId","typeId");
+        if (ValidatorUtil.validator(map,list).size()>0){
+            return ServerResponse.createByErrorMessage("缺少参数，应包括userId,typeId");
+        }
+        if (StringUtils.isBlank(map.get("userId").toString())){
+            return ServerResponse.createByErrorMessage("用户id不能为空");
+        }else if (StringUtils.isBlank(map.get("typeId").toString())){
+            return ServerResponse.createByErrorMessage("笔记类型不能为空");
+        }else{
+            try {
+                int userId = Integer.parseInt(map.get("userId").toString());
+                int typeId = Integer.parseInt(map.get("typeId").toString());
+                List<Note> noteList =  noteDao.findNoteByTypeId(userId,typeId);
+                return ServerResponse.createBySuccess("笔记收藏列",noteList);
+            }catch (Exception e){
+                logger.error("查找失败");
+                return ServerResponse.createByErrorMessage("查找失败");
+            }
+        }
+
     }
 
     /**
@@ -216,10 +288,44 @@ public class NoteServiceImpl implements NoteService {
         if (StringUtils.isBlank(map.get("noteId").toString())){
             return ServerResponse.createByErrorMessage("笔记本id不能为空");
         }else{
-            Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
-            int NoteRead = note.getCn_note_read()+1;
-            noteDao.updateNoteReadById(Integer.parseInt(map.get("noteId").toString()),NoteRead);
-            return ServerResponse.createBySuccessMessags("修改成功");
+            try{
+                Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+                int NoteRead = note.getCn_note_read()+1;
+                noteDao.updateNoteReadById(Integer.parseInt(map.get("noteId").toString()),NoteRead);
+                return ServerResponse.createBySuccessMessags("修改成功");
+            }catch (Exception e){
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+
         }
     }
+
+    /**
+     * TODO: 彻底删除
+     * @author white
+     * @date 2018-03-23 15:08
+       @param "noteId"
+     * @return
+     * @throws
+     */
+    public ServerResponse deleteByNoteId(Map<String,Object> map){
+        List<String> list = Arrays.asList("noteId");
+        if (ValidatorUtil.validator(map,list).size()>0){
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括noteId");
+        }
+        if (StringUtils.isBlank(map.get("noteId").toString())){
+            return ServerResponse.createByErrorMessage("笔记id不能为空");
+        }else{
+            try {
+                int noteId = Integer.parseInt(map.get("noteId").toString());
+                noteDao.deleteByNoteId(noteId);
+                return ServerResponse.createBySuccessMessags("删除成功");
+            }catch (Exception e){
+                logger.error("删除失败");
+                return ServerResponse.createByErrorMessage("删除失败");
+            }
+        }
+    }
+
 }

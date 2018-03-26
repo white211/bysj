@@ -28,4 +28,11 @@ public interface NoteService {
 
     //笔记阅读量
     ServerResponse addRead(Map<String,Object> map);
+
+    //通过笔记类型查找笔记
+    ServerResponse findNoteByTypeId(Map<String,Object> map);
+
+    //删除笔记通过笔记id
+    ServerResponse deleteByNoteId(Map<String,Object> map);
+
 }

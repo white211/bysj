@@ -4,9 +4,18 @@ package cn.white.bysj.user;
 import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.*;
+
 import cn.white.bysj.utils.redis.RedisService;
 import org.apache.commons.lang3.StringUtils;
 import groovy.util.logging.Slf4j;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +25,10 @@ import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+
 import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.security.SignatureException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executor;
@@ -43,6 +55,9 @@ public class UserService {
     private JavaMailSender javaMailSender;
     @Autowired
     private Executor executor;
+//
+//    @Autowired
+//    private HttpClient httpClient;
 
     @Autowired
 //    private BaseService baseService;
@@ -69,33 +84,32 @@ public class UserService {
         if (StringUtils.isEmpty(map.get("account").toString())) {
             return ServerResponse.createByErrorMessage("输入账户不能为空");
         }
-
         if (StringUtils.isEmpty(map.get("password").toString())) {
             return ServerResponse.createByErrorMessage("输入密码不能为空");
         }
-
-        User user = userDao.selectUserByAccount(map.get("account").toString());
-        if (user == null) {
-            return ServerResponse.createByErrorMessage("用户不存在或尚未激活");
-        } else {
-            if (user.getCn_user_password().equals(map.get("password").toString())) {
-                //登陆成功保存到session
-//                HttpSession session = request.getSession();
-                session.setAttribute(Constant.CURRENT_USER_ACCOUNT, map.get("account").toString());
-                session.setAttribute(Constant.CURRENT_USER_ID, user.getCn_user_id().toString());
-                session.setAttribute(Constant.CURRENT_USER, user);
-                System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
-                System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
-                user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
-
-//                String token = MD5.md5(user.getCn_user_name());
-//                redisService.set(token,user);
-//                redisService.expire(token,10);
-                return ServerResponse.createBySuccess("登陆成功", user);
+        try {
+            User user = userDao.selectUserByAccount(map.get("account").toString());
+            if (user == null) {
+                return ServerResponse.createByErrorMessage("用户不存在或尚未激活");
             } else {
-                return ServerResponse.createByErrorMessage("登陆密码错误");
+                if (user.getCn_user_password().equals(map.get("password").toString())) {
+                    session.setAttribute(Constant.CURRENT_USER_ACCOUNT, map.get("account").toString());
+                    session.setAttribute(Constant.CURRENT_USER_ID, user.getCn_user_id().toString());
+                    session.setAttribute(Constant.CURRENT_USER, user);
+                    System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
+                    System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
+                    user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
+                    return ServerResponse.createBySuccess("登陆成功", user);
+                } else {
+                    return ServerResponse.createByErrorMessage("登陆密码错误");
+                }
             }
+        } catch (Exception e) {
+            logger.error("服务器出错");
+            return ServerResponse.createByErrorMessage("服务器异常");
         }
+
+
     }
 
     /**
@@ -210,12 +224,24 @@ public class UserService {
      * @date 2018-03-19 13:28
      */
     public ServerResponse updateUserState(Map<String, Object> map) {
-        User user = selectUserByCode(map.get("code").toString());
-        if (user != null) {
-            userDao.updateUserState(map.get("code").toString());
-            return ServerResponse.createBySuccessMessags("激活成功,请前往登陆");
-        } else {
-            return ServerResponse.createByErrorMessage("激活码错误，请重新注册");
+        List<String> list = Arrays.asList("code");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，应该包括code");
+        }
+        if (StringUtils.isBlank(map.get("code").toString())) {
+            return ServerResponse.createByErrorMessage("code不能为空");
+        }
+        try {
+            User user = selectUserByCode(map.get("code").toString());
+            if (user != null) {
+                userDao.updateUserState(map.get("code").toString());
+                return ServerResponse.createBySuccessMessags("激活成功,请前往登陆");
+            } else {
+                return ServerResponse.createByErrorMessage("激活码错误，请重新注册");
+            }
+        } catch (Exception e) {
+            logger.error("服务出现异常");
+            return ServerResponse.createByErrorMessage("系统出现异常");
         }
     }
 
@@ -264,19 +290,31 @@ public class UserService {
      * @date 2018-03-19 13:33
      */
     public ServerResponse<User> checkEmailIsExist(Map<String, Object> map) {
-        if (StringUtils.isEmpty(map.get("email").toString())) {
+        List<String> list = Arrays.asList("email");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，应包括email");
+        }
+
+        if (StringUtils.isBlank(map.get("email").toString())) {
             return ServerResponse.createByErrorMessage("邮箱不能为空");
         } else {
             if (CheckEmailUtil.checkEmail(map.get("email").toString())) {
                 return ServerResponse.createByErrorMessage("邮箱格式错误");
-            }
-            if (userDao.selectUserByEmail(map.get("email").toString()) > 0) {
-                User user = userDao.selectUserByAccount(map.get("email").toString());
-                user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
-                return ServerResponse.createBySuccess("存在该注册邮箱", user);
+            } else {
+                try {
+                    if (userDao.selectUserByEmail(map.get("email").toString()) > 0) {
+                        User user = userDao.selectUserByAccount(map.get("email").toString());
+                        user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
+                        return ServerResponse.createBySuccess("存在该注册邮箱", user);
+                    } else {
+                        return ServerResponse.createBySuccessMessags("邮箱验证正确");
+                    }
+                } catch (Exception e) {
+                    logger.error("服务出现异常");
+                    return ServerResponse.createByErrorMessage("服务出现异常");
+                }
             }
         }
-        return null;
     }
 
     /**
@@ -289,10 +327,15 @@ public class UserService {
      * @date 2018-03-19 13:34
      */
     public ServerResponse checkTelephoneCheckNum(Map<String, Object> map) {
-        if (StringUtils.isEmpty(map.get("telephone").toString())) {
+        List<String> list = Arrays.asList("telephone", "checkNum");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，应包括telephone,checkNum");
+        }
+
+        if (StringUtils.isBlank(map.get("telephone").toString())) {
             return ServerResponse.createByErrorMessage("手机号不能为空");
         }
-        if (StringUtils.isEmpty(map.get("checkNum").toString())) {
+        if (StringUtils.isBlank(map.get("checkNum").toString())) {
             return ServerResponse.createByErrorMessage("请输入验证码");
         }
         try {
@@ -352,11 +395,7 @@ public class UserService {
      */
     public ServerResponse<User> resetPassword(Map<String, Object> map) {
         List<String> list = Arrays.asList("email", "oldPassword", "newPassword");
-//        User user = null;
         if (ValidatorUtil.validator(map, list).size() > 0) {
-
-            System.out.println(ValidatorUtil.validator(map, list));
-
             return ServerResponse.createByErrorMessage("缺少参数，应包括email，oldPassword，newPassword");
         }
         if (StringUtils.isEmpty(map.get("email").toString())) {
@@ -401,9 +440,31 @@ public class UserService {
         }
     }
 
-    //更新个人头像
-    public ServerResponse<User> updateIcon(Map<String, Object> map, HttpSession session) {
-        return null;
+    /**
+     * TODO: 更新用户头像
+     *
+     * @param "userId","url"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-23 21:20
+     */
+    public ServerResponse<User> updateAvatar(int userId, String url) {
+
+        if (StringUtils.isBlank(String.valueOf(userId))) {
+            return ServerResponse.createByErrorMessage("用户id不能为空");
+        } else if (StringUtils.isBlank(url)) {
+            return ServerResponse.createByErrorMessage("头像链接不能为空");
+        } else {
+            try {
+                userDao.updateUserAvatar(userId, url);
+                return ServerResponse.createBySuccessMessags("更新成功");
+            } catch (Exception e) {
+                logger.error("更换失败");
+                return ServerResponse.createByErrorMessage("更换失败");
+            }
+        }
+
     }
 
     /**
@@ -436,25 +497,59 @@ public class UserService {
 
     /**
      * TODO: 通过id查找用户
-     * @author white
-     * @date 2018-03-20 18:41
-       @param "userId"
+     *
+     * @param "userId"
      * @return
      * @throws
+     * @author white
+     * @date 2018-03-20 18:41
      */
-    public ServerResponse<User> findUserById(Map<String, Object> map){
+    public ServerResponse<User> findUserById(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
             return ServerResponse.createByErrorMessage("缺少参数，必须包括userId");
         }
-        if (StringUtils.isBlank(map.get("userId").toString())){
+        if (StringUtils.isBlank(map.get("userId").toString())) {
             return ServerResponse.createByErrorMessage("用户id不能为空");
-        }else{
-            int userId = Integer.parseInt(map.get("userId").toString());
-            User user = userDao.findOne(userId);
-            return ServerResponse.createBySuccess("用户信息",user);
+        } else {
+            try {
+                int userId = Integer.parseInt(map.get("userId").toString());
+                User user = userDao.findOne(userId);
+                return ServerResponse.createBySuccess("用户信息", user);
+            } catch (Exception e) {
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
+            }
         }
     }
+
+    /**
+     * TODO: 通过城市到心知天气上面获取天气数据
+     *
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-03-25 10:20
+     */
+    public ServerResponse weatherJson(Map<String, Object> map) {
+        List<String> list = Arrays.asList("city");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数city");
+        }
+        if (StringUtils.isBlank(map.get("city").toString())) {
+            return ServerResponse.createByErrorMessage("城市不能为空");
+        } else {
+            String city = map.get("city").toString();
+            try {
+                String url = WeatherUtil.generateGetDiaryWeatherURL(city, "", "c", "1", "1");
+                return ServerResponse.createBySuccess("请求成功",url);
+            } catch (Exception e) {
+                logger.error("获取天气url失败");
+                return ServerResponse.createByErrorMessage("查找失败");
+            }
+        }
+    }
+
 
 }
 

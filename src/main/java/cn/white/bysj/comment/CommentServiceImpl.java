@@ -1,8 +1,11 @@
 package cn.white.bysj.comment;
 
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.user.User;
+import cn.white.bysj.user.UserDao;
 import cn.white.bysj.user.UserService;
 import cn.white.bysj.utils.ValidatorUtil;
+import cn.white.bysj.vo.CommentListVo;
 import com.sun.tools.corba.se.idl.StringGen;
 import groovy.util.logging.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -11,10 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Create by @author white
@@ -27,6 +27,9 @@ public class CommentServiceImpl implements CommentService {
 
     @Autowired
     private CommentDao commentDao;
+
+    @Autowired
+    private UserDao userDao;
 
     private static Logger logger = LoggerFactory.getLogger(CommentServiceImpl.class);
 
@@ -60,9 +63,6 @@ public class CommentServiceImpl implements CommentService {
                 comment.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
                 comment.setCn_comment_content(map.get("commentContent").toString());
                 comment.setCn_comment_creatTime(new Date());
-                comment.setCn_user_avatar(ValidatorUtil.toString(map.get("userAvatar")));
-                comment.setCn_user_email(map.get("userEmail").toString());
-                comment.setCn_user_nickName(ValidatorUtil.toString(map.get("userNickName")));
                 commentDao.save(comment);
                 return ServerResponse.createBySuccessMessags("评论成功");
             } catch (Exception e) {
@@ -110,7 +110,7 @@ public class CommentServiceImpl implements CommentService {
      * @author white
      * @date 2018-03-21 13:43
      */
-    public ServerResponse<List<Comment>> CommentListByNoteId(Map<String, Object> map) {
+    public ServerResponse<List<CommentListVo>> CommentListByNoteId(Map<String, Object> map) {
         List<String> list = Arrays.asList("noteId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
             return ServerResponse.createByErrorMessage("缺少参数，包括noteId");
@@ -119,9 +119,21 @@ public class CommentServiceImpl implements CommentService {
             return ServerResponse.createByErrorMessage("笔记id不能为空");
         } else {
             try {
+                List<CommentListVo> commentListVos = new ArrayList<>();
                 int noteId = Integer.parseInt(map.get("noteId").toString());
                 List<Comment> list1 = commentDao.findAllByNoteId(noteId);
-                return ServerResponse.createBySuccess("评论列表",list1);
+                for (Comment comment:list1){
+                    CommentListVo commentListVo = new CommentListVo();
+                    commentListVo.setCn_comment_content(comment.getCn_comment_content());
+                    commentListVo.setCn_comment_creatTime(comment.getCn_comment_creatTime());
+                    commentListVo.setCn_comment_id(comment.getCn_comment_id());
+                    User user = userDao.findOne(comment.getCn_user_id());
+                    commentListVo.setCn_user_email(user.getCn_user_email());
+                    commentListVo.setCn_user_avatar(user.getCn_user_avatar());
+                    commentListVo.setCn_user_nickName(user.getCn_user_nickname());
+                    commentListVos.add(commentListVo);
+                }
+                return ServerResponse.createBySuccess("评论列表",commentListVos);
             } catch (Exception e) {
                 logger.error("查找失败");
                 return ServerResponse.createByErrorMessage("服务出现异常");
