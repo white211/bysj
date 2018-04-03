@@ -1,8 +1,8 @@
 package cn.white.bysj.label;
 
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.note.Note;
 import cn.white.bysj.note.NoteDao;
-import cn.white.bysj.utils.FirstFontUtil;
 import cn.white.bysj.utils.ValidatorUtil;
 import cn.white.bysj.vo.LabelListVo;
 import org.apache.commons.lang3.StringUtils;
@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 /**
@@ -59,13 +58,12 @@ public class LabelServiceImpl implements LabelService {
                     labelVo.setCn_label_desc(label.getCn_label_desc());
                     labelVo.setCn_label_name(label.getCn_label_name());
                     labelVo.setCn_label_createTime(label.getCn_label_createTime());
-                    labelVo.setCn_label_last_updateTime(label.getCn_label_last_updateTime());
+                    labelVo.setCn_label_last_updateTime(label.getCn_label_updateTime());
                     //计算该标签下tyoe !=1 的笔记条数
                     int count = noteDao.countByLabelId(label.getCn_label_id());
                     labelVo.setNoteCount(count);
-                    //提取收个字
-                    String firstFont = FirstFontUtil.getFirstFont(label.getCn_label_name());
-                    labelVo.setLabel_first_font(firstFont);
+                     List<Note> noteList= noteDao.findNoteByLabelId(label.getCn_label_id());
+                     labelVo.setNoteList(noteList);
                     labelListVo.add(labelVo);
                 }
 
@@ -99,7 +97,7 @@ public class LabelServiceImpl implements LabelService {
         } else if (StringUtils.isBlank(map.get("labelName").toString())) {
             return ServerResponse.createByErrorMessage("标签不能为空");
         } else {
-            try{
+            try {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 int count = labelDao.findLabelByName(map.get("labelName").toString(), userId);
                 if (count > 0) {
@@ -109,10 +107,10 @@ public class LabelServiceImpl implements LabelService {
                 label.setCn_label_name(map.get("labelName").toString());
                 label.setCn_user_id(userId);
                 label.setCn_label_createTime(new Date());
-                label.setCn_label_last_updateTime(new Date());
+                label.setCn_label_updateTime(new Date());
                 labelDao.save(label);
                 return ServerResponse.createBySuccess("新增成功", label);
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -139,13 +137,13 @@ public class LabelServiceImpl implements LabelService {
         } else if (StringUtils.isBlank(map.get("labelId").toString())) {
             return ServerResponse.createByErrorMessage("标签id不能为空");
         } else {
-            try{
+            try {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 int labelId = Integer.parseInt(map.get("labelId").toString());
 
                 labelDao.deleteLabelByUserIdAndLabelId(userId, labelId);
                 return ServerResponse.createBySuccessMessags("删除成功");
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -174,7 +172,7 @@ public class LabelServiceImpl implements LabelService {
         } else if (StringUtils.isBlank(map.get("searchText").toString())) {
             return ServerResponse.createByErrorMessage("查询内容不能为空");
         } else {
-            try{
+            try {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 List<LabelListVo> labelListVo = new ArrayList<>();
                 List<Label> labelList = labelDao.findLabelByName(userId, map.get("searchText").toString());
@@ -185,18 +183,18 @@ public class LabelServiceImpl implements LabelService {
                     labelVo.setCn_label_desc(label.getCn_label_desc());
                     labelVo.setCn_label_name(label.getCn_label_name());
                     labelVo.setCn_label_createTime(label.getCn_label_createTime());
-                    labelVo.setCn_label_last_updateTime(label.getCn_label_last_updateTime());
+                    labelVo.setCn_label_last_updateTime(label.getCn_label_updateTime());
                     //计算该标签下tyoe=1的笔记条数
                     int count = noteDao.countByLabelId(label.getCn_label_id());
                     labelVo.setNoteCount(count);
                     //提取收个字
-                    String firstFont = FirstFontUtil.getFirstFont(label.getCn_label_name());
-                    labelVo.setLabel_first_font(firstFont);
+//                    String firstFont = FirstFontUtil.getFirstFont(label.getCn_label_name());
+//                    labelVo.setLabel_first_font(firstFont);
                     labelListVo.add(labelVo);
                 }
 
                 return ServerResponse.createBySuccess("列表", labelListVo);
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -224,7 +222,7 @@ public class LabelServiceImpl implements LabelService {
         } else if (StringUtils.isBlank(map.get("labelId").toString())) {
             return ServerResponse.createByErrorMessage("标签id不能为空");
         } else {
-            try{
+            try {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 int labelId = Integer.parseInt(map.get("labelId").toString());
                 int count = labelDao.findLabelByNameAndUserId(userId, map.get("newName").toString(), labelId);
@@ -234,7 +232,7 @@ public class LabelServiceImpl implements LabelService {
                     labelDao.updateLabelName(userId, map.get("newName").toString(), labelId);
                     return ServerResponse.createBySuccessMessags("重命名成功");
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }

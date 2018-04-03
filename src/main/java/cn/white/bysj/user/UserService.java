@@ -5,17 +5,15 @@ import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.*;
 
+import cn.white.bysj.utils.GetCityUtil;
 import cn.white.bysj.utils.redis.RedisService;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import groovy.util.logging.Slf4j;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.*;
-import java.security.SignatureException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executor;
@@ -524,6 +522,25 @@ public class UserService {
     }
 
     /**
+     * TODO: 通过用户访问ip获取当前所在城市
+     * @author white
+     * @date 2018-03-27 15:35
+
+     * @return
+     * @throws
+     */
+    public ServerResponse<String> getCity(HttpServletRequest request){
+        try {
+            String city =  GetCityUtil.getCity(request);
+            return ServerResponse.createBySuccess("获取成功",city);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ServerResponse.createByErrorMessage("获取失败");
+        }
+    }
+
+
+    /**
      * TODO: 通过城市到心知天气上面获取天气数据
      *
      * @return
@@ -542,7 +559,12 @@ public class UserService {
             String city = map.get("city").toString();
             try {
                 String url = WeatherUtil.generateGetDiaryWeatherURL(city, "", "c", "1", "1");
-                return ServerResponse.createBySuccess("请求成功",url);
+                DefaultHttpClient httpClient = new DefaultHttpClient();
+                HttpGet httpGet = new HttpGet(url);
+                ResponseHandler<String> responseHandler = new BasicResponseHandler();
+                String responseBody = httpClient.execute(httpGet, responseHandler);
+                JSONObject jsonObject =JSONObject.parseObject(responseBody);
+                return ServerResponse.createBySuccess("请求成功",jsonObject);
             } catch (Exception e) {
                 logger.error("获取天气url失败");
                 return ServerResponse.createByErrorMessage("查找失败");

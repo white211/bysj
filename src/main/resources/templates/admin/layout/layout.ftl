@@ -140,12 +140,17 @@
               </a>
               <ul class="treeview-menu">
                   <@shiro.hasPermission name="system:note:index">
-                      <li <#if active=="note">class="active"</#if>><a href="${ctx!}/admin/note/index"><i class="fa fa-pencil"></i> 笔记管理</a></li>
+                      <li <#if active=="note">class="active"</#if>><a href="${ctx!}/admin/note/index"><i class="fa fa-file-text-o"></i> 笔记管理</a></li>
                   </@shiro.hasPermission>
-                  <@shiro.hasPermission name="system:tran:index">
-                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/tran/index"><i class="fa fa-chain"></i> 转载审核</a></li>
+                  <@shiro.hasPermission name="system:shield:index">
+                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/shield/index"><i class="fa fa-minus-square"></i> 屏蔽词管理</a></li>
                   </@shiro.hasPermission>
-
+                  <@shiro.hasPermission name="system:home:index">
+                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/home/index"><i class="fa fa-tv"></i> 首页信息</a></li>
+                  </@shiro.hasPermission>
+                  <@shiro.hasPermission name="system:feedback:index">
+                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/feedback/index"><i class="fa fa-user-circle-o"></i> 用户反馈</a></li>
+                  </@shiro.hasPermission>
               </ul>
           </li>
 

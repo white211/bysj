@@ -19,10 +19,10 @@ import java.util.List;
 @Mapper
 public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
 
-    @Query(value = "select count(*) from note_book where cn_notebook_name=?1",nativeQuery = true)
-    int findNoteBookByName(String noteBookName);
+    @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_user_id =?2 and cn_notebook_type_id != 4",nativeQuery = true)
+    int findNoteBookByName(String noteBookName,int userId);
 
-    @Query(value = "select * from note_book where cn_user_id = ?1 ORDER BY cn_notebook_lastupdate_time DESC",nativeQuery = true)
+    @Query(value = "select * from note_book where cn_user_id = ?1 and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC ",nativeQuery = true)
     List<NoteBook> findNoteBookByUserId(int userId);
 
     @Transactional
@@ -30,7 +30,7 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
     @Query(value = "DELETE FROM note_book where cn_notebook_id =?1",nativeQuery = true)
     void  deleteByNoteBookId(int noteBookId);
 
-    @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_user_id =?3 and cn_notebook_id != ?2",nativeQuery = true)
+    @Query(value = "select count(*) from note_book where cn_notebook_name=?1 and cn_user_id =?3 and cn_notebook_id != ?2 and cn_notebook_type_id != 4",nativeQuery = true)
     int findNoteBookByNameAndUserId(String noteBookName,int noteBookId,int userId);
 
     @Transactional

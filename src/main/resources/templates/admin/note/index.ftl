@@ -11,7 +11,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "${ctx!}/admin/user/delete/" + id,
+                url: "${ctx!}/admin/note/delete/" + id,
                 success: function (res) {
                     layer.msg(res.message, {time: 2000}, function () {
                         location.reload();
@@ -26,12 +26,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        用户列表
+        笔记列表
         <small>一切从这里开始</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-cog"></i> 系统</a></li>
-        <li><a href="#"><i class="fa fa-list-ul"></i> 内容管理</a></li>
+        <li><a href="#"><i class="fa fa-database"></i>内容管理</a></li>
+        <li><a href="#"><i class="fa fa-list-ul"></i> 笔记管理</a></li>
         <li class="active"><i class="fa fa-table"></i> 笔记列表</li>
     </ol>
 </section>
@@ -41,68 +41,37 @@
     <!-- Default box -->
     <div class="box box-primary">
         <div class="box-header">
-        <@shiro.hasPermission name="system:user:add">
-            <a class="btn btn-sm btn-success" href="${ctx!}/admin/user/add">新增</a>
-        </@shiro.hasPermission>
         </div>
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
                     <th>ID</th>
-                    <th>账户名</th>
-                    <th>昵称</th>
-                    <th>性别</th>
-                    <th>电话</th>
-                    <th>邮箱</th>
-                    <th>住址</th>
-                    <th>删除状态</th>
-                    <th>锁定</th>
+                    <th>笔记标题</th>
+                    <th>笔记本</th>
+                    <th>标签</th>
+                    <th>作者</th>
+                    <th>类型</th>
+                    <th>阅读量</th>
                     <th>创建时间</th>
                     <th>操作</th>
                 </tr>
-                <#list pageInfo.content as userInfo>
+                <#list pageInfo.content as noteInfo>
                 <tr>
-                    <td>${userInfo.cn_user_id}</td>
-                    <td>${userInfo.cn_user_name}</td>
-                    <td>${userInfo.cn_user_nickname}</td>
+                    <td>${noteInfo.cn_note_id}</td>
+                    <td>${noteInfo.cn_note_title}</td>
+                    <td>${noteInfo.cn_notebook_name}</td>
+                    <td>${noteInfo.cn_notelabel_name}</td>
+                    <td>${noteInfo.cn_user_email}</td>
+                    <td>${noteInfo.cn_noteType_name}</td>
+                    <td>${noteInfo.cn_note_read}次</td>
+                    <td>${noteInfo.cn_note_creatTime}</td>
                     <td>
-                        <#if userInfo.cn_user_sex == 1>
-                            <span class="label label-info">男</span>
-                        <#elseif userInfo.cn_user_sex == 0>
-                            <span class="label label-danger">女</span>
-                        <#else >
-                            <span class="label label-warning">未知</span>
-                        </#if>
-                    </td>
-                    <td>${userInfo.cn_user_telephone}</td>
-                    <td>${userInfo.cn_user_email}</td>
-                    <td>${userInfo.cn_user_address}</td>
-                    <td>
-                        <#if userInfo.cn_user_deleteStatus == 1>
-                            <span class="label label-danger">已删除</span>
-                        <#else>
-                            <span class="label label-info">未删除</span>
-                        </#if>
-                    </td>
-                    <td>
-                        <#if userInfo.cn_user_locked == 1>
-                            <span class="label label-danger">已锁定</span>
-                        <#else>
-                            <span class="label label-info">未锁定</span>
-                        </#if>
-
-                    </td>
-                    <td>${userInfo.cn_user_createTime}</td>
-                    <td>
-                    <@shiro.hasPermission name="system:user:edit">
-                        <a class="btn btn-sm btn-primary" href="${ctx!}/admin/user/edit/${userInfo.cn_user_id}">编辑</a>
-                    </@shiro.hasPermission>
-                    <@shiro.hasPermission name="system:user:grant">
-                        <a class="btn btn-sm btn-warning" href="${ctx!}/admin/user/grant/${userInfo.cn_user_id}">分配角色</a>
-                    </@shiro.hasPermission>
-                    <@shiro.hasPermission name="system:user:deleteBatch">
-                        <button class="btn btn-sm btn-danger" onclick="del(${userInfo.cn_user_id})">删除</button>
-                    </@shiro.hasPermission>
+                        <@shiro.hasPermission name="system:note:see">
+                            <a class="btn btn-sm btn-primary" href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>
+                        </@shiro.hasPermission>
+                        <@shiro.hasPermission name="system:note:deleteBatch">
+                            <button class="btn btn-sm btn-danger" onclick="del(${noteInfo.cn_note_id})">删除</button>
+                        </@shiro.hasPermission>
                     </td>
                 </tr>
                 </#list>
@@ -110,7 +79,7 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer clearfix">
-            <@macro.page pageInfo=pageInfo url="${ctx!}/admin/user/index?" />
+            <@macro.page pageInfo=pageInfo url="${ctx!}/admin/note/index?" />
         </div>
     </div>
     <!-- /.box -->

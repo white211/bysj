@@ -1,0 +1,308 @@
+2018-03-31 21:07:56.464 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 12752 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-03-31 21:07:56.510 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-31 21:07:56.511 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-03-31 21:07:59.301 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-03-31 21:08:07.950 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-03-31 21:08:07.953 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-03-31 21:08:08.020 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-03-31 21:08:08.108 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-03-31 21:08:08.109 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-03-31 21:08:16.920 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-03-31 21:08:39.693 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_4_, resource0_.create_time as create_t2_4_, resource0_.description as descript3_4_, resource0_.icon as icon4_4_, resource0_.is_hide as is_hide5_4_, resource0_.level as level6_4_, resource0_.name as name7_4_, resource0_.parent_id as parent_13_4_, resource0_.sort as sort8_4_, resource0_.source_key as source_k9_4_, resource0_.source_url as source_10_4_, resource0_.type as type11_4_, resource0_.update_time as update_12_4_ from tb_resource resource0_
+2018-03-31 21:08:47.323 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-03-31 21:08:47.324 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-03-31 21:08:48.011 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-03-31 21:08:53.163 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-03-31 21:08:53.221 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-03-31 21:08:53.221 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-03-31 21:08:53.223 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-03-31 21:08:53.288 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-03-31 21:08:53.300 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-03-31 21:08:53.312 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-03-31 21:08:53.376 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-31 21:08:53.377 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-31 21:08:53.377 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-31 21:08:53.389 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-03-31 21:08:53.389 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-03-31 21:08:53.389 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-03-31 21:08:53.425 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-03-31 21:08:53.426 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-03-31 21:08:53.432 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-31 21:08:53.440 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-03-31 21:08:53.441 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-03-31 21:08:53.502 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-03-31 21:08:53.503 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-03-31 21:08:53.504 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-03-31 21:08:53.505 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-03-31 21:08:53.505 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-03-31 21:08:53.521 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-03-31 21:08:53.523 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-03-31 21:08:53.523 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-03-31 21:08:53.524 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-03-31 21:08:53.525 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-03-31 21:08:53.525 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-03-31 21:08:53.526 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-03-31 21:08:53.526 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-03-31 21:08:53.533 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-03-31 21:08:53.533 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-03-31 21:08:53.533 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-03-31 21:08:57.263 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-03-31 21:08:57.353 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-03-31 21:08:57.773 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-03-31 21:08:59.901 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-31 21:09:00.356 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-03-31 21:09:00.386 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-03-31 21:09:00.904 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-03-31 21:09:00.966 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 66.835 seconds (JVM running for 85.778)
+2018-03-31 21:09:00.966 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-03-31 21:10:08.868 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-31 21:10:09.081 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:10:09.081 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:10:09.082 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-03-31 21:10:09.082 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_last_update_time DESC 
+2018-03-31 21:10:09.081 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_user_id =? and cn_note_type_id != 4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:10:09.088 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-31 21:10:09.171 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.173 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.173 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.179 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.179 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.212 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.212 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.213 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.214 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.214 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.216 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.217 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.218 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.218 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.220 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.220 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.222 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.222 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.224 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.224 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.227 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.227 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.229 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.229 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.231 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.231 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.232 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.232 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.327 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_notebook_lastupdate_time DESC
+2018-03-31 21:10:09.334 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-03-31 21:10:09.338 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:10:09.339 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_last_update_time DESC 
+2018-03-31 21:10:09.354 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.357 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.357 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.359 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.359 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.361 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.361 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.362 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:10:09.362 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.364 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.366 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.368 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.370 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.371 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:09.373 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:10:09.374 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:10:11.591 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://api.seniverse.com:443
+2018-03-31 21:10:11.629 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to api.seniverse.com:443
+2018-03-31 21:10:12.317 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2018-03-31 21:10:12.319 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-03-31 21:10:12.319 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-03-31 21:10:12.320 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-03-31 21:10:12.320 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-03-31 21:10:12.320 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /v3/weather/now.json?ts=1522501811326&ttl=30&uid=U70D845775&sig=p3vboZeFSoaoe75BG0OLy7R8hYc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:10:12.321 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "GET /v3/weather/now.json?ts=1522501811326&ttl=30&uid=U70D845775&sig=p3vboZeFSoaoe75BG0OLy7R8hYc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1[\r][\n]"
+2018-03-31 21:10:12.322 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "Host: api.seniverse.com[\r][\n]"
+2018-03-31 21:10:12.322 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-03-31 21:10:12.322 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+2018-03-31 21:10:12.322 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2018-03-31 21:10:12.322 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> GET /v3/weather/now.json?ts=1522501811326&ttl=30&uid=U70D845775&sig=p3vboZeFSoaoe75BG0OLy7R8hYc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:10:12.323 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> Host: api.seniverse.com
+2018-03-31 21:10:12.323 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2018-03-31 21:10:12.323 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+2018-03-31 21:10:12.400 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Date: Sat, 31 Mar 2018 13:10:12 GMT[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Content-Length: 263[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+2018-03-31 21:10:12.402 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Date: Sat, 31 Mar 2018 13:10:12 GMT
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Content-Length: 263
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Connection: keep-alive
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Pragma: no-cache
+2018-03-31 21:10:12.403 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Expires: -1
+2018-03-31 21:10:12.408 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-03-31 21:10:12.417 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "{"results":[{"location":{"id":"WS0E9D8WN298","name":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e]","country":"CN","path":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe4][0xb8][0x9c],[0xe4][0xb8][0xad][0xe5][0x9b][0xbd]","timezone":"Asia/Shanghai","timezone_offset":"+08:00"},"now":{"text":"[0xe6][0x99][0xb4]","code":"1","temperature":"22"},"last_update":"2018-03-31T20:20:00+08:00"}]}"
+2018-03-31 21:10:12.418 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5c5bc17d
+2018-03-31 21:10:12.418 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-03-31 21:10:46.701 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:30108<->116.62.81.138:443 closed
+2018-03-31 21:20:39.893 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_last_update_time DESC 
+2018-03-31 21:20:39.893 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:20:39.897 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:20:39.897 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.899 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:20:39.900 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:20:39.900 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:20:39.901 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.904 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:20:39.904 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:20:39.906 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.907 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:20:39.909 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.911 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:20:39.912 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.914 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:20:39.915 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:20:39.916 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:27.800 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://api.seniverse.com:443
+2018-03-31 21:43:27.817 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to api.seniverse.com:443
+2018-03-31 21:43:28.082 [http-nio-8080-exec-1] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /v3/weather/now.json?ts=1522503807788&ttl=30&uid=U70D845775&sig=6Gq3S1Xug5A30Db1FtdKfOkyadc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  >> "GET /v3/weather/now.json?ts=1522503807788&ttl=30&uid=U70D845775&sig=6Gq3S1Xug5A30Db1FtdKfOkyadc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1[\r][\n]"
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  >> "Host: api.seniverse.com[\r][\n]"
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - >> GET /v3/weather/now.json?ts=1522503807788&ttl=30&uid=U70D845775&sig=6Gq3S1Xug5A30Db1FtdKfOkyadc%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - >> Host: api.seniverse.com
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2018-03-31 21:43:28.083 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+2018-03-31 21:43:28.157 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Date: Sat, 31 Mar 2018 13:43:28 GMT[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Content-Length: 272[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+2018-03-31 21:43:28.158 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Date: Sat, 31 Mar 2018 13:43:28 GMT
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Content-Length: 272
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Connection: keep-alive
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Pragma: no-cache
+2018-03-31 21:43:28.159 [http-nio-8080-exec-1] DEBUG org.apache.http.headers - << Expires: -1
+2018-03-31 21:43:28.160 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-03-31 21:43:28.160 [http-nio-8080-exec-1] DEBUG org.apache.http.wire -  << "{"results":[{"location":{"id":"WS0E9D8WN298","name":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e]","country":"CN","path":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe4][0xb8][0x9c],[0xe4][0xb8][0xad][0xe5][0x9b][0xbd]","timezone":"Asia/Shanghai","timezone_offset":"+08:00"},"now":{"text":"[0xe6][0x99][0xb4][0xe9][0x97][0xb4][0xe5][0xa4][0x9a][0xe4][0xba][0x91]","code":"6","temperature":"21"},"last_update":"2018-03-31T21:20:00+08:00"}]}"
+2018-03-31 21:43:28.160 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@45e03812
+2018-03-31 21:43:28.160 [http-nio-8080-exec-1] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-03-31 21:43:31.094 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://api.seniverse.com:443
+2018-03-31 21:43:31.094 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to api.seniverse.com:443
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /v3/weather/now.json?ts=1522503811088&ttl=30&uid=U70D845775&sig=jQQzXu5rOovhTKikJrwcD%2Bj6KEQ%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:43:31.377 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "GET /v3/weather/now.json?ts=1522503811088&ttl=30&uid=U70D845775&sig=jQQzXu5rOovhTKikJrwcD%2Bj6KEQ%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1[\r][\n]"
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "Host: api.seniverse.com[\r][\n]"
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> GET /v3/weather/now.json?ts=1522503811088&ttl=30&uid=U70D845775&sig=jQQzXu5rOovhTKikJrwcD%2Bj6KEQ%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> Host: api.seniverse.com
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2018-03-31 21:43:31.378 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+2018-03-31 21:43:31.431 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Date: Sat, 31 Mar 2018 13:43:31 GMT[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Content-Length: 272[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Date: Sat, 31 Mar 2018 13:43:31 GMT
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Content-Length: 272
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Connection: keep-alive
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Pragma: no-cache
+2018-03-31 21:43:31.432 [http-nio-8080-exec-8] DEBUG org.apache.http.headers - << Expires: -1
+2018-03-31 21:43:31.433 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-03-31 21:43:31.433 [http-nio-8080-exec-8] DEBUG org.apache.http.wire -  << "{"results":[{"location":{"id":"WS0E9D8WN298","name":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e]","country":"CN","path":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe4][0xb8][0x9c],[0xe4][0xb8][0xad][0xe5][0x9b][0xbd]","timezone":"Asia/Shanghai","timezone_offset":"+08:00"},"now":{"text":"[0xe6][0x99][0xb4][0xe9][0x97][0xb4][0xe5][0xa4][0x9a][0xe4][0xba][0x91]","code":"6","temperature":"21"},"last_update":"2018-03-31T21:20:00+08:00"}]}"
+2018-03-31 21:43:31.433 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1269244a
+2018-03-31 21:43:31.433 [http-nio-8080-exec-8] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-03-31 21:43:32.502 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:36045<->116.62.81.138:443 closed
+2018-03-31 21:43:32.502 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:36046<->116.62.81.138:443 closed
+2018-03-31 21:43:35.179 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_last_update_time DESC 
+2018-03-31 21:43:35.180 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_lastupdate_time DESC 
+2018-03-31 21:43:35.189 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:43:35.190 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:43:35.191 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.192 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:43:35.194 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-03-31 21:43:35.194 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:35.204 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.209 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:35.210 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.212 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:35.213 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.215 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:35.217 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.218 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 21:43:35.220 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ?
+2018-03-31 21:43:35.221 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-03-31 23:17:54.057 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://api.seniverse.com:443
+2018-03-31 23:17:54.071 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to api.seniverse.com:443
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-03-31 23:17:54.335 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /v3/weather/now.json?ts=1522509474037&ttl=30&uid=U70D845775&sig=dVXPKghFT6kz8EAoepyZgLFZr4w%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  >> "GET /v3/weather/now.json?ts=1522509474037&ttl=30&uid=U70D845775&sig=dVXPKghFT6kz8EAoepyZgLFZr4w%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1[\r][\n]"
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  >> "Host: api.seniverse.com[\r][\n]"
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - >> GET /v3/weather/now.json?ts=1522509474037&ttl=30&uid=U70D845775&sig=dVXPKghFT6kz8EAoepyZgLFZr4w%3D&location=guangzhou&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - >> Host: api.seniverse.com
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2018-03-31 23:17:54.336 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+2018-03-31 23:17:54.649 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-03-31 23:17:54.649 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Date: Sat, 31 Mar 2018 15:17:54 GMT[\r][\n]"
+2018-03-31 23:17:54.649 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-03-31 23:17:54.649 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Content-Length: 272[\r][\n]"
+2018-03-31 23:17:54.649 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Date: Sat, 31 Mar 2018 15:17:54 GMT
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Content-Length: 272
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Connection: keep-alive
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Pragma: no-cache
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.headers - << Expires: -1
+2018-03-31 23:17:54.650 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-03-31 23:17:54.651 [http-nio-8080-exec-9] DEBUG org.apache.http.wire -  << "{"results":[{"location":{"id":"WS0E9D8WN298","name":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e]","country":"CN","path":"[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e],[0xe5][0xb9][0xbf][0xe4][0xb8][0x9c],[0xe4][0xb8][0xad][0xe5][0x9b][0xbd]","timezone":"Asia/Shanghai","timezone_offset":"+08:00"},"now":{"text":"[0xe6][0x99][0xb4][0xe9][0x97][0xb4][0xe5][0xa4][0x9a][0xe4][0xba][0x91]","code":"6","temperature":"20"},"last_update":"2018-03-31T22:55:00+08:00"}]}"
+2018-03-31 23:17:54.651 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@723d1182
+2018-03-31 23:17:54.651 [http-nio-8080-exec-9] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-03-31 23:18:07.345 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:42166<->116.62.81.138:443 closed

@@ -54,8 +54,9 @@ public class NoteBookServiceImpl implements NoteBookService {
         } else if (StringUtils.isBlank(map.get("noteBookName").toString())) {
             return ServerResponse.createByErrorMessage("笔记本名称不能为空");
         } else {
+            int userId = Integer.parseInt(map.get("userId").toString());
             try{
-                int count = noteBookDao.findNoteBookByName(map.get("noteBookName").toString());
+                int count = noteBookDao.findNoteBookByName(map.get("noteBookName").toString(),userId);
                 if (count > 0) {
                     return ServerResponse.createByErrorMessage("该笔记本已经存在，请重新起个名字");
                 } else {
@@ -63,7 +64,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteBook.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
                     noteBook.setCn_notebook_name(map.get("noteBookName").toString());
                     noteBook.setCn_notebook_createTime(new Date());
-                    noteBook.setCn_notebook_lastupdateTime(new Date());
+                    noteBook.setCn_notebook_updateTime(new Date());
                     noteBook.setCn_notebook_type_id(1);
                     noteBookDao.save(noteBook);
                     return ServerResponse.createBySuccessMessags("创建成功");
@@ -101,7 +102,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteListVo.setCn_notebook_id(notebooklist.getCn_notebook_id());
                     noteListVo.setCn_notebook_name(notebooklist.getCn_notebook_name());
                     noteListVo.setCn_notebook_createTime(notebooklist.getCn_notebook_createTime());
-                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_lastupdateTime());
+                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_updateTime());
                     noteListVo.setCn_notebook_label_id(notebooklist.getCn_notebook_label_id());
                     noteListVo.setCn_notebook_type_id(notebooklist.getCn_notebook_type_id());
                     List<Note> notelist = noteDao.findNoteByNoteBookId(notebooklist.getCn_notebook_id());
@@ -128,6 +129,7 @@ public class NoteBookServiceImpl implements NoteBookService {
      * @author white
      * @date 2018-03-17 13:19
      */
+    @Override
     public ServerResponse deleteByNoteBookId(Map<String, Object> map) {
         List<String> list = Arrays.asList("noteBookId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -256,7 +258,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteListVo.setCn_notebook_id(notebooklist.getCn_notebook_id());
                     noteListVo.setCn_notebook_name(notebooklist.getCn_notebook_name());
                     noteListVo.setCn_notebook_createTime(notebooklist.getCn_notebook_createTime());
-                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_lastupdateTime());
+                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_updateTime());
                     noteListVo.setCn_notebook_label_id(notebooklist.getCn_notebook_label_id());
                     noteListVo.setCn_notebook_type_id(notebooklist.getCn_notebook_type_id());
                     List<Note> notelist = noteDao.findNoteByNoteBookId(notebooklist.getCn_notebook_id());
@@ -282,6 +284,7 @@ public class NoteBookServiceImpl implements NoteBookService {
      * @author white
      * @date 2018-03-23 13:02
      */
+    @Override
     public ServerResponse<List<NoteBook>> findNoteBookByTypeId(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId", "noteBookTypeId");
         if (ValidatorUtil.validator(map, list).size() > 0) {

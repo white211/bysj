@@ -1,9 +1,11 @@
 package cn.white.bysj.vo;
 
+import cn.white.bysj.note.Note;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Create by @author white
@@ -22,6 +24,7 @@ public class LabelListVo {
     private Date cn_label_last_updateTime=null;//最后更新时间
     private Integer cn_user_id=null;//标签创建者id
 
+    private List<Note> noteList;//笔记数据
     private Integer noteCount;//某一标签下的笔记条数（type=1）
     private String label_first_font;//标签的首字母
 

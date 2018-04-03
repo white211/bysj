@@ -6,22 +6,14 @@ import cn.white.bysj.utils.ComponentHelper;
 import cn.white.bysj.utils.Cors;
 import cn.white.bysj.utils.QiNiu.QiniuService;
 import cn.white.bysj.utils.UUIDutils;
-import cn.white.bysj.utils.WeatherUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
-import java.security.SignatureException;
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
 /**
  * Create by @author white
@@ -159,6 +151,15 @@ public class UserController extends Cors  {
        Map<String,Object> map = ComponentHelper.requestToMap(request);
        return userService.weatherJson(map);
     }
+
+    //获取当前所在城市
+    @RequestMapping(value = "getCity.do")
+    @ResponseBody
+    public ServerResponse getCity(HttpServletRequest request) {
+        return userService.getCity(request);
+    }
+
+
 
 }
 

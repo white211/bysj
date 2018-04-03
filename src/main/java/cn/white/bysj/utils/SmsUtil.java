@@ -1,14 +1,10 @@
 package cn.white.bysj.utils;
 
 import cn.white.bysj.commons.Constant;
-
-//import com.sun.mail.smtp.DigestMD5;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

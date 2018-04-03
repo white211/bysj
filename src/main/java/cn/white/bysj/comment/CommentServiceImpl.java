@@ -36,16 +36,16 @@ public class CommentServiceImpl implements CommentService {
     /**
      * TODO: 添加评论
      *
-     * @param "userId,noteId,commentContent,userEmail,userAvatar,userNickName"
+     * @param "userId,noteId,commentContent"
      * @return
      * @throws
      * @author white
      * @date 2018-03-21 13:39
      */
     public ServerResponse newComment(Map<String, Object> map) {
-        List<String> list = Arrays.asList("userId", "noteId", "commentContent", "userEmail", "userAvatar", "userNickName");
+        List<String> list = Arrays.asList("userId", "noteId", "commentContent");
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数，包括userId,noteId,commentContent，userEmail，userAvatar，userNickName");
+            return ServerResponse.createByErrorMessage("缺少参数，包括userId,noteId,commentContent");
         }
 
         if (StringUtils.isBlank(map.get("userId").toString())) {
@@ -54,8 +54,6 @@ public class CommentServiceImpl implements CommentService {
             return ServerResponse.createByErrorMessage("笔记id不能为空");
         } else if (StringUtils.isBlank(map.get("commentContent").toString())) {
             return ServerResponse.createByErrorMessage("评论内容不能为空");
-        } else if (StringUtils.isBlank(map.get("userEmail").toString())) {
-            return ServerResponse.createByErrorMessage("评论人邮箱不能为空");
         } else {
             try {
                 Comment comment = new Comment();

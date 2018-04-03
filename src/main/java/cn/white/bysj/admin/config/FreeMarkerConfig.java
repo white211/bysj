@@ -12,7 +12,8 @@ public class FreeMarkerConfig {
     @Autowired
     private freemarker.template.Configuration configuration;
 
-    @PostConstruct
+
+    @PostConstruct//注解之后给方法类似于init(),在构造方法之后与init之前运行，只运行一次
     public void setSharedVariable() {
     	try {
 			configuration.setSharedVariable("shiro", new ShiroTags());

@@ -16,4 +16,8 @@ public interface IUserDao extends IBaseDao<User, Integer> {
 	@Query(value = "select * from user where cn_user_nickname =?1 ORDER BY ?#{#pageable}",nativeQuery = true)
 	Page<User> findAllByCn_user_nicknameContaining(String searchText, Pageable pageable);
 
+    @Query(value = "select cn_user_email from user where cn_user_id = ?1",nativeQuery = true)
+	String findEmailById(int userId);
+
+
 }

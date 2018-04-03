@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface LabelDao extends JpaRepository<Label,Integer> {
 
-    @Query(value = "select * from label where cn_user_id=?1 ORDER BY cn_label_last_update_time DESC ",nativeQuery = true)
+    @Query(value = "select * from label where cn_user_id=?1 ORDER BY cn_label_update_time DESC ",nativeQuery = true)
     List<Label> findLabelByUserId(int userId);
 
     @Query(value = "select count(*) from label where cn_label_name =?1 AND cn_user_id=?2",nativeQuery = true)

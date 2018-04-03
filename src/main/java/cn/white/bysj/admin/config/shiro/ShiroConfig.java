@@ -46,6 +46,7 @@ public class ShiroConfig {
     @ConditionalOnMissingBean
     public DefaultSecurityManager securityManager() {
         DefaultSecurityManager sm = new DefaultWebSecurityManager();
+//        sm.setRealm(realm());
         sm.setCacheManager(cacheManager());
         return sm;
     }
