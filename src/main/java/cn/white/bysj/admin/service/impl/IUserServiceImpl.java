@@ -10,6 +10,7 @@ import cn.white.bysj.admin.service.IRoleService;
 import cn.white.bysj.admin.service.IUserService;
 import cn.white.bysj.admin.service.support.impl.BaseServiceImpl;
 import cn.white.bysj.user.User;
+import cn.white.bysj.utils.MD5;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -51,7 +53,7 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 
 	@Override
 	@Transactional
-	public void saveOrUpdate(User user) {
+	public void saveOrUpdate(User user) throws NoSuchAlgorithmException {
 		if(user.getCn_user_id() != null){
 			User dbUser = find(user.getCn_user_id());
 			dbUser.setCn_user_nickname(user.getCn_user_nickname());
@@ -69,7 +71,7 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 			user.setCn_user_createTime(new Date());
 			user.setCn_user_updateTime(new Date());
 			user.setCn_user_deleteStatus(0);
-			user.setCn_user_password(MD5Utils.md5("111111"));
+			user.setCn_user_password(MD5.md5("111111"));
 			save(user);
 		}
 	}
@@ -109,7 +111,7 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 
 	
 	@Override
-	public void updatePwd(User user, String oldPassword, String password1, String password2) {
+	public void updatePwd(User user, String oldPassword, String password1, String password2) throws NoSuchAlgorithmException {
 		Assert.notNull(user, "用户不能为空");
 		Assert.notNull(oldPassword, "原始密码不能为空");
 		Assert.notNull(password1, "新密码不能为空");
@@ -118,9 +120,9 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 		User dbUser = userDao.findByCn_user_name(user.getCn_user_name());
 		Assert.notNull(dbUser, "用户不存在");
 		
-		Assert.isTrue(user.getCn_user_password().equals(MD5Utils.md5(oldPassword)), "原始密码不正确");;
+		Assert.isTrue(user.getCn_user_password().equals(MD5.md5(oldPassword)), "原始密码不正确");;
 		Assert.isTrue(password1.equals(password2), "两次密码不一致");
-		dbUser.setCn_user_password(MD5Utils.md5(password1));
+		dbUser.setCn_user_password(MD5.md5(password1));
 		userDao.saveAndFlush(dbUser);
 	}
 	

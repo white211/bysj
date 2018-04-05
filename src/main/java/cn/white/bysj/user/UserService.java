@@ -1,7 +1,6 @@
 package cn.white.bysj.user;
 
 
-import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.*;
 
@@ -27,6 +26,7 @@ import org.springframework.util.CollectionUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executor;
@@ -74,15 +74,10 @@ public class UserService {
         if (ValidatorUtil.validator(map, list).size() > 0) {
             return ServerResponse.createByErrorMessage("缺少参数,应该包括account，password");
         }
-
-        if (CollectionUtils.isEmpty(map)) {
-            return ServerResponse.createByErrorMessage("没有带数据");
-        }
-
-        if (StringUtils.isEmpty(map.get("account").toString())) {
+        if (StringUtils.isBlank(map.get("account").toString())) {
             return ServerResponse.createByErrorMessage("输入账户不能为空");
         }
-        if (StringUtils.isEmpty(map.get("password").toString())) {
+        if (StringUtils.isBlank(map.get("password").toString())) {
             return ServerResponse.createByErrorMessage("输入密码不能为空");
         }
         try {
@@ -90,14 +85,21 @@ public class UserService {
             if (user == null) {
                 return ServerResponse.createByErrorMessage("用户不存在或尚未激活");
             } else {
-                if (user.getCn_user_password().equals(map.get("password").toString())) {
-                    session.setAttribute(Constant.CURRENT_USER_ACCOUNT, map.get("account").toString());
-                    session.setAttribute(Constant.CURRENT_USER_ID, user.getCn_user_id().toString());
-                    session.setAttribute(Constant.CURRENT_USER, user);
-                    System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
-                    System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
-                    user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
-                    return ServerResponse.createBySuccess("登陆成功", user);
+                if (user.getCn_user_password().equals(MD5.md5(map.get("password").toString()))) {
+                    if (user.getCn_user_locked().equals(1)) {
+                        logger.error("登陆失败，该用户已经被锁定");
+                        return ServerResponse.createByErrorMessage("登陆失败，该用户已被锁定");
+                    } else {
+                        user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
+                        logger.info("登陆成功");
+                        return ServerResponse.createBySuccess("登陆成功", user);
+                    }
+//                    session.setAttribute(Constant.CURRENT_USER_ACCOUNT, map.get("account").toString());
+//                    session.setAttribute(Constant.CURRENT_USER_ID, user.getCn_user_id().toString());
+//                    session.setAttribute(Constant.CURRENT_USER, user);
+//                    System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
+//                    System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
+
                 } else {
                     return ServerResponse.createByErrorMessage("登陆密码错误");
                 }
@@ -106,7 +108,6 @@ public class UserService {
             logger.error("服务器出错");
             return ServerResponse.createByErrorMessage("服务器异常");
         }
-
 
     }
 
@@ -145,7 +146,7 @@ public class UserService {
                     "telephone,checKNum"));
         }
         //判断邮箱的正确性
-        if (!StringUtils.isEmpty(map.get("email").toString())) {
+        if (!StringUtils.isBlank(map.get("email").toString())) {
             if (userDao.selectUserByEmail(map.get("email").toString()) > 0) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱已经被注册"));
             }
@@ -156,45 +157,49 @@ public class UserService {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮箱不能为空"));
         }
         //判断密码的正确性
-        if (!StringUtils.isEmpty(map.get("password").toString())) {
+        if (!StringUtils.isBlank(map.get("password").toString())) {
             if (map.get("password").toString().length() < 6) {
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码长度不能小于6"));
             }
         } else {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("密码不能为空"));
         }
-        if (StringUtils.isEmpty(map.get("telephone").toString())) {
+        if (StringUtils.isBlank(map.get("telephone").toString())) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码不能为空"));
         } else if (map.get("telephone").toString().length() != 11) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("电话号码长度必须为11位"));
         }
         //判断验证码
-        if (StringUtils.isEmpty(map.get("checkNum").toString())) {
+        if (StringUtils.isBlank(map.get("checkNum").toString())) {
             return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码不能为空"));
         }
         User user = new User();
         user.setCn_user_actived_code(UUIDutils.getUUID());
         user.setCn_user_actived("0");
         user.setCn_user_email(map.get("email").toString());
-        System.out.println("service层发送邮件");
+
         try {
             if (redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
                 //发送邮件
-                System.out.println(redisService.get(map.get("telephone").toString()));
-                user.setCn_user_password(map.get("password").toString());
+                user.setCn_user_password(MD5.md5(map.get("password").toString()));
                 user.setCn_user_telephone(map.get("telephone").toString());
-                executor.execute(new EmailUtil(user.getCn_user_actived_code(), user.getCn_user_email(), javaMailSender, 1));
+                user.setCn_user_locked(0);
+                String content = "";
+                executor.execute(new EmailUtil(user.getCn_user_actived_code(), user.getCn_user_email(), javaMailSender, content,1));
                 userDao.save(user);
             } else {
                 System.out.println(redisService.get(map.get("telephone").toString()));
-                System.out.println("验证码错误");
+                logger.error("验证码错误");
                 return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码输入错误，请重新输入"));
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("邮件发送出现异常"));
+            logger.error("注册失败");
+            logger.error(e.getMessage());
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("注册失败"));
         }
-        System.out.println("注册成功");
+
+
+        logger.info("注册成功");
         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
         return new AsyncResult<ServerResponse<User>>(ServerResponse.createBySuccess("注册成功,请到邮箱激活", user));
     }
@@ -252,30 +257,32 @@ public class UserService {
      * @author white
      * @date 2018-03-19 13:33
      */
+
     public ServerResponse sendCheckNum(Map<String, Object> map) {
         HashMap<String, String> re = null;
         List<String> list = Arrays.asList("telephone");
         if (ValidatorUtil.validator(map, list).size() > 0) {
             return ServerResponse.createByErrorMessage("参数名出错，必须为telephone");
         }
-        if (StringUtils.isEmpty(map.get("telephone").toString())) {
+        if (StringUtils.isBlank(map.get("telephone").toString())) {
             return ServerResponse.createByErrorMessage("电话号码不能为空");
         } else {
             try {
-                re = SmsUtil.getCode(map.get("telephone").toString());
-                System.out.println(re);
+                String random = SmsUtil.getSms();
                 long timeout = 60;
+                redisService.set(map.get("telephone").toString(), random, timeout);
+//                throw  new MyException(401,"链接redis出错");
+                re = SmsUtil.getCode(map.get("telephone").toString(), random);
                 if (re.containsKey("code")) {
-                    redisService.set(map.get("telephone").toString(), re.get("code"), timeout);
-                    System.out.println(redisService.get(map.get("telephone").toString()));
                     return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
+                } else {
+                    return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error(e.getMessage());
                 return ServerResponse.createByErrorCodeMessage(-1, "服务器出现异常");
             }
         }
-        return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
     }
 
     /**
@@ -316,7 +323,7 @@ public class UserService {
     }
 
     /**
-     * TODO: 发送手机验证码
+     * TODO: 验证手机验证码
      *
      * @param "telephone" "checkNum"
      * @return
@@ -407,7 +414,7 @@ public class UserService {
                 if (map.get("oldPassword").toString().equals(map.get("newPassword").toString())) {
                     return ServerResponse.createByErrorMessage("新密码不能与旧密码相同");
                 } else {
-                    userDao.forgetResetPassword(map.get("newPassword").toString(), map.get("email").toString());
+                    userDao.forgetResetPassword(MD5.md5(map.get("newPassword").toString()), map.get("email").toString());
                     return ServerResponse.createBySuccessMessags("修改密码成功");
                 }
             } catch (Exception e) {
@@ -427,15 +434,30 @@ public class UserService {
      * @author white
      * @date 2018-03-19 13:36
      */
-    public ServerResponse<User> updateInfo(Map<String, Object> map, HttpSession session) {
-        User user = null;
-        if (StringUtils.isBlank(session.getAttribute(Constant.CURRENT_USER_ID).toString())) {
-            return ServerResponse.createByErrorMessage("未登录状态下不能进行修改");
-        } else {
-            user.setCn_user_id(Integer.parseInt(Constant.CURRENT_USER_ID));
-            user = userDao.save(user);
-            return ServerResponse.createBySuccess("修改个人信息成功", user);
+    public ServerResponse<User> updateInfo(Map<String, Object> map) {
+
+        List<String> list = Arrays.asList("userId", "nickname", "name", "birthday", "sex", "address");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括userId,nickname,name,birthday,sex,address");
+        } else if (StringUtils.isBlank(map.get("userId").toString())) {
+            return ServerResponse.createByErrorMessage("用户id不能为空");
         }
+        try {
+            int userId = Integer.parseInt(map.get("userId").toString());
+            String nickName = StringUtils.isBlank(map.get("nickname").toString()) ? "" : map.get("nickname").toString();
+            String name = StringUtils.isBlank(map.get("name").toString()) ? "" : map.get("name").toString();
+            String birthday = StringUtils.isBlank(map.get("birthday").toString()) ? "" : map.get("birthday").toString();
+            int sex = StringUtils.isBlank(map.get("name").toString()) ? 1 : Integer.parseInt(map.get("sex").toString());
+            String address = StringUtils.isBlank(map.get("address").toString()) ? "" : map.get("address").toString();
+            userDao.updateInfo(userId, name, nickName, birthday, sex, address);
+            User user = userDao.findOne(userId);
+            return ServerResponse.createBySuccess("保存成功", user);
+        } catch (Exception e) {
+            logger.error("保存失败");
+            e.printStackTrace();
+            return ServerResponse.createByErrorMessage("保存用户信息失败");
+        }
+
     }
 
     /**
@@ -484,11 +506,16 @@ public class UserService {
         } else if (StringUtils.isBlank(map.get("oldPassword").toString())) {
             return ServerResponse.createByErrorMessage("旧密码不能为空");
         } else {
-            String password = userDao.findPasswordByCn_user_email(map.get("email").toString());
-            if (!password.equals(map.get("oldPassword").toString())) {
-                return ServerResponse.createByErrorMessage("旧密码错误");
-            } else {
-                return ServerResponse.createBySuccessMessags("密码正确");
+            try {
+                String password = userDao.findPasswordByCn_user_email(map.get("email").toString());
+                if (!password.equals(MD5.md5(map.get("oldPassword").toString()))) {
+                    return ServerResponse.createByErrorMessage("旧密码错误");
+                } else {
+                    return ServerResponse.createBySuccessMessags("密码正确");
+                }
+            } catch (NoSuchAlgorithmException e) {
+                logger.error("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
             }
         }
     }
@@ -523,16 +550,16 @@ public class UserService {
 
     /**
      * TODO: 通过用户访问ip获取当前所在城市
-     * @author white
-     * @date 2018-03-27 15:35
-
+     *
      * @return
      * @throws
+     * @author white
+     * @date 2018-03-27 15:35
      */
-    public ServerResponse<String> getCity(HttpServletRequest request){
+    public ServerResponse<String> getCity(HttpServletRequest request) {
         try {
-            String city =  GetCityUtil.getCity(request);
-            return ServerResponse.createBySuccess("获取成功",city);
+            String city = GetCityUtil.getCity(request);
+            return ServerResponse.createBySuccess("获取成功", city);
         } catch (IOException e) {
             e.printStackTrace();
             return ServerResponse.createByErrorMessage("获取失败");
@@ -563,8 +590,8 @@ public class UserService {
                 HttpGet httpGet = new HttpGet(url);
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
                 String responseBody = httpClient.execute(httpGet, responseHandler);
-                JSONObject jsonObject =JSONObject.parseObject(responseBody);
-                return ServerResponse.createBySuccess("请求成功",jsonObject);
+                JSONObject jsonObject = JSONObject.parseObject(responseBody);
+                return ServerResponse.createBySuccess("请求成功", jsonObject);
             } catch (Exception e) {
                 logger.error("获取天气url失败");
                 return ServerResponse.createByErrorMessage("查找失败");

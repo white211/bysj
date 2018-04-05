@@ -7,6 +7,8 @@ import cn.white.bysj.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.security.NoSuchAlgorithmException;
+
 /**
  * <p>
  * 用户服务类
@@ -28,7 +30,7 @@ public interface IUserService extends IBaseService<User, Integer> {
 	 * 增加或者修改用户
 	 * @param user
 	 */
-	void saveOrUpdate(User user);
+	void saveOrUpdate(User user) throws NoSuchAlgorithmException;
 
 	/**
 	 * 给用户分配角色
@@ -52,6 +54,6 @@ public interface IUserService extends IBaseService<User, Integer> {
 	 * @param password1
 	 * @param password2
 	 */
-	void updatePwd(User user, String oldPassword, String password1, String password2);
+	void updatePwd(User user, String oldPassword, String password1, String password2) throws NoSuchAlgorithmException;
 
 }

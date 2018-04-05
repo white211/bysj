@@ -63,11 +63,11 @@
                                 <input id="password2" name="password2" class="form-control" type="password">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-8 col-sm-offset-3">
-                                <button class="btn btn-primary" type="submit">提交</button>
-                            </div>
-                        </div>
+                        <#--<div class="form-group">-->
+                            <#--<div class="col-sm-8 col-sm-offset-3">-->
+                                <#--<button class="btn btn-primary" type="submit">提交</button>-->
+                            <#--</div>-->
+                        <#--</div>-->
                     </div>
                     <div class="box-footer">
                         <button type="button" class="btn btn-default btn-back">返回</button>

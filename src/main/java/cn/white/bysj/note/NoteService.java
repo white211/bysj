@@ -35,4 +35,10 @@ public interface NoteService {
     //删除笔记通过笔记id
     ServerResponse deleteByNoteId(Map<String,Object> map);
 
+    //通过笔记本id查找笔记
+    ServerResponse findNoteByBookId(Map<String,Object> map);
+
+    //通过标签id查找笔记
+    ServerResponse findNoteByTagId(Map<String,Object> map);
+
 }

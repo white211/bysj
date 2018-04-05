@@ -50,7 +50,11 @@ public interface UserDao extends JpaRepository<User,Integer>{
     @Query(value = "update user set cn_user_avatar =?2 where cn_user_id = ?1",nativeQuery = true)
     void updateUserAvatar(int userId,String url);
 
-
+    //更新用户信息
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update user set cn_user_name =?2,cn_user_nickname=?3 , cn_user_birthday=?4 ,cn_user_sex=?5 , cn_user_address=?6 where cn_user_id = ?1",nativeQuery = true)
+    void updateInfo(int userId,String name,String nickname,String birthday,int sex,String address);
 }
 
 

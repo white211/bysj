@@ -131,6 +131,37 @@ public class NoteController extends Cors {
         }
     }
 
+
+    /**
+     * TODO: 通过笔记本id查找笔记
+     * @author white
+     * @date 2018-04-04 13:39
+
+     * @return
+     * @throws
+     */
+    @RequestMapping(value = "findNoteByBookId.do")
+    @ResponseBody
+    public ServerResponse findNoteByBookId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.findNoteByBookId(map);
+    }
+
+
+    /**
+     * TODO: 通过标签id查找笔记
+     * @author white
+     * @date 2018-04-04 14:56
+
+     * @return
+     * @throws
+     */
+    @RequestMapping(value = "findNoteByTagId.do")
+    @ResponseBody
+    public ServerResponse findNoteByTagId(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.findNoteByTagId(map);
+    }
 }
 
 

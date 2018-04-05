@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,7 +26,7 @@ public class RedisServiceImpl implements RedisService{
     //不设置过去时长
     private final static long NOT_EXPIRE =-1;
 
-
+   @Transactional
     public void set(String key,Object value,long expire){
         try {
             if (expire == NOT_EXPIRE){
@@ -38,6 +39,7 @@ public class RedisServiceImpl implements RedisService{
         }
     }
 
+    @Transactional
     public void set(String key, Object value) {
         set(key,value,DEFAULT_EXPIRE);
     }

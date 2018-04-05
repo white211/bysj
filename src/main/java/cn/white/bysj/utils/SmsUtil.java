@@ -21,8 +21,8 @@ import java.util.Random;
 
 //短信验证信息
 public class SmsUtil {
-    public static HashMap<String,String>  getCode(String telephone) {
-        String random = getSms();
+    public static HashMap<String,String>  getCode(String telephone,String random) {
+//        String random = getSms();
         String timeStamp = getTimestamp();
         String sig = getMD5(Constant.ACCOUNT_SID, Constant.AUTH_TOKEN, timeStamp);
 //        String tamp = "【不黑科技】注册验证码："+random+"，如非本人操作，请忽略此短信。";
@@ -67,7 +67,6 @@ public class SmsUtil {
         } else {
             map.put("respCode",respCode);
             map.put("respDesc",respDesc);
-//            map.put("code","123456");
             return map;
         }
     }
@@ -123,7 +122,7 @@ public class SmsUtil {
     }
     //测试
     public static void main(String[] args) {
-        HashMap<String,String> result = getCode("");
-        System.out.println(result);
+//        HashMap<String,String> result = getCode("");
+//        System.out.println(result);
     }
 }

@@ -1,10 +1,9 @@
-package cn.white.bysj.feedback;
+package cn.white.bysj.admin.vo;
 
-import cn.white.bysj.admin.entity.support.BaseEntity;
 import com.alibaba.fastjson.annotation.JSONField;
+import com.sun.tools.corba.se.idl.StringGen;
 import lombok.Data;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
@@ -12,12 +11,10 @@ import java.util.Date;
 /**
  * Create by @author white
  *
- * @date 2018-04-01 21:49
+ * @date 2018-04-05 11:35
  */
-@Entity
 @Data
-public class Feedback extends BaseEntity {
-
+public class FeedBackVo {
     //用户反馈id
     @Id
     @GeneratedValue
@@ -27,7 +24,7 @@ public class Feedback extends BaseEntity {
     private String cn_feedback_content=null;
 
     //反馈用户id
-    private Integer cn_user_id=null;
+    private String cn_user_email=null;
 
     //反馈创建时间
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
@@ -43,7 +40,7 @@ public class Feedback extends BaseEntity {
     private Integer cn_feedback_isReturn=null;
 
     //回复人id
-    private Integer cn_userReturn_id=null;
+    private String cn_userReturn_name=null;
 
 
 }

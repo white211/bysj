@@ -5,6 +5,7 @@ import cn.white.bysj.admin.entity.Resource;
 import cn.white.bysj.admin.entity.Role;
 import cn.white.bysj.user.User;
 import cn.white.bysj.admin.service.IUserService;
+import cn.white.bysj.utils.MD5;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.AllowAllCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -14,6 +15,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -74,8 +76,12 @@ public class MyRealm extends AuthorizingRealm {
 		}
 		String password = new String((char[]) credentials);
 		// 密码错误
-		if (!MD5Utils.md5(password).equals(user.getCn_user_password())) {
-			throw new IncorrectCredentialsException("账号或密码不正确");
+		try {
+			if (!MD5.md5(password).equals(user.getCn_user_password())) {
+                throw new IncorrectCredentialsException("账号或密码不正确");
+            }
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
 		}
 		// 账号锁定
 		if (user.getCn_user_locked() == 1) {

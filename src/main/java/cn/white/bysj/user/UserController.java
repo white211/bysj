@@ -100,7 +100,7 @@ public class UserController extends Cors  {
     @ResponseBody
     public ServerResponse updateInfo(HttpServletRequest request){
         Map<String,Object> map = ComponentHelper.requestToMap(request);
-        return userService.updateInfo(map,request.getSession());
+        return userService.updateInfo(map);
     }
 
     //验证旧密码
