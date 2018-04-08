@@ -1,8 +1,14 @@
 package cn.white.bysj.feedback;
 
+import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.utils.ComponentHelper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * Create by @author white
@@ -16,6 +22,11 @@ public class FeedbackController {
     @Autowired
     private FeedbackService feedbackService;
 
+    @PostMapping(value = "newFeedBack.do")
+    public ServerResponse newFeedBack(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return feedbackService.newFeedBack(map);
+    }
 
 
 }

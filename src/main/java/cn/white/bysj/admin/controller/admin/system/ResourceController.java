@@ -7,6 +7,7 @@ import cn.white.bysj.admin.service.IResourceService;
 import cn.white.bysj.admin.vo.ZtreeView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,7 +32,8 @@ public class ResourceController extends BaseController {
 
 	@RequestMapping("/index")
 	public String index(ModelMap map) {
-		Page<Resource> page = resourceService.findAll(getPageRequest());
+		Sort sort = new Sort(Sort.Direction.DESC,"createTime");
+		Page<Resource> page = resourceService.findAll(getPageRequest(sort));
 		map.put("pageInfo", page);
 		return "admin/resource/index";
 	}

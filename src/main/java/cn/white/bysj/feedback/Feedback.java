@@ -31,7 +31,7 @@ public class Feedback extends BaseEntity {
 
     //反馈创建时间
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date cn_feedback_createTime=null;
+    private Date cnFeedbackCreateTime=null;
 
     //回复内容
     private String cn_feedback_returnContent=null;

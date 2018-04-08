@@ -39,12 +39,12 @@ public class IShieldServiceImpl extends BaseServiceImpl<Shield,Integer> implemen
             ShieldVo sheildVo = new ShieldVo();
             sheildVo.setCn_shield_id(shield.getCn_shield_id());
             sheildVo.setCn_shield_content(shield.getCn_shield_content());
-            sheildVo.setCn_shield_createTime(shield.getCn_shield_createTime());
+            sheildVo.setCn_shield_createTime(shield.getCnShieldCreateTime());
             String email = iUserDao.findEmailById(shield.getCn_user_id());
             sheildVo.setCn_user_name(email);
             sheildVolist.add(sheildVo);
         }
-        Page<ShieldVo> sheildVos = new PageImpl<ShieldVo>(sheildVolist);
+        Page<ShieldVo> sheildVos = new PageImpl<ShieldVo>(sheildVolist,pageable,sheilds.getTotalElements());
         return sheildVos;
     }
 
@@ -57,7 +57,7 @@ public class IShieldServiceImpl extends BaseServiceImpl<Shield,Integer> implemen
             dbshield.setCn_user_id(shield.getCn_user_id());
             update(dbshield);
         }else{
-            shield.setCn_shield_createTime(new Date());
+            shield.setCnShieldCreateTime(new Date());
             save(shield);
         }
     }

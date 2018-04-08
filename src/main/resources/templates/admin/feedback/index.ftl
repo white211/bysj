@@ -22,11 +22,11 @@
     }
 </script>
 </#assign>
-<@layout title="反馈信息管理" active="feedback">
+<@layout title="反馈信息管理" active="feedbackVo">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        用户列表
+        用户反馈列表
         <small>一切从这里开始</small>
     </h1>
     <ol class="breadcrumb">
@@ -48,7 +48,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>反馈者</th>
                     <th>反馈类型</th>
                     <th>反馈时间</th>
@@ -57,7 +57,7 @@
                 </tr>
                 <#list pageInfo.content as feedbackInfo>
                     <tr>
-                        <td>${feedbackInfo.cn_feedback_id}</td>
+                        <td>${feedbackInfo_index+1}</td>
                         <td>${feedbackInfo.cn_user_email}</td>
                         <td>${feedbackInfo.cn_feedback_type}</td>
                         <td>${feedbackInfo.cn_feedback_createTime}</td>

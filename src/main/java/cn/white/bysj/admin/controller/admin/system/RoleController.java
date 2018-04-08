@@ -6,6 +6,7 @@ import cn.white.bysj.admin.entity.Role;
 import cn.white.bysj.admin.service.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,8 @@ public class RoleController extends BaseController {
 
     @RequestMapping(value = {"/index"})
     public String index(ModelMap modelMap) {
-        Page<Role> page = roleService.findAll(getPageRequest());
+        Sort sort =new Sort(Sort.Direction.DESC,"createTime");
+        Page<Role> page = roleService.findAll(getPageRequest(sort));
         modelMap.put("pageInfo", page);
         return "admin/role/index";
     }

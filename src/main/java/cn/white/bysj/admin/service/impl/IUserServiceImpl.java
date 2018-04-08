@@ -64,12 +64,12 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 			dbUser.setCn_user_address(user.getCn_user_address());
 			dbUser.setCn_user_locked(user.getCn_user_locked());
 			dbUser.setCn_user_description(user.getCn_user_description());
-			dbUser.setCn_user_updateTime(new Date());
+			dbUser.setCnUserUpdateTime(new Date());
 			dbUser.setCn_user_avatar(user.getCn_user_avatar());
 			update(dbUser);
 		}else{
-			user.setCn_user_createTime(new Date());
-			user.setCn_user_updateTime(new Date());
+			user.setCnUserCreateTime(new Date());
+			user.setCnUserUpdateTime(new Date());
 			user.setCn_user_deleteStatus(0);
 			user.setCn_user_password(MD5.md5("111111"));
 			save(user);

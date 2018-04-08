@@ -10,6 +10,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +33,8 @@ public class IUserController extends BaseController {
 
     @RequestMapping(value = {"/index"})
     public String index(ModelMap modelMap) {
-        Page<User> page = userService.findAll(getPageRequest());
+        Sort sort = new Sort(Sort.Direction.DESC,"cnUserCreateTime");
+        Page<User> page = userService.findAll(getPageRequest(sort));
         modelMap.put("pageInfo", page);
         return "admin/user/index";
     }

@@ -30,7 +30,7 @@ public class Shield extends BaseEntity{
 
     //屏蔽词创建时间
     @JSONField(format = "yyyy-MM-dd")
-    private Date cn_shield_createTime=null;
+    private Date cnShieldCreateTime=null;
 
     //创建者id
     private Integer cn_user_id=null;

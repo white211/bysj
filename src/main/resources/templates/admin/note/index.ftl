@@ -22,7 +22,7 @@
     }
 </script>
 </#assign>
-<@layout title="笔记管理" active="note">
+<@layout title="笔记管理" active="noteVo">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -45,7 +45,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>笔记标题</th>
                     <th>笔记本</th>
                     <th>标签</th>
@@ -57,14 +57,15 @@
                 </tr>
                 <#list pageInfo.content as noteInfo>
                 <tr>
-                    <td>${noteInfo.cn_note_id}</td>
+                    <#--<td>${noteInfo.cn_note_id}</td>-->
+                    <td>${(pageInfo.number)*10+(noteInfo_index + 1)}</td>
                     <td>${noteInfo.cn_note_title}</td>
                     <td>${noteInfo.cn_notebook_name}</td>
                     <td>${noteInfo.cn_notelabel_name}</td>
                     <td>${noteInfo.cn_user_email}</td>
                     <td>${noteInfo.cn_noteType_name}</td>
                     <td>${noteInfo.cn_note_read}次</td>
-                    <td>${noteInfo.cn_note_creatTime}</td>
+                    <td>${noteInfo.cn_note_createTime}</td>
                     <td>
                         <@shiro.hasPermission name="system:note:see">
                             <a class="btn btn-sm btn-primary" href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>

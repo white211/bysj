@@ -48,7 +48,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>角色名称</th>
                     <th>角色key</th>
                     <th>角色状态</th>
@@ -59,7 +59,8 @@
                 </tr>
                 <#list pageInfo.content as roleInfo>
                 <tr>
-					<td>${roleInfo.id}</td>
+                    <td>${(pageInfo.number)*10+(roleInfo_index+1)}</td>
+					<#--<td>${roleInfo.id}</td>-->
 					<td>${roleInfo.name}</td>
 					<td>${roleInfo.roleKey}</td>
                     <td>

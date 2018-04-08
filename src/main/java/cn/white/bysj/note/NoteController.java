@@ -1,5 +1,9 @@
 package cn.white.bysj.note;
 
+import cn.white.bysj.admin.controller.BaseController;
+import cn.white.bysj.admin.dao.INoteDao;
+import cn.white.bysj.admin.service.INoteService;
+import cn.white.bysj.admin.vo.NoteVo;
 import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.ComponentHelper;
@@ -7,6 +11,10 @@ import cn.white.bysj.utils.Cors;
 import cn.white.bysj.utils.QiNiu.QiniuService;
 import cn.white.bysj.utils.UUIDutils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -30,7 +38,9 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/note")
-public class NoteController extends Cors {
+public class NoteController extends BaseController
+//        extends Cors
+{
 
     @Autowired
     private NoteServiceImpl noteService;
@@ -38,12 +48,46 @@ public class NoteController extends Cors {
     @Autowired
     private QiniuService qiniuService;
 
+
+    @Autowired
+    private INoteService iNoteService;
+
+    @Autowired
+    private INoteDao iNoteDao;
+
     @RequestMapping(value = "noteList.do")
     @ResponseBody
     public ServerResponse noteList(HttpServletRequest request) {
         Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.noteList(map);
     }
+
+    //测试用
+    @RequestMapping(value = "page1.do")
+    @ResponseBody
+    public Page<NoteVo> getPage(){
+        Page<Note> page= iNoteDao.findAll(getPageRequest());
+        List<NoteVo> noteVos = new ArrayList<>();
+        for (Note note : page){
+            NoteVo noteVo = new NoteVo();
+            noteVo.setCn_note_id(note.getCn_note_id());
+            noteVo.setCn_note_content(note.getCn_note_content());
+            noteVos.add(noteVo);
+        }
+        Pageable pageable = getPageRequest();
+        Page<NoteVo> page1 = new PageImpl<NoteVo>(noteVos,pageable,page.getTotalElements());
+        return page1;
+    }
+
+    //测试用
+    @RequestMapping(value = "page2.do")
+    @ResponseBody
+    public Page<Note> getPage2(){
+        Page<Note> page= iNoteDao.findAll(getPageRequest());
+        return page;
+    }
+
+
 
     @RequestMapping(value = "newNote.do")
     @ResponseBody
@@ -89,24 +133,26 @@ public class NoteController extends Cors {
 
     @RequestMapping(value = "findNoteByTypeId.do")
     @ResponseBody
-    public ServerResponse findNoteByTypeId(HttpServletRequest request){
-        Map<String,Object> map = ComponentHelper.requestToMap(request);
+    public ServerResponse findNoteByTypeId(HttpServletRequest request) {
+        Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.findNoteByTypeId(map);
     }
 
     @RequestMapping(value = "deleteByNoteId.do")
     @ResponseBody
-    public ServerResponse deleteByNoteId(HttpServletRequest request){
-        Map<String,Object> map = ComponentHelper.requestToMap(request);
+    public ServerResponse deleteByNoteId(HttpServletRequest request) {
+        Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.deleteByNoteId(map);
     }
+
     /**
      * TODO: 用于上传图片到七牛云
-     * @author white
-     * @date 2018-03-22 21:27
-       @param "图片文件file"
+     *
+     * @param "图片文件file"
      * @return
      * @throws
+     * @author white
+     * @date 2018-03-22 21:27
      */
     @RequestMapping(value = "uploadFile.do")
     @ResponseBody
@@ -122,8 +168,8 @@ public class NoteController extends Cors {
                 // 生成云端的真实文件名
                 String remoteFileName = UUIDutils.getUUID().toString() + fileNameExtension;
                 qiniuService.upload(file.getBytes(), remoteFileName);
-                String url = Constant.QINIU_DOMAIN_NAME+remoteFileName;
-                return ServerResponse.createBySuccess("上传成功",url);
+                String url = Constant.QINIU_DOMAIN_NAME + remoteFileName;
+                return ServerResponse.createBySuccess("上传成功", url);
             } catch (Exception e) {
                 e.printStackTrace();
                 return ServerResponse.createByErrorMessage("上传出错");
@@ -134,32 +180,32 @@ public class NoteController extends Cors {
 
     /**
      * TODO: 通过笔记本id查找笔记
-     * @author white
-     * @date 2018-04-04 13:39
-
+     *
      * @return
      * @throws
+     * @author white
+     * @date 2018-04-04 13:39
      */
     @RequestMapping(value = "findNoteByBookId.do")
     @ResponseBody
-    public ServerResponse findNoteByBookId(HttpServletRequest request){
-        Map<String,Object> map = ComponentHelper.requestToMap(request);
+    public ServerResponse findNoteByBookId(HttpServletRequest request) {
+        Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.findNoteByBookId(map);
     }
 
 
     /**
      * TODO: 通过标签id查找笔记
-     * @author white
-     * @date 2018-04-04 14:56
-
+     *
      * @return
      * @throws
+     * @author white
+     * @date 2018-04-04 14:56
      */
     @RequestMapping(value = "findNoteByTagId.do")
     @ResponseBody
-    public ServerResponse findNoteByTagId(HttpServletRequest request){
-        Map<String,Object> map = ComponentHelper.requestToMap(request);
+    public ServerResponse findNoteByTagId(HttpServletRequest request) {
+        Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.findNoteByTagId(map);
     }
 }

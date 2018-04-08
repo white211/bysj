@@ -57,8 +57,8 @@ public class LabelServiceImpl implements LabelService {
                     labelVo.setCn_label_id(label.getCn_label_id());
                     labelVo.setCn_label_desc(label.getCn_label_desc());
                     labelVo.setCn_label_name(label.getCn_label_name());
-                    labelVo.setCn_label_createTime(label.getCn_label_createTime());
-                    labelVo.setCn_label_last_updateTime(label.getCn_label_updateTime());
+                    labelVo.setCn_label_createTime(label.getCnLabelCreateTime());
+                    labelVo.setCn_label_last_updateTime(label.getCnLabelUpdateTime());
                     //计算该标签下tyoe !=1 的笔记条数
                     int count = noteDao.countByLabelId(label.getCn_label_id());
                     labelVo.setNoteCount(count);
@@ -106,8 +106,8 @@ public class LabelServiceImpl implements LabelService {
                 Label label = new Label();
                 label.setCn_label_name(map.get("labelName").toString());
                 label.setCn_user_id(userId);
-                label.setCn_label_createTime(new Date());
-                label.setCn_label_updateTime(new Date());
+                label.setCnLabelCreateTime(new Date());
+                label.setCnLabelUpdateTime(new Date());
                 labelDao.save(label);
                 return ServerResponse.createBySuccess("新增成功", label);
             } catch (Exception e) {
@@ -182,8 +182,8 @@ public class LabelServiceImpl implements LabelService {
                     labelVo.setCn_label_id(label.getCn_label_id());
                     labelVo.setCn_label_desc(label.getCn_label_desc());
                     labelVo.setCn_label_name(label.getCn_label_name());
-                    labelVo.setCn_label_createTime(label.getCn_label_createTime());
-                    labelVo.setCn_label_last_updateTime(label.getCn_label_updateTime());
+                    labelVo.setCn_label_createTime(label.getCnLabelCreateTime());
+                    labelVo.setCn_label_last_updateTime(label.getCnLabelUpdateTime());
                     //计算该标签下tyoe=1的笔记条数
                     int count = noteDao.countByLabelId(label.getCn_label_id());
                     labelVo.setNoteCount(count);

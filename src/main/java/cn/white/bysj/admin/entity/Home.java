@@ -67,7 +67,7 @@ public class Home extends BaseEntity {
 
     //创建时间
     @JSONField(format = "yyyy-MM-DD hh:ss:mm")
-    private Date cn_home_createTime;
+    private Date cnHomeCreateTime;
 
     //使用状态
     private String cn_home_type;

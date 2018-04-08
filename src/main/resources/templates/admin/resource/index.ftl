@@ -48,7 +48,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>资源名称</th>
                     <th>资源key</th>
                     <th>类型</th>
@@ -63,7 +63,8 @@
                 </tr>
                 <#list pageInfo.content as resourceInfo>
                 <tr>
-                    <td>${resourceInfo.id}</td>
+                    <#--<td>${resourceInfo.id}</td>-->
+                        <td>${(pageInfo.number)*10+(resourceInfo_index+1)}</td>
                     <td>${resourceInfo.name}</td>
                     <td>${resourceInfo.sourceKey}</td>
                     <td>

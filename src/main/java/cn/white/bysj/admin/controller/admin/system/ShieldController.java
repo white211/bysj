@@ -8,6 +8,7 @@ import cn.white.bysj.admin.vo.ShieldVo;
 import cn.white.bysj.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +25,10 @@ public class ShieldController extends BaseController {
     @Autowired
     private IShieldService iShieldService;
 
-    @GetMapping(value = "/index")
+    @GetMapping(value = {"/index"})
     public String index(ModelMap map) {
-        Page<ShieldVo> page = iShieldService.findShield(getPageRequest());
+        Sort sort =new Sort(Sort.Direction.DESC,"cnShieldCreateTime");
+        Page<ShieldVo> page = iShieldService.findShield(getPageRequest(sort));
         map.put("pageInfo", page);
         return "admin/shield/index";
     }

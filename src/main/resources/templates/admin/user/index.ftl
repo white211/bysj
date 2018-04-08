@@ -48,7 +48,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>账户名</th>
                     <th>昵称</th>
                     <th>性别</th>
@@ -62,7 +62,8 @@
                 </tr>
                 <#list pageInfo.content as userInfo>
                 <tr>
-                    <td>${userInfo.cn_user_id}</td>
+                    <td>${(pageInfo.number)*10+(userInfo_index+1)}</td>
+                    <#--<td>${userInfo.cn_user_id}</td>-->
                     <td>${userInfo.cn_user_name}</td>
                     <td>${userInfo.cn_user_nickname}</td>
                     <td>
@@ -92,7 +93,7 @@
                         </#if>
 
                     </td>
-                    <td>${userInfo.cn_user_createTime}</td>
+                    <td>${userInfo.cnUserCreateTime}</td>
                     <td>
                     <@shiro.hasPermission name="system:user:edit">
                         <a class="btn btn-sm btn-primary" href="${ctx!}/admin/user/edit/${userInfo.cn_user_id}">编辑</a>

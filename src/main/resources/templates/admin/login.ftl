@@ -44,11 +44,11 @@
         </#if>
         <form id="form-login" action="${ctx!}/admin/login" method="post">
             <div class="form-group has-feedback">
-                <input type="username" name="username" class="form-control" placeholder="username">
+                <input type="username" name="username" class="form-control" placeholder="username" value="admin">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="password">
+                <input type="password" name="password" class="form-control" placeholder="password" value="admin">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">

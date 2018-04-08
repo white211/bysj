@@ -9,6 +9,7 @@ import cn.white.bysj.note.Note;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -25,8 +26,9 @@ public class IFeedBackController extends BaseController {
     @Autowired
     private IFeedBackService iFeedBackService;
 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = {"/index"})
     public String index(ModelMap map){
+        Sort sort = new Sort(Sort.Direction.DESC,"cnFeedbackCreateTime");
         Page<FeedBackVo> page = iFeedBackService.findFeedBack(getPageRequest());
         map.put("pageInfo",page);
         return "admin/feedback/index";

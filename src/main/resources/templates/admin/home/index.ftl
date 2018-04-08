@@ -55,7 +55,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>使用状态</th>
                     <th>创建者</th>
                     <th>创建时间</th>
@@ -63,7 +63,8 @@
                 </tr>
                 <#list pageInfo.content as homeInfo>
                     <tr>
-                        <td>${homeInfo.cn_home_id}</td>
+                        <#--<td>${homeInfo.cn_home_id}</td>-->
+                            <td>${(pageInfo.number)*10+(homeInfo_index+1)}</td>
                         <td>
                             <#if homeInfo.cn_home_type == 0>
                                 <span class="label label-info">正在使用</span>
@@ -74,7 +75,7 @@
                             </#if>
                         </td>
                         <td>${homeInfo.cn_user_id}</td>
-                        <td>${homeInfo.cn_home_createTime}</td>
+                        <td>${homeInfo.cnHomeCreateTime}</td>
                         <td>
                             <#if homeInfo.cn_home_type == 0>
                                 <@shiro.hasPermission name="system:home:use">

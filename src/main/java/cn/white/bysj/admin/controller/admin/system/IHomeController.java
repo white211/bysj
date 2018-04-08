@@ -6,6 +6,9 @@ import cn.white.bysj.admin.entity.Home;
 import cn.white.bysj.admin.service.IHomeServcie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -22,9 +25,10 @@ public class IHomeController extends BaseController {
     @Autowired
     private IHomeServcie iHomeServcie;
 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = {"/index"})
     public String index(ModelMap map) {
-        Page<Home> page = iHomeServcie.findAll(getPageRequest());
+        Sort sort = new Sort(Sort.Direction.DESC,"cnHomeCreateTime");
+        Page<Home> page = iHomeServcie.findAll(getPageRequest(sort));
         map.put("pageInfo",page);
         return "/admin/home/index";
     }

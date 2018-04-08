@@ -72,7 +72,7 @@
 
                           <p>
                               <@shiro.principal property="cn_user_description"/>
-                              <small><@shiro.principal property="cn_user_createTime"/></small>
+                              <small><@shiro.principal property="cnUserCreateTime"/></small>
                           </p>
                       </li>
                       <!-- Menu Footer-->

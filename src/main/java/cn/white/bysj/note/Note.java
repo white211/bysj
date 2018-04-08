@@ -4,6 +4,7 @@ import cn.white.bysj.admin.entity.support.BaseEntity;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +19,9 @@ import java.util.Date;
 @Data
 public class Note  extends BaseEntity{
      @Id @GeneratedValue
-     //笔记id
+     /**
+      * 笔记 id
+      */
     private Integer cn_note_id=null;
 
     //笔记创造者id
@@ -41,11 +44,11 @@ public class Note  extends BaseEntity{
 
     //笔记创建时间
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date cn_note_createTime =null;
+    private Date cnNoteCreateTime =null;
 
     //笔记最后更新时间
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date cn_note_updateTime =null;
+    private Date cnNoteUpdateTime =null;
 
     //笔记所属标签id
     private Integer cn_note_label_id = null;

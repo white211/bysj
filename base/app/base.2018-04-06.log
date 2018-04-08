@@ -1,0 +1,686 @@
+2018-04-06 11:38:28.053 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 4064 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-06 11:38:28.166 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-06 11:38:28.167 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-06 11:38:30.004 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-06 11:38:40.203 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-06 11:38:40.206 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-06 11:38:40.302 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-06 11:38:40.402 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-06 11:38:40.404 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-06 11:38:51.791 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-06 11:39:07.617 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-06 11:39:14.796 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-06 11:39:14.798 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-06 11:39:15.820 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-06 11:39:24.866 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-06 11:39:24.923 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-06 11:39:24.924 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-06 11:39:24.926 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-06 11:39:25.187 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-06 11:39:25.431 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-06 11:39:25.486 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-06 11:39:25.942 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 11:39:25.942 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 11:39:25.942 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 11:39:26.018 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 11:39:26.018 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 11:39:26.018 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 11:39:26.086 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-06 11:39:26.087 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-06 11:39:26.094 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 11:39:26.107 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-06 11:39:26.108 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 11:39:26.250 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-06 11:39:26.252 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-06 11:39:26.253 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-06 11:39:26.253 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-06 11:39:26.253 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-06 11:39:26.277 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-06 11:39:26.279 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-06 11:39:26.279 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-06 11:39:26.281 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-06 11:39:26.282 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-06 11:39:26.282 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-06 11:39:26.283 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-06 11:39:26.286 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-06 11:39:26.295 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-06 11:39:26.295 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-06 11:39:26.296 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-06 11:39:32.049 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-06 11:39:32.216 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-06 11:39:33.694 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-06 11:39:36.782 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-06 11:39:36.971 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-06 11:39:37.011 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-06 11:39:37.031 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-06 11:39:37.295 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 71.604 seconds (JVM running for 90.242)
+2018-04-06 11:39:37.295 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-06 12:45:30.438 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 2900 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-06 12:45:30.453 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-06 12:45:30.454 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-06 12:45:30.908 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-06 12:45:33.237 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-06 12:45:33.240 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-06 12:45:33.302 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-06 12:45:33.317 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-06 12:45:33.318 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-06 12:45:35.630 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-06 12:45:42.025 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-06 12:45:43.135 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-06 12:45:43.136 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-06 12:45:43.357 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-06 12:45:46.872 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-06 12:45:46.904 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-06 12:45:46.904 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-06 12:45:46.905 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-06 12:45:46.916 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-06 12:45:46.918 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-06 12:45:46.924 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-06 12:45:46.975 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 12:45:46.975 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 12:45:46.975 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 12:45:46.983 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 12:45:46.984 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 12:45:46.984 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 12:45:47.006 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-06 12:45:47.006 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-06 12:45:47.011 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 12:45:47.019 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-06 12:45:47.020 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 12:45:47.072 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-06 12:45:47.073 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-06 12:45:47.074 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-06 12:45:47.074 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-06 12:45:47.074 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-06 12:45:47.105 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-06 12:45:47.106 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-06 12:45:47.106 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-06 12:45:47.108 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-06 12:45:47.108 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-06 12:45:47.108 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-06 12:45:47.109 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-06 12:45:47.109 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-06 12:45:47.114 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-06 12:45:47.114 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-06 12:45:47.115 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-06 12:45:48.926 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-06 12:45:48.970 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-06 12:45:49.012 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-06 12:45:50.424 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-06 12:45:50.563 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-06 12:45:50.575 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-06 12:45:50.590 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-06 12:45:50.615 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 20.617 seconds (JVM running for 24.288)
+2018-04-06 12:45:50.615 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-06 12:46:07.997 [http-nio-8080-exec-5] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-06 12:46:08.303 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-06 12:46:08.307 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.307 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 12:46:08.308 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-06 12:46:08.304 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_user_id =? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC 
+2018-04-06 12:46:08.313 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 12:46:08.347 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.355 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.365 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.369 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.372 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.375 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.377 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.378 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.379 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.379 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.382 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.384 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.384 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.386 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.387 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.389 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.390 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.393 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.394 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.398 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.400 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.402 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.403 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.406 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.408 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.453 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.516 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.581 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.605 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.637 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.642 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.644 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.651 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.653 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.675 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-06 12:46:08.689 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 12:46:08.694 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.695 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.704 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.713 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.715 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.719 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.735 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.741 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.746 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.755 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.781 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.785 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-06 12:46:08.787 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-06 12:46:08.789 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.838 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.854 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.862 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.876 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.878 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.883 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.885 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.887 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:08.890 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 12:46:08.894 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 12:46:14.382 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://api.seniverse.com:443
+2018-04-06 12:46:14.468 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to api.seniverse.com:443
+2018-04-06 12:46:15.569 [http-nio-8080-exec-7] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2018-04-06 12:46:15.571 [http-nio-8080-exec-7] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-04-06 12:46:15.572 [http-nio-8080-exec-7] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-04-06 12:46:15.573 [http-nio-8080-exec-7] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-04-06 12:46:15.573 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-04-06 12:46:15.574 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /v3/weather/now.json?ts=1522989973977&ttl=30&uid=U70D845775&sig=GjRe9Ak9Ci1yHScGm6R2sKKVZrI%3D&location=%E9%A6%99%E6%B8%AF&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-04-06 12:46:15.574 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  >> "GET /v3/weather/now.json?ts=1522989973977&ttl=30&uid=U70D845775&sig=GjRe9Ak9Ci1yHScGm6R2sKKVZrI%3D&location=%E9%A6%99%E6%B8%AF&language=&unit=c&start=1&days=1 HTTP/1.1[\r][\n]"
+2018-04-06 12:46:15.576 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  >> "Host: api.seniverse.com[\r][\n]"
+2018-04-06 12:46:15.576 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-04-06 12:46:15.576 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+2018-04-06 12:46:15.577 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2018-04-06 12:46:15.577 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - >> GET /v3/weather/now.json?ts=1522989973977&ttl=30&uid=U70D845775&sig=GjRe9Ak9Ci1yHScGm6R2sKKVZrI%3D&location=%E9%A6%99%E6%B8%AF&language=&unit=c&start=1&days=1 HTTP/1.1
+2018-04-06 12:46:15.577 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - >> Host: api.seniverse.com
+2018-04-06 12:46:15.577 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2018-04-06 12:46:15.577 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+2018-04-06 12:46:15.730 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-04-06 12:46:15.732 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Date: Fri, 06 Apr 2018 04:46:15 GMT[\r][\n]"
+2018-04-06 12:46:15.732 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-04-06 12:46:15.732 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Content-Length: 256[\r][\n]"
+2018-04-06 12:46:15.732 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2018-04-06 12:46:15.733 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+2018-04-06 12:46:15.733 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+2018-04-06 12:46:15.733 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+2018-04-06 12:46:15.733 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Date: Fri, 06 Apr 2018 04:46:15 GMT
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Content-Length: 256
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Connection: keep-alive
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Pragma: no-cache
+2018-04-06 12:46:15.734 [http-nio-8080-exec-7] DEBUG org.apache.http.headers - << Expires: -1
+2018-04-06 12:46:15.740 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-04-06 12:46:15.750 [http-nio-8080-exec-7] DEBUG org.apache.http.wire -  << "{"results":[{"location":{"id":"WECNV8ZNE40W","name":"[0xe9][0xa6][0x99][0xe6][0xb8][0xaf]","country":"HK","path":"[0xe9][0xa6][0x99][0xe6][0xb8][0xaf],[0xe9][0xa6][0x99][0xe6][0xb8][0xaf],[0xe9][0xa6][0x99][0xe6][0xb8][0xaf]","timezone":"Asia/Shanghai","timezone_offset":"+08:00"},"now":{"text":"[0xe6][0x99][0xb4]","code":"2","temperature":"24"},"last_update":"2018-04-06T12:30:00+08:00"}]}"
+2018-04-06 12:46:15.750 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@16f1be73
+2018-04-06 12:46:15.750 [http-nio-8080-exec-7] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-04-06 17:30:23.735 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 4680 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-06 17:30:23.755 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-06 17:30:23.755 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-06 17:30:24.472 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-06 17:30:28.334 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-06 17:30:28.337 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-06 17:30:28.426 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-06 17:30:28.451 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-06 17:30:28.451 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-06 17:30:31.932 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-06 17:30:40.909 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-06 17:30:42.285 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-06 17:30:42.286 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-06 17:30:42.549 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-06 17:30:46.938 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-06 17:30:46.976 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-06 17:30:46.976 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-06 17:30:46.978 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-06 17:30:47.003 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-06 17:30:47.006 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-06 17:30:47.020 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-06 17:30:47.088 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 17:30:47.088 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 17:30:47.089 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 17:30:47.101 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-06 17:30:47.101 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-06 17:30:47.101 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-06 17:30:47.142 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-06 17:30:47.143 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-06 17:30:47.151 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 17:30:47.165 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-06 17:30:47.166 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-06 17:30:47.241 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-06 17:30:47.243 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-06 17:30:47.244 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-06 17:30:47.245 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-06 17:30:47.245 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-06 17:30:47.261 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-06 17:30:47.262 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-06 17:30:47.263 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-06 17:30:47.264 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-06 17:30:47.265 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-06 17:30:47.265 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-06 17:30:47.266 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-06 17:30:47.266 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-06 17:30:47.271 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-06 17:30:47.271 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-06 17:30:47.272 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-06 17:30:49.487 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-06 17:30:49.542 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-06 17:30:49.690 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-06 17:30:51.370 [restartedMain] DEBUG org.apache.solr.client.solrj.impl.HttpClientUtil - Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+2018-04-06 17:30:51.769 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-06 17:30:51.934 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-06 17:30:51.948 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-06 17:30:51.962 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-06 17:30:51.994 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 29.301 seconds (JVM running for 33.931)
+2018-04-06 17:30:51.994 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-06 17:33:21.292 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-06 17:33:21.484 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:24.447 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:29.749 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:32.515 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:52.603 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:53.212 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:53.216 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.218 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.414 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:53.420 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.424 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.427 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.431 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.433 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.436 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.438 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.440 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.441 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.443 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.444 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.446 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.460 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:53.462 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.463 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.465 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.467 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.468 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.471 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.473 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.476 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.478 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.480 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.481 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.483 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.633 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:53.635 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:53.636 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:53.857 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:54.273 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:54.276 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.278 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.413 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:54.416 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.417 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.419 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.421 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.423 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.425 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.427 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.428 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.430 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.432 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.433 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.434 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.448 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:54.451 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.453 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.454 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.457 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.459 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.461 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.462 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.464 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.465 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.467 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.468 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.469 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.649 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:54.650 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:54.652 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:54.881 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:55.086 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:33:55.095 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.096 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.284 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:55.290 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.293 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.297 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.302 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.307 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.315 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.317 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.318 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.320 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.321 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.323 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.325 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.337 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:33:55.343 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.346 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.347 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.359 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.360 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.362 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.365 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.366 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.367 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.368 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:33:55.370 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:33:55.371 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:05.216 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:05.224 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:05.227 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:05.315 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:05.490 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:05.616 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:05.995 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:06.187 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:06.302 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:06.305 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.308 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.462 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:06.474 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.484 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.486 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.488 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.490 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.492 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.494 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.495 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.496 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.498 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.500 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.501 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.522 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:06.537 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.539 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.542 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.544 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.546 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.549 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.550 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.552 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.557 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.559 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.560 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.561 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:06.975 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:06.977 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:06.979 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:07.054 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:07.242 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:07.391 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:07.752 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:07.908 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:08.058 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:08.059 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.061 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.216 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:08.218 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.219 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.221 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.224 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.226 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.228 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.229 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.232 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.234 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.236 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.237 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.238 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.249 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:08.251 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.252 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.254 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.256 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.258 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.259 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.261 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.263 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.265 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.284 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.285 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.286 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.548 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:08.550 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:08.551 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:08.599 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:08.771 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:09.114 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:09.554 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:09.697 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:09.863 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:09.865 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:09.866 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.002 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:10.004 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.005 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.006 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.008 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.009 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.011 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.012 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.013 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.015 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.016 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.017 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.019 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.029 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:10.032 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.034 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.036 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.038 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.040 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.041 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.043 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.044 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.046 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.047 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.048 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.049 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.651 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:10.652 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:10.653 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:10.773 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:10.965 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.137 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.364 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.400 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.549 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.668 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:11.756 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.059 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.590 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.624 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.645 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.683 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.715 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.752 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.789 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:12.791 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.791 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.826 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:12.828 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.830 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.832 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.834 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.835 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.837 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.841 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.842 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.844 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.844 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.846 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.847 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.856 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:12.858 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.859 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.861 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.863 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.864 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.866 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.868 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.870 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.871 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.872 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:12.874 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:12.875 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:13.298 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:13.301 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:13.303 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:13.439 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:13.555 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:13.837 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:13.852 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:14.062 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:14.116 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:14.389 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:14.450 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:14.997 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.018 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.053 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.091 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.125 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.164 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:15.165 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.166 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.200 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:15.202 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.203 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.204 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.207 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.208 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.209 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.210 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.211 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.212 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.213 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.213 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.214 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.223 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:15.225 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.227 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.228 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.230 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.233 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.234 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.235 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.236 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.237 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.238 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:15.239 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:15.240 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:16.147 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:16.149 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:16.150 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:16.374 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:17.029 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:17.031 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.032 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.204 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:17.207 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.209 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.211 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.215 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.217 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.219 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.220 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.222 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.223 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.224 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.225 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.226 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.238 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:17.242 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.244 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.245 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.248 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.250 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.252 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.253 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.255 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.256 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.257 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.258 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.259 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.497 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:17.498 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:17.500 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:17.735 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.109 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.234 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.380 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.605 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.760 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:18.929 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:19.060 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:19.061 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.062 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.192 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:19.193 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.194 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.196 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.197 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.198 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.200 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.201 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.202 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.203 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.204 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.205 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.206 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.215 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:19.217 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.218 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.220 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.223 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.227 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.229 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.230 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.232 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.233 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.235 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:19.236 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:19.238 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:21.191 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:21.192 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:21.193 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.048 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_notebook_name like ? and cn_user_id = ? AND cn_notebook_type_id !=?
+2018-04-06 17:34:22.050 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.051 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.197 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:22.198 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.199 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.200 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.202 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.203 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.204 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.205 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.206 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.207 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.208 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.209 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.209 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.216 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-06 17:34:22.218 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.219 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.220 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.222 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.224 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.225 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.227 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.228 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.230 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.232 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-06 17:34:22.234 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-06 17:34:22.234 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4

@@ -83,8 +83,8 @@ public class NoteServiceImpl implements NoteService {
                     note.setCn_note_desc(desc);
                     note.setCn_note_label_id(noteLabelId);
                     note.setCn_note_type_id(1);
-                    note.setCn_note_createTime(new Date());
-                    note.setCn_note_updateTime(new Date());
+                    note.setCnNoteCreateTime(new Date());
+                    note.setCnNoteUpdateTime(new Date());
                     noteDao.save(note);
                     return ServerResponse.createBySuccess("新建笔记成功", note);
                 } else {
@@ -248,7 +248,7 @@ public class NoteServiceImpl implements NoteService {
                 note.setCn_note_label_id(noteLabelId);
                 note.setCn_note_desc(desc);
                 note.setCn_note_type_id(1);
-                note.setCn_note_updateTime(new Date());
+                note.setCnNoteUpdateTime(new Date());
                 noteDao.save(note);
                 return ServerResponse.createBySuccess("更新成功", note);
             } catch (Exception e) {

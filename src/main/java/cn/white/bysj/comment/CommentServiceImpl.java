@@ -60,7 +60,7 @@ public class CommentServiceImpl implements CommentService {
                 comment.setCn_note_id(Integer.parseInt(map.get("noteId").toString()));
                 comment.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
                 comment.setCn_comment_content(map.get("commentContent").toString());
-                comment.setCn_comment_creatTime(new Date());
+                comment.setCnCommentCreatTime(new Date());
                 commentDao.save(comment);
                 return ServerResponse.createBySuccessMessags("评论成功");
             } catch (Exception e) {
@@ -80,6 +80,7 @@ public class CommentServiceImpl implements CommentService {
      * @author white
      * @date 2018-03-21 13:42
      */
+    @Override
     public ServerResponse deleteComment(Map<String, Object> map) {
         List<String> list = Arrays.asList("commentId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -108,6 +109,7 @@ public class CommentServiceImpl implements CommentService {
      * @author white
      * @date 2018-03-21 13:43
      */
+    @Override
     public ServerResponse<List<CommentListVo>> CommentListByNoteId(Map<String, Object> map) {
         List<String> list = Arrays.asList("noteId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -123,7 +125,7 @@ public class CommentServiceImpl implements CommentService {
                 for (Comment comment:list1){
                     CommentListVo commentListVo = new CommentListVo();
                     commentListVo.setCn_comment_content(comment.getCn_comment_content());
-                    commentListVo.setCn_comment_creatTime(comment.getCn_comment_creatTime());
+                    commentListVo.setCn_comment_creatTime(comment.getCnCommentCreatTime());
                     commentListVo.setCn_comment_id(comment.getCn_comment_id());
                     User user = userDao.findOne(comment.getCn_user_id());
                     commentListVo.setCn_user_email(user.getCn_user_email());

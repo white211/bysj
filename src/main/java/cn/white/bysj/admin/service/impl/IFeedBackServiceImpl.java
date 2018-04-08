@@ -63,7 +63,7 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
             FeedBackVo feedBackVo = new FeedBackVo();
             feedBackVo.setCn_feedback_id(feedback.getCn_feedback_id());
             feedBackVo.setCn_feedback_content(feedback.getCn_feedback_content());
-            feedBackVo.setCn_feedback_createTime(feedback.getCn_feedback_createTime());
+            feedBackVo.setCn_feedback_createTime(feedback.getCnFeedbackCreateTime());
             feedBackVo.setCn_feedback_isReturn(feedback.getCn_feedback_isReturn());
             feedBackVo.setCn_feedback_returnContent(feedback.getCn_feedback_returnContent());
             feedBackVo.setCn_feedback_type(feedback.getCn_feedback_type());
@@ -79,7 +79,7 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
             }
             feedBackVos.add(feedBackVo);
         }
-        Page<FeedBackVo> feedBackVos1 = new PageImpl<FeedBackVo>(feedBackVos);
+        Page<FeedBackVo> feedBackVos1 = new PageImpl<FeedBackVo>(feedBackVos,pageable,page.getTotalElements());
         return feedBackVos1;
     }
 
@@ -91,7 +91,7 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
             feedBackVo.setCn_feedback_id(feedback.getCn_feedback_id());
             feedBackVo.setCn_feedback_type(feedback.getCn_feedback_type());
             feedBackVo.setCn_feedback_content(feedback.getCn_feedback_content());
-            feedBackVo.setCn_feedback_createTime(feedback.getCn_feedback_createTime());
+            feedBackVo.setCn_feedback_createTime(feedback.getCnFeedbackCreateTime());
             feedBackVo.setCn_feedback_isReturn(feedback.getCn_feedback_isReturn());
             User user = iUserDao.findOne(StringUtils.isBlank(feedback.getCn_user_id().toString()) ? 0 : feedback.getCn_user_id());
             feedBackVo.setCn_user_email(user.getCn_user_email());

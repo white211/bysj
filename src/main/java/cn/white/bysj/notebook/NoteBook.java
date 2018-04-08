@@ -20,16 +20,31 @@ import java.util.List;
 @Data
 public class NoteBook extends BaseEntity {
     @Id @GeneratedValue
-    private Integer cn_notebook_id =null;//笔记本id
-    private Integer cn_notebook_type_id=null;//笔记本类型id
-    private Integer cn_user_id=null;//用户id
-    private String cn_notebook_name=null;//笔记本名称
-    private String  cn_notebook_desc=null;//笔记本说明
+   /* 笔记本id*/
+    private Integer cn_notebook_id =null;
+
+    /*笔记本类型id*/
+    private Integer cn_notebook_type_id=null;
+
+    /*用户id*/
+    private Integer cn_user_id=null;
+
+    /*笔记本名称*/
+    private String cn_notebook_name=null;
+
+    /*笔记本说明*/
+    private String  cn_notebook_desc=null;
+
+    /*笔记本创建时间*/
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date cn_notebook_createTime=null;//笔记本创建时间
+    private Date cnNotebookCreateTime=null;
+
+    /*笔记本最后更新时间*/
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date cn_notebook_updateTime=null;//笔记本最后更新时间
-    private Integer cn_notebook_label_id=null;//笔记本所属标签id
+    private Date cnNotebookUpdateTime=null;
+
+    /*笔记本所属标签id*/
+    private Integer cn_notebook_label_id=null;
 
 }
 

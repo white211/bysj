@@ -63,8 +63,8 @@ public class NoteBookServiceImpl implements NoteBookService {
                     NoteBook noteBook = new NoteBook();
                     noteBook.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
                     noteBook.setCn_notebook_name(map.get("noteBookName").toString());
-                    noteBook.setCn_notebook_createTime(new Date());
-                    noteBook.setCn_notebook_updateTime(new Date());
+                    noteBook.setCnNotebookCreateTime(new Date());
+                    noteBook.setCnNotebookUpdateTime(new Date());
                     noteBook.setCn_notebook_type_id(1);
                     noteBookDao.save(noteBook);
                     return ServerResponse.createBySuccessMessags("创建成功");
@@ -101,8 +101,8 @@ public class NoteBookServiceImpl implements NoteBookService {
                     NoteListVo noteListVo = new NoteListVo();
                     noteListVo.setCn_notebook_id(notebooklist.getCn_notebook_id());
                     noteListVo.setCn_notebook_name(notebooklist.getCn_notebook_name());
-                    noteListVo.setCn_notebook_createTime(notebooklist.getCn_notebook_createTime());
-                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_updateTime());
+                    noteListVo.setCn_notebook_createTime(notebooklist.getCnNotebookCreateTime());
+                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCnNotebookUpdateTime());
                     noteListVo.setCn_notebook_label_id(notebooklist.getCn_notebook_label_id());
                     noteListVo.setCn_notebook_type_id(notebooklist.getCn_notebook_type_id());
                     List<Note> notelist = noteDao.findNoteByNoteBookId(notebooklist.getCn_notebook_id());
@@ -257,8 +257,8 @@ public class NoteBookServiceImpl implements NoteBookService {
                     NoteListVo noteListVo = new NoteListVo();
                     noteListVo.setCn_notebook_id(notebooklist.getCn_notebook_id());
                     noteListVo.setCn_notebook_name(notebooklist.getCn_notebook_name());
-                    noteListVo.setCn_notebook_createTime(notebooklist.getCn_notebook_createTime());
-                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCn_notebook_updateTime());
+                    noteListVo.setCn_notebook_createTime(notebooklist.getCnNotebookCreateTime());
+                    noteListVo.setCn_notebook_lastupdateTime(notebooklist.getCnNotebookUpdateTime());
                     noteListVo.setCn_notebook_label_id(notebooklist.getCn_notebook_label_id());
                     noteListVo.setCn_notebook_type_id(notebooklist.getCn_notebook_type_id());
                     List<Note> notelist = noteDao.findNoteByNoteBookId(notebooklist.getCn_notebook_id());

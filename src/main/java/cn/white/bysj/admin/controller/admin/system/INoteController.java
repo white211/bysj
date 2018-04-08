@@ -7,6 +7,9 @@ import cn.white.bysj.admin.vo.NoteVo;
 import cn.white.bysj.note.Note;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -25,10 +28,13 @@ public class INoteController extends BaseController {
 
     @RequestMapping(value = {"/index"})
     public String index(ModelMap modelMap) {
-        Page<NoteVo> page = iNoteService.findNote(getPageRequest());
+        String string = "cnNoteCreateTime";
+        Sort sort = new Sort(Sort.Direction.DESC,string);
+        Page<NoteVo> page = iNoteService.findNote(getPageRequest(sort));
         modelMap.put("pageInfo", page);
         return "admin/note/index";
     }
+
 
     @GetMapping(value = "/see/{cn_note_id}")
     public String see(@PathVariable Integer cn_note_id,ModelMap modelMap){

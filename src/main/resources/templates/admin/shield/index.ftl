@@ -22,7 +22,7 @@
     }
 </script>
 </#assign>
-<@layout title="屏蔽词管理" active="shield">
+<@layout title="屏蔽词管理" active="shieldVo">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -48,7 +48,7 @@
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>序号</th>
                     <th>内容</th>
                     <th>创建者</th>
                     <th>创建时间</th>
@@ -56,7 +56,8 @@
                 </tr>
                 <#list pageInfo.content as shieldInfo>
                 <tr>
-                    <td>${shieldInfo.cn_shield_id}</td>
+                    <#--<td>${shieldInfo.cn_shield_id}</td>-->
+                    <td>${(pageInfo.number)*10+(shieldInfo_index+1)}</td>
                     <td>${shieldInfo.cn_shield_content}</td>
                     <td>${shieldInfo.cn_user_name}</td>
                     <td>${shieldInfo.cn_shield_createTime}</td>
