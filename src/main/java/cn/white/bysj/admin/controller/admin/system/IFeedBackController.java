@@ -29,7 +29,7 @@ public class IFeedBackController extends BaseController {
     @RequestMapping(value = {"/index"})
     public String index(ModelMap map){
         Sort sort = new Sort(Sort.Direction.DESC,"cnFeedbackCreateTime");
-        Page<FeedBackVo> page = iFeedBackService.findFeedBack(getPageRequest());
+        Page<FeedBackVo> page = iFeedBackService.findFeedBack(getPageRequest(sort));
         map.put("pageInfo",page);
         return "admin/feedback/index";
     }
@@ -41,15 +41,12 @@ public class IFeedBackController extends BaseController {
         return "admin/feedback/see";
     }
 
-
-
     @GetMapping(value = "/return/{cn_feedback_id}")
     public String Return(@PathVariable Integer cn_feedback_id, ModelMap modelMap){
         FeedBackVo feedBackVo = iFeedBackService.findOne(cn_feedback_id);
         modelMap.put("feedback",feedBackVo);
         return "admin/feedback/return";
     }
-
 
     @PostMapping(value = "/return")
     public JsonResult Return(FeedBackVo feedBackVo, ModelMap modelMap){
@@ -73,7 +70,5 @@ public class IFeedBackController extends BaseController {
         }
         return JsonResult.success();
     }
-
-
 
 }

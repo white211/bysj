@@ -21,11 +21,17 @@
         });
     }
 
-    ,
-
     function use(id, type) {
-
-
+       $.ajax({
+           type: "POST",
+           dataType: "json",
+           url: "${ctx!}/admin/home/use/"+id+"/"+type,
+           success: function (res) {
+               layer.msg(res.msg, {time: 2000}, function () {
+                   location.reload();
+               });
+           }
+       });
     }
 </script>
 </#assign>
@@ -48,7 +54,7 @@
     <!-- Default box -->
     <div class="box box-primary">
         <div class="box-header">
-            <@shiro.hasPermission name="system:user:add">
+            <@shiro.hasPermission name="system:home:add">
                 <a class="btn btn-sm btn-success" href="${ctx!}/admin/home/add">新增</a>
             </@shiro.hasPermission>
         </div>
@@ -75,8 +81,14 @@
                             </#if>
                         </td>
                         <td>${homeInfo.cn_user_id}</td>
-                        <td>${homeInfo.cnHomeCreateTime}</td>
+                        <td>${homeInfo.cnHomeCreateTime?date}</td>
                         <td>
+
+
+                            <@shiro.hasPermission name="system:home:edit">
+                                <a class="btn btn-sm btn-primary" href="${ctx!}/admin/home/edit/${homeInfo.cn_home_id}">编辑</a>
+                            </@shiro.hasPermission>
+
                             <#if homeInfo.cn_home_type == 0>
                                 <@shiro.hasPermission name="system:home:use">
                                     <button class="btn btn-sm btn-warning" onclick="use(${homeInfo.cn_home_id},1)">取消
@@ -88,9 +100,6 @@
                                     </button>
                                 </@shiro.hasPermission>
                             </#if>
-                            <@shiro.hasPermission name="system:home:edit">
-                                <a class="btn btn-sm btn-primary" href="${ctx!}/admin/home/edit/${homeInfo.cn_home_id}">编辑</a>
-                            </@shiro.hasPermission>
 
                             <@shiro.hasPermission name="system:home:deleteBatch">
                                 <button class="btn btn-sm btn-danger" onclick="del(${homeInfo.cn_home_id})">删除</button>

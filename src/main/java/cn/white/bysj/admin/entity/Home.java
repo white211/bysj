@@ -71,4 +71,8 @@ public class Home extends BaseEntity {
 
     //使用状态
     private String cn_home_type;
+
+    //更新时间
+    @JSONField(format = "yyyy-MM-DD hh:ss:mm")
+    private Date cnHomeUpdateTime;
 }

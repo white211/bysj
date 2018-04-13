@@ -2,6 +2,7 @@ package cn.white.bysj.admin.service;
 
 import cn.white.bysj.admin.entity.Home;
 import cn.white.bysj.admin.service.support.IBaseService;
+import cn.white.bysj.commons.ServerResponse;
 
 /**
  * Create by @author white
@@ -12,5 +13,5 @@ public interface IHomeServcie extends IBaseService<Home,Integer> {
 
     void saveOrUpdate(Home home);
 
-    void updateType(int id,String type);
+    ServerResponse updateType(int id, String type);
 }

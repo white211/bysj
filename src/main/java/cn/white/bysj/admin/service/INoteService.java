@@ -16,4 +16,7 @@ public interface INoteService  extends IBaseService<Note,Integer>{
 
      Page<NoteVo> findNote(Pageable pageable);
 
+     Page<NoteVo> findByText(String text,Pageable pageable);
+
+
 }

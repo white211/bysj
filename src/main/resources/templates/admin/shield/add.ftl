@@ -43,7 +43,6 @@
             <div class="box  box-primary">
                 <form class="form-horizontal form-edit" method="post" action="${ctx!}/admin/shield/edit">
                     <div class="box-body">
-                    <#--<input type="hidden" id="cn_shield_id" name="cn_shield_id" value="${shield.cn_shield_id}">-->
                         <div class="form-group">
                             <label class="col-sm-2 control-label">内容：</label>
                             <div class="col-sm-10">

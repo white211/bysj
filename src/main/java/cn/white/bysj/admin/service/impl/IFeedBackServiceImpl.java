@@ -55,6 +55,14 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
 
     private static Logger logger = LoggerFactory.getLogger(IFeedBackService.class);
 
+    /**
+     * TODO: 查询全部反馈信息
+     * @author white
+     * @date 2018-04-08 15:27
+       @param pageable
+     * @return
+     * @throws
+     */
     @Override
     public Page<FeedBackVo> findFeedBack(Pageable pageable) {
         List<FeedBackVo> feedBackVos = new ArrayList<>();
@@ -83,6 +91,14 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
         return feedBackVos1;
     }
 
+    /**
+     * TODO: 方法描述
+     * @author white
+     * @date 2018-04-08 15:28
+       @param feedbackId
+     * @return
+     * @throws
+     */
     @Override
     public FeedBackVo findOne(int feedbackId) {
         FeedBackVo feedBackVo = new FeedBackVo();

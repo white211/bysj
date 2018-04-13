@@ -135,7 +135,8 @@ public class CommentServiceImpl implements CommentService {
                 }
                 return ServerResponse.createBySuccess("评论列表",commentListVos);
             } catch (Exception e) {
-                logger.error("查找失败");
+                e.printStackTrace();
+                logger.error(e.getMessage());
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
         }

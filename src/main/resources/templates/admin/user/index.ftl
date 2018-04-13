@@ -93,7 +93,7 @@
                         </#if>
 
                     </td>
-                    <td>${userInfo.cnUserCreateTime}</td>
+                    <td>${userInfo.cnUserCreateTime?date}</td>
                     <td>
                     <@shiro.hasPermission name="system:user:edit">
                         <a class="btn btn-sm btn-primary" href="${ctx!}/admin/user/edit/${userInfo.cn_user_id}">编辑</a>

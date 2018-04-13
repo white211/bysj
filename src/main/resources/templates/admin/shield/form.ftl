@@ -43,28 +43,25 @@
             <div class="box  box-primary">
                 <form class="form-horizontal form-edit" method="post" action="${ctx!}/admin/shield/edit">
                     <div class="box-body">
-                    <#--<input type="hidden" id="cn_shield_id" name="cn_shield_id" value="${shield.cn_shield_id}">-->
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">ID：</label>
-                            <div class="col-sm-10">
-                                <input id="cn_shield_id" name="cn_shield_id" class="form-control" type="text"
-                                       value="${shield.cn_shield_id}" <#if shield?exists> readonly="readonly"</#if>>
-                            </div>
-                        </div>
+                        <input type="hidden" id="cn_shield_id" name="cn_shield_id" value="${shield.cn_shield_id}">
+                        <input type="hidden" id="cn_user_id" name="cn_user_id" value="${shield.cn_user_id}">
                         <div class="form-group">
                             <label class="col-sm-2 control-label">创建者：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_id" name="cn_user_id" class="form-control" type="text"
-                                       value="${shield.cn_user_id}"  readonly="readonly">
+                                <input id="cn_user_name" name="cn_user_name" class="form-control" type="text"
+                                       value="${shield.cn_user_name}" readonly="readonly">
                             </div>
                         </div>
+
                         <div class="form-group">
                             <label class="col-sm-2 control-label">创建时间：</label>
                             <div class="col-sm-10">
-                                <input id="cn_shield_createTime" name="cn_shield_createTime" class="form-control" type="text"
-                                       value="${shield.cn_shield_createTime}" readonly="readonly"   >
+                                <input id="cn_shield_createTime" name="cn_shield_createTime" class="form-control"
+                                       type="text"
+                                       value="${shield.cn_shield_createTime}" readonly="readonly">
                             </div>
                         </div>
+
                         <div class="form-group">
                             <label class="col-sm-2 control-label">内容：</label>
                             <div class="col-sm-10">

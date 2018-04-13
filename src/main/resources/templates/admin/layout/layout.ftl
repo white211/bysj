@@ -110,8 +110,10 @@
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li <#if active = "home">class="active" </#if>><a href="${ctx!}/admin/index"><i class="fa fa-home"></i> <span>主页</span></a></li>
-        <li class="treeview <#if active=="user" || active=="role" || active=="resource" >active</#if>">
+
+          <li <#if active = "home">class="active" </#if>><a href="${ctx!}/admin/index"><i class="fa fa-home"></i> <span>主页</span></a></li>
+
+          <li class="treeview <#if active=="user" || active=="role" || active=="resource" >active</#if>">
           <a href="#">
             <i class="fa fa-cog"></i> <span>系统管理</span>
             <span class="pull-right-container">
@@ -131,7 +133,8 @@
 
           </ul>
         </li>
-        <li class="treeview <#if active=="note" || active=="tran" >active</#if>">
+
+          <li class="treeview <#if active=="note" || active=="home" || active=="feedback" || active=="shield">active</#if>">
               <a href="#">
                   <i class="fa fa-database"></i> <span>内容管理</span>
                   <span class="pull-right-container">
@@ -143,13 +146,13 @@
                       <li <#if active=="note">class="active"</#if>><a href="${ctx!}/admin/note/index"><i class="fa fa-file-text-o"></i> 笔记管理</a></li>
                   </@shiro.hasPermission>
                   <@shiro.hasPermission name="system:shield:index">
-                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/shield/index"><i class="fa fa-minus-square"></i> 屏蔽词管理</a></li>
+                      <li <#if active=="shield">class="active"</#if>><a href="${ctx!}/admin/shield/index"><i class="fa fa-minus-square"></i> 屏蔽词管理</a></li>
                   </@shiro.hasPermission>
                   <@shiro.hasPermission name="system:home:index">
-                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/home/index"><i class="fa fa-tv"></i> 首页信息</a></li>
+                      <li <#if active=="home">class="active"</#if>><a href="${ctx!}/admin/home/index"><i class="fa fa-tv"></i> 首页信息</a></li>
                   </@shiro.hasPermission>
                   <@shiro.hasPermission name="system:feedback:index">
-                      <li <#if active=="tran">class="active"</#if>><a href="${ctx!}/admin/feedback/index"><i class="fa fa-user-circle-o"></i> 用户反馈</a></li>
+                      <li <#if active=="feedback">class="active"</#if>><a href="${ctx!}/admin/feedback/index"><i class="fa fa-user-circle-o"></i> 用户反馈</a></li>
                   </@shiro.hasPermission>
               </ul>
           </li>

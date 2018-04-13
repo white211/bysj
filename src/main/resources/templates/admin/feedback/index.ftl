@@ -22,7 +22,7 @@
     }
 </script>
 </#assign>
-<@layout title="反馈信息管理" active="feedbackVo">
+<@layout title="反馈信息管理" active="feedback">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -40,11 +40,7 @@
 <section class="content">
     <!-- Default box -->
     <div class="box box-primary">
-    <#--<div class="box-header">-->
-    <#--<@shiro.hasPermission name="system:user:add">-->
-    <#--<a class="btn btn-sm btn-success" href="${ctx!}/admin//add">新增</a>-->
-    <#--</@shiro.hasPermission>-->
-    <#--</div>-->
+
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
@@ -60,7 +56,7 @@
                         <td>${feedbackInfo_index+1}</td>
                         <td>${feedbackInfo.cn_user_email}</td>
                         <td>${feedbackInfo.cn_feedback_type}</td>
-                        <td>${feedbackInfo.cn_feedback_createTime}</td>
+                        <td>${feedbackInfo.cn_feedback_createTime?date}</td>
                         <td>
                             <#if feedbackInfo.cn_feedback_isReturn == 0>
                                 <span class="label label-info">已回复</span>

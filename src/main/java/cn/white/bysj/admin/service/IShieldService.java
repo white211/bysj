@@ -16,4 +16,6 @@ public interface IShieldService extends IBaseService<Shield,Integer> {
    Page<ShieldVo> findShield(Pageable pageable);
 
    void saveOrUpdate(Shield shield);
+
+   ShieldVo findOne(int shield_id);
 }

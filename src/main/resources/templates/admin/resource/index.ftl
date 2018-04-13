@@ -88,7 +88,7 @@
                     </#if>
                     </td>
                     <td>${resourceInfo.description}</td>
-                    <td>${resourceInfo.updateTime}</td>
+                    <td>${resourceInfo.updateTime?date}</td>
                     <td>
 					<@shiro.hasPermission name="system:resource:edit">
 					<a class="btn btn-sm btn-primary" href="${ctx!}/admin/resource/edit/${resourceInfo.id}">编辑</a>

@@ -4,6 +4,7 @@ import cn.white.bysj.admin.common.JsonResult;
 import cn.white.bysj.admin.controller.BaseController;
 import cn.white.bysj.admin.service.INoteService;
 import cn.white.bysj.admin.vo.NoteVo;
+import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.note.Note;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,7 +36,6 @@ public class INoteController extends BaseController {
         return "admin/note/index";
     }
 
-
     @GetMapping(value = "/see/{cn_note_id}")
     public String see(@PathVariable Integer cn_note_id,ModelMap modelMap){
          Note note = iNoteService.find(cn_note_id);
@@ -54,5 +54,17 @@ public class INoteController extends BaseController {
         }
         return JsonResult.success();
     }
+
+    @GetMapping(value = "/find")
+    public String find(@RequestParam String text,ModelMap map){
+        String string = "cn_note_create_time";
+        Sort sort = new Sort(Sort.Direction.DESC,string);
+        Page<NoteVo> page = iNoteService.findByText(text,getPageRequest(sort));
+        map.put("pageInfo",page);
+        return "/admin/note/index";
+    }
+
+
+
 
 }

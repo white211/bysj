@@ -22,7 +22,7 @@
     }
 </script>
 </#assign>
-<@layout title="屏蔽词管理" active="shieldVo">
+<@layout title="屏蔽词管理" active="shield">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -41,9 +41,9 @@
     <!-- Default box -->
     <div class="box box-primary">
         <div class="box-header">
-        <@shiro.hasPermission name="system:user:add">
-            <a class="btn btn-sm btn-success" href="${ctx!}/admin/shield/add">新增</a>
-        </@shiro.hasPermission>
+            <@shiro.hasPermission name="system:shield:add">
+                <a class="btn btn-sm btn-success" href="${ctx!}/admin/shield/add">新增</a>
+            </@shiro.hasPermission>
         </div>
         <div class="box-body">
             <table class="table table-striped">
@@ -55,21 +55,23 @@
                     <th>操作</th>
                 </tr>
                 <#list pageInfo.content as shieldInfo>
-                <tr>
-                    <#--<td>${shieldInfo.cn_shield_id}</td>-->
-                    <td>${(pageInfo.number)*10+(shieldInfo_index+1)}</td>
-                    <td>${shieldInfo.cn_shield_content}</td>
-                    <td>${shieldInfo.cn_user_name}</td>
-                    <td>${shieldInfo.cn_shield_createTime}</td>
-                    <td>
-                    <@shiro.hasPermission name="system:shield:edit">
-                        <a class="btn btn-sm btn-primary" href="${ctx!}/admin/shield/edit/${shieldInfo.cn_shield_id}">编辑</a>
-                    </@shiro.hasPermission>
-                    <@shiro.hasPermission name="system:shield:deleteBatch">
-                        <button class="btn btn-sm btn-danger" onclick="del(${shieldInfo.cn_shield_id})">删除</button>
-                    </@shiro.hasPermission>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>${(pageInfo.number)*10+(shieldInfo_index+1)}</td>
+                        <td>${shieldInfo.cn_shield_content}</td>
+                        <td>${shieldInfo.cn_user_name}</td>
+                        <td>${shieldInfo.cn_shield_createTime?date}</td>
+                        <td>
+
+                            <@shiro.hasPermission name="system:shield:edit">
+                                <a class="btn btn-sm btn-primary"
+                                   href="${ctx!}/admin/shield/edit/${shieldInfo.cn_shield_id}">编辑</a>
+                            </@shiro.hasPermission>
+                            <@shiro.hasPermission name="system:shield:deleteBatch">
+                                <button class="btn btn-sm btn-danger" onclick="del(${shieldInfo.cn_shield_id})">删除
+                                </button>
+                            </@shiro.hasPermission>
+                        </td>
+                    </tr>
                 </#list>
             </table>
         </div>

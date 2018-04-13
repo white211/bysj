@@ -71,8 +71,8 @@
 						</#if>
                     </td>
 					<td>${roleInfo.description}</td>
-					<td>${roleInfo.createTime}</td>
-					<td>${roleInfo.updateTime}</td>
+					<td>${roleInfo.createTime?date}</td>
+					<td>${roleInfo.updateTime?date}</td>
                     <td>
                     <@shiro.hasPermission name="system:role:edit">
                         <a class="btn btn-sm btn-primary" href="${ctx!}/admin/role/edit/${roleInfo.id}">编辑</a>

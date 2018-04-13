@@ -4,6 +4,7 @@ import cn.white.bysj.admin.entity.support.BaseEntity;
 import cn.white.bysj.note.Note;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
+import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ import java.util.List;
 @Entity
 @Data
 public class NoteBook extends BaseEntity {
+
     @Id @GeneratedValue
    /* 笔记本id*/
     private Integer cn_notebook_id =null;

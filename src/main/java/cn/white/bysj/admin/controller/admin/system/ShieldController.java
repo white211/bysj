@@ -35,8 +35,8 @@ public class ShieldController extends BaseController {
 
     @GetMapping(value = "/edit/{cn_shield_id}")
     public String edit(@PathVariable Integer cn_shield_id, ModelMap map) {
-        Shield shield = iShieldService.find(cn_shield_id);
-        map.put("shield", shield);
+        ShieldVo shieldVo = iShieldService.findOne(cn_shield_id);
+        map.put("shield", shieldVo);
         return "admin/shield/form";
     }
 

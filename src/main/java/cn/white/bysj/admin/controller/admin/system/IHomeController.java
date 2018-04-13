@@ -4,6 +4,7 @@ import cn.white.bysj.admin.common.JsonResult;
 import cn.white.bysj.admin.controller.BaseController;
 import cn.white.bysj.admin.entity.Home;
 import cn.white.bysj.admin.service.IHomeServcie;
+import cn.white.bysj.commons.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -57,6 +58,7 @@ public class IHomeController extends BaseController {
     }
 
     @PostMapping(value = "/delete/{cn_home_id}")
+    @ResponseBody
     public JsonResult delete(@PathVariable Integer cn_home_id,ModelMap map){
          try {
              iHomeServcie.delete(cn_home_id);
@@ -66,14 +68,10 @@ public class IHomeController extends BaseController {
          return JsonResult.success();
     }
 
-    @PostMapping(value = "/use/{cn_home_id}")
-    public JsonResult use(@PathVariable Integer cn_home_id,@PathVariable String type, ModelMap map){
-         try{
-            iHomeServcie.updateType(cn_home_id,type);
-         }catch (Exception e){
-             return JsonResult.failure(e.getMessage());
-         }
-         return JsonResult.success();
+    @RequestMapping(value = "/use/{cn_home_id}/{type}")
+    @ResponseBody
+    public ServerResponse use(@PathVariable Integer cn_home_id, @PathVariable String type, ModelMap map){
+         return iHomeServcie.updateType(cn_home_id,type);
     }
 
 
