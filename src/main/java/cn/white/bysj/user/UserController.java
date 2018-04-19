@@ -20,7 +20,6 @@ import java.util.concurrent.ExecutionException;
  *
  * @date 2017-12-28 16:04
  */
-//@CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Controller
 @RequestMapping(value = "user/")
 public class UserController extends Cors  {

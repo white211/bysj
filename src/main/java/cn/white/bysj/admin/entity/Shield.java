@@ -3,7 +3,6 @@ package cn.white.bysj.admin.entity;
 import cn.white.bysj.admin.entity.support.BaseEntity;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
-import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

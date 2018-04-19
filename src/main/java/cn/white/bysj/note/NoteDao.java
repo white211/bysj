@@ -55,5 +55,9 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "select * from note where cn_note_label_id = ?1 and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC",nativeQuery = true)
     List<Note> findNoteByLabelId(int labelId);
 
+    @Query(value = "select * from note where cn_note_id = ?1 and cn_note_type_id=1",nativeQuery = true)
+    Note findNoteByIdAndTypeId(int id);
+
+
 }
 

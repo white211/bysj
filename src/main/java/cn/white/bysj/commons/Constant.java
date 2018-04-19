@@ -29,4 +29,8 @@ public class Constant {
     public static final String QINIU_BUCKET_NAME ="test";
     public static final String QINIU_DOMAIN_NAME = "http://oxdypxsie.bkt.clouddn.com/";
 
+    //es上的索引与类型参数
+    public static final String ES_INDEX_NAME = "bysj";
+    public static final String ES_TYPE_NAME = "note";
+
 }

@@ -1,14 +1,28 @@
 package cn.white.bysj.note;
 
+import cn.white.bysj.admin.dao.ITypeDao;
+import cn.white.bysj.commons.Constant;
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.label.LabelDao;
+import cn.white.bysj.notebook.NoteBookDao;
+import cn.white.bysj.user.UserDao;
 import cn.white.bysj.utils.ValidatorUtil;
 import groovy.util.logging.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.delete.DeleteResponse;
+import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.action.update.UpdateResponse;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -25,6 +39,21 @@ public class NoteServiceImpl implements NoteService {
 
     @Autowired
     private NoteDao noteDao;
+
+    @Autowired
+    private UserDao userDao;
+
+    @Autowired
+    private ITypeDao iTypeDao;
+
+    @Autowired
+    private LabelDao labelDao;
+
+    @Autowired
+    private NoteBookDao noteBookDao;
+
+    @Autowired
+    private TransportClient client;
 
     private static Logger logger = LoggerFactory.getLogger(NoteServiceImpl.class);
 
@@ -85,7 +114,9 @@ public class NoteServiceImpl implements NoteService {
                     note.setCn_note_type_id(1);
                     note.setCnNoteCreateTime(new Date());
                     note.setCnNoteUpdateTime(new Date());
-                    noteDao.save(note);
+                    Note note1 = noteDao.save(note);
+                    map.put("id", note1.getCn_note_id());
+                    addNoteToEs(map);
                     return ServerResponse.createBySuccess("新建笔记成功", note);
                 } else {
                     return updateNote(map);
@@ -98,6 +129,7 @@ public class NoteServiceImpl implements NoteService {
 
         }
     }
+
 
     /**
      * TODO: 删除，收藏(更新笔记的类型id)
@@ -112,7 +144,7 @@ public class NoteServiceImpl implements NoteService {
     public ServerResponse updateNoteTypeId(Map<String, Object> map) {
         List<String> list = Arrays.asList("noteId", "noteTypeId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数，应该包括noteID,noteTypeId");
+            return ServerResponse.createByErrorMessage("缺少参数，应该包括noteId,noteTypeId");
         }
         if (StringUtils.isBlank(map.get("noteId").toString())) {
             return ServerResponse.createByErrorMessage("笔记id不能为空");
@@ -121,6 +153,7 @@ public class NoteServiceImpl implements NoteService {
         } else {
             try {
                 noteDao.updateNoteTypeId(Integer.parseInt(map.get("noteTypeId").toString()), Integer.parseInt(map.get("noteId").toString()));
+                updateNoteTypeToEs(map);
                 return ServerResponse.createBySuccessMessags("操作成功");
             } catch (Exception e) {
                 logger.error("服务出现异常");
@@ -220,7 +253,7 @@ public class NoteServiceImpl implements NoteService {
         }
 
         if (StringUtils.isBlank(map.get("noteDesc").toString())) {
-            desc = null;
+            desc = "";
         } else {
             desc = map.get("noteDesc").toString();
         }
@@ -249,7 +282,8 @@ public class NoteServiceImpl implements NoteService {
                 note.setCn_note_desc(desc);
                 note.setCn_note_type_id(1);
                 note.setCnNoteUpdateTime(new Date());
-                noteDao.save(note);
+                Note note1 = noteDao.save(note);
+                this.updateNoteToEs(map);
                 return ServerResponse.createBySuccess("更新成功", note);
             } catch (Exception e) {
                 logger.error("服务出现异常");
@@ -274,10 +308,10 @@ public class NoteServiceImpl implements NoteService {
             return ServerResponse.createByErrorMessage("缺少参数，必须包括noteId");
         }
         if (StringUtils.isBlank(map.get("noteId").toString())) {
-            return ServerResponse.createByErrorMessage("笔记本id不能为空");
+            return ServerResponse.createByErrorMessage("笔记id不能为空");
         } else {
             try {
-                Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+                Note note = noteDao.findNoteByIdAndTypeId(Integer.parseInt(map.get("noteId").toString()));
                 return ServerResponse.createBySuccess("查询成功", note);
             } catch (Exception e) {
                 logger.error("服务出现异常");
@@ -288,7 +322,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     /**
-     * TODO: 通过typeid查找笔记本
+     * TODO: 通过类型id查找笔记
      *
      * @param "userId,typeId"
      * @return
@@ -311,7 +345,7 @@ public class NoteServiceImpl implements NoteService {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 int typeId = Integer.parseInt(map.get("typeId").toString());
                 List<Note> noteList = noteDao.findNoteByTypeId(userId, typeId);
-                return ServerResponse.createBySuccess("笔记收藏列", noteList);
+                return ServerResponse.createBySuccess("笔记收藏列表", noteList);
             } catch (Exception e) {
                 logger.error("查找失败");
                 return ServerResponse.createByErrorMessage("查找失败");
@@ -343,6 +377,7 @@ public class NoteServiceImpl implements NoteService {
                 Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
                 int NoteRead = note.getCn_note_read() + 1;
                 noteDao.updateNoteReadById(Integer.parseInt(map.get("noteId").toString()), NoteRead);
+                updateReadToEs(Integer.parseInt(map.get("noteId").toString()),NoteRead);
                 return ServerResponse.createBySuccessMessags("修改成功");
             } catch (Exception e) {
                 logger.error("服务出现异常");
@@ -373,6 +408,7 @@ public class NoteServiceImpl implements NoteService {
             try {
                 int noteId = Integer.parseInt(map.get("noteId").toString());
                 noteDao.deleteByNoteId(noteId);
+                deleteNoteToEs(String.valueOf(noteId));
                 return ServerResponse.createBySuccessMessags("删除成功");
             } catch (Exception e) {
                 logger.error("删除失败");
@@ -383,11 +419,12 @@ public class NoteServiceImpl implements NoteService {
 
     /**
      * TODO: 通过笔记本id查找笔记
-     * @author white
-     * @date 2018-04-04 13:43
-       @param "bookId"
+     *
+     * @param "bookId"
      * @return
      * @throws
+     * @author white
+     * @date 2018-04-04 13:43
      */
     @Override
     public ServerResponse findNoteByBookId(Map<String, Object> map) {
@@ -399,10 +436,10 @@ public class NoteServiceImpl implements NoteService {
             return ServerResponse.createByErrorMessage("笔记本id不能为空");
         } else {
             try {
-              int bookId = Integer.parseInt(map.get("bookId").toString());
-              List<Note> noteList = noteDao.findNoteByNoteBookId(bookId);
-              return ServerResponse.createBySuccess("笔记列表",noteList);
-            }catch (Exception e){
+                int bookId = Integer.parseInt(map.get("bookId").toString());
+                List<Note> noteList = noteDao.findNoteByNoteBookId(bookId);
+                return ServerResponse.createBySuccess("笔记列表", noteList);
+            } catch (Exception e) {
                 logger.error("查找失败");
                 return ServerResponse.createByErrorMessage("查找失败");
             }
@@ -411,11 +448,12 @@ public class NoteServiceImpl implements NoteService {
 
     /**
      * TODO: 通过标签id查找笔记
+     *
+     * @param "labelId"
+     * @return
+     * @throws
      * @author white
      * @date 2018-04-04 13:43
-       @param "labelId"
-      * @return
-     * @throws
      */
     @Override
     public ServerResponse findNoteByTagId(Map<String, Object> map) {
@@ -429,13 +467,183 @@ public class NoteServiceImpl implements NoteService {
             try {
                 int labelId = Integer.parseInt(map.get("labelId").toString());
                 List<Note> noteList = noteDao.findNoteByLabelId(labelId);
-                return ServerResponse.createBySuccess("笔记列表",noteList);
-            }catch (Exception e){
+                return ServerResponse.createBySuccess("笔记列表", noteList);
+            } catch (Exception e) {
                 logger.error("查找失败");
                 return ServerResponse.createByErrorMessage("查找失败");
             }
         }
     }
+
+
+    /***********************************在elasticsearch上面的相关操作***************************************/
+    /*#####################################################################################################*/
+
+    /**
+     * TODO: 将笔记存放到es上面
+     *
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-04-17 13:25
+     */
+    public ServerResponse addNoteToEs(Map<String, Object> map) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String email = "";
+        String bookname = "";
+        String typename = "";
+        String labelname = "";
+        String noteRead = "0";
+
+        email = userDao.findOne(Integer.parseInt(map.get("userId").toString())).getCn_user_email();
+        typename = iTypeDao.findOne(1).getCn_type_name();
+        if (!StringUtils.isBlank(map.get("noteBookId").toString())) {
+            bookname = noteBookDao.findOne(Integer.parseInt(map.get("noteBookId").toString())).getCn_notebook_name();
+        }
+        if (!StringUtils.isBlank(map.get("noteLabel").toString())) {
+            labelname = labelDao.findOne(Integer.parseInt(map.get("noteLabel").toString())).getCn_label_name();
+        }
+
+        try {
+            XContentBuilder content = XContentFactory.jsonBuilder()
+                    .startObject()
+                    .field("cnNoteTitle", map.get("noteTitle").toString())
+                    .field("cnUserEmail", email)
+                    .field("cnNoteType", typename)
+                    .field("cnNoteContent", map.get("noteContent").toString())
+                    .field("cnNoteBookName", bookname)
+                    .field("cnNoteLabelName", labelname)
+                    .field("cnNoteCreateTime", sdf.format(new Date()))
+                    .field("cnNoteRead", noteRead)
+                    .endObject();
+            IndexResponse response = this.client.prepareIndex(Constant.ES_INDEX_NAME, Constant.ES_TYPE_NAME,map.get("id").toString())
+                    .setSource(content)
+                    .get();
+            return ServerResponse.createBySuccess(response.getId(), HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ServerResponse.createByErrorCodeMessage(Integer.parseInt(HttpStatus.INTERNAL_SERVER_ERROR.toString()), "添加到es失败");
+        }
+
+    }
+
+
+    /**
+     * TODO: 修改es某条笔记
+     *
+     * @param "userId","noteBookId","noteId","noteContent","noteTitle", "noteDesc","noteLabel"
+     * @return
+     * @throws
+     * @author white
+     * @date 2018-04-17 18:53
+     */
+    public ServerResponse updateNoteToEs(Map<String, Object> map) {
+        String email = "";
+        String bookname = "";
+        String typename = "";
+        String labelname = "";
+        String noteRead = "0";
+        if (!StringUtils.isBlank(map.get("noteBookId").toString())) {
+            bookname = noteBookDao.findOne(Integer.parseInt(map.get("noteBookId").toString())).getCn_notebook_name();
+        }
+        if (!StringUtils.isBlank(map.get("noteLabel").toString())) {
+            labelname = labelDao.findOne(Integer.parseInt(map.get("noteLabel").toString())).getCn_label_name();
+        }
+        if (!StringUtils.isBlank(map.get("userId").toString())) {
+            email = userDao.findOne(Integer.parseInt(map.get("userId").toString())).getCn_user_email();
+        }
+        UpdateRequest updateRequest = new UpdateRequest(Constant.ES_INDEX_NAME, Constant.ES_TYPE_NAME, map.get("noteId").toString());
+        try {
+            XContentBuilder content = XContentFactory.jsonBuilder().startObject();
+            content.field("cnNoteTitle",map.get("noteTitle").toString());
+            content.field("cnNoteContent",map.get("noteContent").toString());
+            content.field("cnNoteBookName",bookname);
+            content.field("cnNoteLabelName",labelname);
+            content.endObject();
+            updateRequest.doc(content);
+            UpdateResponse updateResponse = this.client.update(updateRequest).get();
+            logger.info("es更新成功");
+            return ServerResponse.createBySuccess(updateResponse.getResult().toString(),HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return ServerResponse.createByErrorCodeMessage(Integer.parseInt(HttpStatus.INTERNAL_SERVER_ERROR.toString()), "es修改出错");
+        }
+    }
+
+    /**
+     * TODO: 彻底从es上删除笔记
+     * @author white
+     * @date 2018-04-17 19:53
+
+     * @return
+     * @throws
+     */
+    public ServerResponse deleteNoteToEs(String noteId){
+        try {
+            DeleteResponse response = client.prepareDelete(Constant.ES_INDEX_NAME, Constant.ES_TYPE_NAME,noteId).get();
+            return ServerResponse.createBySuccess(response.getResult().toString(),HttpStatus.OK);
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            return ServerResponse.createByErrorMessage("彻底从es删除失败");
+        }
+    }
+
+
+    /**
+     * TODO: 更新es上笔记的类型
+     * @author white
+     * @date 2018-04-17 19:58
+       @param "noteId，noteTypeId"
+     * @return
+     * @throws
+     */
+    public ServerResponse updateNoteTypeToEs(Map<String,Object> map) {
+        String typename = "";
+
+        if (!StringUtils.isBlank(map.get("noteTypeId").toString())){
+            typename = iTypeDao.findOne(Integer.parseInt(map.get("noteTypeId").toString())).getCn_type_name();
+        }
+        UpdateRequest updateRequest = new UpdateRequest(Constant.ES_INDEX_NAME, Constant.ES_TYPE_NAME, map.get("noteId").toString());
+        try {
+            XContentBuilder content = XContentFactory.jsonBuilder().startObject();
+            content.field("cnNoteType", typename);
+            content.endObject();
+            updateRequest.doc(content);
+            UpdateResponse updateResponse = this.client.update(updateRequest).get();
+            logger.info("es更新笔记类型成功");
+            return ServerResponse.createBySuccess(updateResponse.getResult().toString(), HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return ServerResponse.createByErrorCodeMessage(Integer.parseInt(HttpStatus.INTERNAL_SERVER_ERROR.toString()), "es修改出错");
+        }
+    }
+
+    /**
+     * TODO: 更新es上面笔记的阅读量
+     * @author white
+     * @date 2018-04-17 20:56
+
+     * @return
+     * @throws
+     */
+     public ServerResponse updateReadToEs(int noteId,int noteRead){
+
+         UpdateRequest updateRequest = new UpdateRequest(Constant.ES_INDEX_NAME, Constant.ES_TYPE_NAME, String.valueOf(noteId));
+         try {
+             XContentBuilder content = XContentFactory.jsonBuilder().startObject();
+             content.field("cnNoteRead", noteRead);
+             content.endObject();
+             updateRequest.doc(content);
+             UpdateResponse updateResponse = this.client.update(updateRequest).get();
+             logger.info("es添加阅读量成功");
+             return ServerResponse.createBySuccess(updateResponse.getResult().toString(), HttpStatus.OK);
+         } catch (Exception e) {
+             logger.error(e.getMessage());
+             return ServerResponse.createByErrorCodeMessage(Integer.parseInt(HttpStatus.INTERNAL_SERVER_ERROR.toString()), "es修改出错");
+         }
+     }
+
 
 
 }

@@ -55,7 +55,7 @@
     <div class="box box-primary">
         <div class="box-header">
             <@shiro.hasPermission name="system:note:find">
-                <form id="searchForm" class="form-horizontal" action="${ctx!}/admin/note/find" method="get" onsubmit="return checkText()">
+                <form id="searchForm" class="form-horizontal" action="${ctx!}/admin/note/findByTextInEs" method="get" onsubmit="return checkText()">
                     <div class="form-group">
                         <div class="col-sm-8 col-xs-12 ">
                             <input type="text" name="text" class="form-control" id="text" placeholder="请输入查找内容">

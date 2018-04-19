@@ -4,13 +4,11 @@ import cn.white.bysj.admin.entity.support.BaseEntity;
 import cn.white.bysj.note.Note;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
-import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Create by @author white

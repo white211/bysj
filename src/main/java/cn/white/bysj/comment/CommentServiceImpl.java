@@ -1,10 +1,13 @@
 package cn.white.bysj.comment;
 
+import cn.white.bysj.admin.dao.IShieldDao;
+import cn.white.bysj.admin.entity.Shield;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.user.User;
 import cn.white.bysj.user.UserDao;
 import cn.white.bysj.user.UserService;
 import cn.white.bysj.utils.ValidatorUtil;
+import cn.white.bysj.utils.shieldWord.ShieldUtil;
 import cn.white.bysj.vo.CommentListVo;
 import com.sun.tools.corba.se.idl.StringGen;
 import groovy.util.logging.Slf4j;
@@ -31,6 +34,9 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private IShieldDao iShieldDao;
+
     private static Logger logger = LoggerFactory.getLogger(CommentServiceImpl.class);
 
     /**
@@ -42,6 +48,7 @@ public class CommentServiceImpl implements CommentService {
      * @author white
      * @date 2018-03-21 13:39
      */
+    @Override
     public ServerResponse newComment(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId", "noteId", "commentContent");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -59,7 +66,7 @@ public class CommentServiceImpl implements CommentService {
                 Comment comment = new Comment();
                 comment.setCn_note_id(Integer.parseInt(map.get("noteId").toString()));
                 comment.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
-                comment.setCn_comment_content(map.get("commentContent").toString());
+                comment.setCn_comment_content(ShieldUtil.getReplaceStr(map.get("commentContent").toString(),this.ShieldToSet()));
                 comment.setCnCommentCreatTime(new Date());
                 commentDao.save(comment);
                 return ServerResponse.createBySuccessMessags("评论成功");
@@ -142,5 +149,17 @@ public class CommentServiceImpl implements CommentService {
         }
     }
 
+    /**
+     * 将数据库中的屏蔽词转化为set集合
+     * @return
+     */
+    public Set<String> ShieldToSet(){
+       List<Shield> shieldList = iShieldDao.findAll();
+       Set<String> set = new HashSet<>();
+       for (Shield shield : shieldList){
+           set.add(shield.getCn_shield_content());
+       }
+        return  set;
+    }
 
 }

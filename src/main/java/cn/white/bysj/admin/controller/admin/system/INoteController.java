@@ -6,6 +6,8 @@ import cn.white.bysj.admin.service.INoteService;
 import cn.white.bysj.admin.vo.NoteVo;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.note.Note;
+import cn.white.bysj.note.NoteService;
+import cn.white.bysj.note.NoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -27,14 +29,25 @@ public class INoteController extends BaseController {
     @Autowired
     private INoteService iNoteService;
 
+    @Autowired
+    private NoteServiceImpl noteService;
+
+//    @RequestMapping(value = {"/index"})
+//    public String index(ModelMap modelMap) {
+//        String string = "cnNoteCreateTime";
+//        Sort sort = new Sort(Sort.Direction.DESC,string);
+//        Page<NoteVo> page = iNoteService.findNote(getPageRequest(sort));
+//        modelMap.put("pageInfo", page);
+//        return "admin/note/index";
+//    }
+
     @RequestMapping(value = {"/index"})
     public String index(ModelMap modelMap) {
-        String string = "cnNoteCreateTime";
-        Sort sort = new Sort(Sort.Direction.DESC,string);
-        Page<NoteVo> page = iNoteService.findNote(getPageRequest(sort));
+        Page<NoteVo> page = iNoteService.findNoteInEs(getPageRequest());
         modelMap.put("pageInfo", page);
         return "admin/note/index";
     }
+
 
     @GetMapping(value = "/see/{cn_note_id}")
     public String see(@PathVariable Integer cn_note_id,ModelMap modelMap){
@@ -48,6 +61,7 @@ public class INoteController extends BaseController {
     public JsonResult delete(@PathVariable Integer cn_note_id, ModelMap map) {
         try {
             iNoteService.delete(cn_note_id);
+            noteService.deleteNoteToEs(String.valueOf(cn_note_id));
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResult.failure(e.getMessage());
@@ -65,6 +79,12 @@ public class INoteController extends BaseController {
     }
 
 
+    @RequestMapping(value = "/findByTextInEs")
+    public String findByText(@RequestParam String text,ModelMap map){
+        Page<NoteVo> page = iNoteService.findByTextInEs(text,getPageRequest());
+        map.put("pageInfo",page);
+        return "/admin/note/index";
+    }
 
 
 }

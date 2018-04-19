@@ -1,0 +1,346 @@
+2018-04-14 00:00:00.271 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 6716 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-14 00:00:00.350 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-14 00:00:00.353 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-14 00:00:01.952 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-14 00:00:08.142 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-14 00:00:08.148 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-14 00:00:08.361 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-14 00:00:08.406 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-14 00:00:08.406 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-14 00:00:14.183 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-14 00:00:27.246 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-14 00:00:28.941 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-14 00:00:28.944 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-14 00:00:29.330 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-14 00:00:35.636 [restartedMain] DEBUG org.apache.solr.client.solrj.impl.HttpClientUtil - Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+2018-04-14 00:00:36.825 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-14 00:00:36.862 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-14 00:00:36.862 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-14 00:00:36.864 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-14 00:00:36.919 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-14 00:00:36.923 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-14 00:00:36.941 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-14 00:00:37.041 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-14 00:00:37.042 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-14 00:00:37.043 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-14 00:00:37.057 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-14 00:00:37.057 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-14 00:00:37.057 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-14 00:00:37.087 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-14 00:00:37.087 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-14 00:00:37.092 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-14 00:00:37.112 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-14 00:00:37.112 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-14 00:00:37.212 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-14 00:00:37.214 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-14 00:00:37.218 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-14 00:00:37.220 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-14 00:00:37.221 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-14 00:00:37.243 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-14 00:00:37.245 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-14 00:00:37.245 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-14 00:00:37.252 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-14 00:00:37.254 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-14 00:00:37.255 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-14 00:00:37.256 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-14 00:00:37.257 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-14 00:00:37.274 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-14 00:00:37.275 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-14 00:00:37.275 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-14 00:00:40.658 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-14 00:00:40.726 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-14 00:00:40.845 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-14 00:00:42.954 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-14 00:00:43.182 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-14 00:00:43.213 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-14 00:00:43.240 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-14 00:00:43.294 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 44.4 seconds (JVM running for 46.73)
+2018-04-14 00:00:43.294 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-14 00:10:02.611 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-14 00:10:02.757 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.white.bysj.note.NoteCore.NoteCoreServiceImpl.addNoteCore(NoteCoreServiceImpl.java:38)
+	at cn.white.bysj.note.NoteCore.NoteCoreController.addNote(NoteCoreController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-14 00:10:06.735 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+2018-04-14 00:10:06.753 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+2018-04-14 00:10:06.755 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 127.0.0.1:8983
+2018-04-14 00:10:07.758 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@63355b12 closed
+2018-04-14 00:10:07.758 [http-nio-8080-exec-2] DEBUG org.apache.solr.client.solrj.impl.SolrHttpRequestRetryHandler - Retry http request 1 out of 3
+2018-04-14 00:10:07.758 [http-nio-8080-exec-2] DEBUG org.apache.solr.client.solrj.impl.SolrHttpRequestRetryHandler - Do not retry, non retriable class java.net.ConnectException
+2018-04-14 00:10:07.759 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@63355b12 shut down
+2018-04-14 00:10:07.759 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@63355b12 closed
+2018-04-14 00:10:07.759 [http-nio-8080-exec-2] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+2018-04-14 00:10:07.762 [http-nio-8080-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.executeMethod(HttpSolrClient.java:482)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:241)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:230)
+	at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)
+	at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:173)
+	at org.springframework.data.solr.core.SolrTemplate$4.doInSolr(SolrTemplate.java:335)
+	at org.springframework.data.solr.core.SolrTemplate$4.doInSolr(SolrTemplate.java:330)
+	at org.springframework.data.solr.core.SolrTemplate.execute(SolrTemplate.java:220)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:330)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:318)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:300)
+	at cn.white.bysj.note.NoteCore.NoteCoreServiceImpl.addNoteCore(NoteCoreServiceImpl.java:45)
+	at cn.white.bysj.note.NoteCore.NoteCoreController.addNote(NoteCoreController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-14 00:10:22.222 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+2018-04-14 00:10:22.223 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 1][route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+2018-04-14 00:10:22.223 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 127.0.0.1:8983
+2018-04-14 00:10:23.225 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@2f335f63 closed
+2018-04-14 00:10:23.226 [http-nio-8080-exec-3] DEBUG org.apache.solr.client.solrj.impl.SolrHttpRequestRetryHandler - Retry http request 1 out of 3
+2018-04-14 00:10:23.226 [http-nio-8080-exec-3] DEBUG org.apache.solr.client.solrj.impl.SolrHttpRequestRetryHandler - Do not retry, non retriable class java.net.ConnectException
+2018-04-14 00:10:23.226 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@2f335f63 shut down
+2018-04-14 00:10:23.226 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@2f335f63 closed
+2018-04-14 00:10:23.226 [http-nio-8080-exec-3] DEBUG org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 1][route: {}->http://127.0.0.1:8983][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+2018-04-14 00:10:23.227 [http-nio-8080-exec-3] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.executeMethod(HttpSolrClient.java:482)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:241)
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:230)
+	at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)
+	at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:173)
+	at org.springframework.data.solr.core.SolrTemplate$4.doInSolr(SolrTemplate.java:335)
+	at org.springframework.data.solr.core.SolrTemplate$4.doInSolr(SolrTemplate.java:330)
+	at org.springframework.data.solr.core.SolrTemplate.execute(SolrTemplate.java:220)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:330)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:318)
+	at org.springframework.data.solr.core.SolrTemplate.saveBean(SolrTemplate.java:300)
+	at cn.white.bysj.note.NoteCore.NoteCoreServiceImpl.addNoteCore(NoteCoreServiceImpl.java:45)
+	at cn.white.bysj.note.NoteCore.NoteCoreController.addNote(NoteCoreController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

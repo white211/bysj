@@ -15,7 +15,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface INoteDao extends IBaseDao<Note, Integer> {
 
-    @Query(value = "select * from note where cn_note_title LIKE %?1% ORDER BY ?#{#pageable}", nativeQuery = true)
+    @Query(value = "select * from note where cn_note_title LIKE %?1%  or cn_note_content LIKE %?1%" +
+            " ORDER BY ?#{#pageable}", nativeQuery = true)
     Page<Note> findNoteByText(String text, Pageable pageable);
 
 }

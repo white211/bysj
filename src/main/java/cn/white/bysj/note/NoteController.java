@@ -38,8 +38,9 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/note")
-public class NoteController extends BaseController
-//        extends Cors
+public class NoteController
+//        extends BaseController
+        extends Cors
 {
 
     @Autowired
@@ -47,7 +48,6 @@ public class NoteController extends BaseController
 
     @Autowired
     private QiniuService qiniuService;
-
 
     @Autowired
     private INoteService iNoteService;
@@ -61,32 +61,6 @@ public class NoteController extends BaseController
         Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.noteList(map);
     }
-
-    //测试用
-    @RequestMapping(value = "page1.do")
-    @ResponseBody
-    public Page<NoteVo> getPage(){
-        Page<Note> page= iNoteDao.findAll(getPageRequest());
-        List<NoteVo> noteVos = new ArrayList<>();
-        for (Note note : page){
-            NoteVo noteVo = new NoteVo();
-            noteVo.setCn_note_id(note.getCn_note_id());
-            noteVo.setCn_note_content(note.getCn_note_content());
-            noteVos.add(noteVo);
-        }
-        Pageable pageable = getPageRequest();
-        Page<NoteVo> page1 = new PageImpl<NoteVo>(noteVos,pageable,page.getTotalElements());
-        return page1;
-    }
-
-    //测试用
-    @RequestMapping(value = "page2.do")
-    @ResponseBody
-    public Page<Note> getPage2(){
-        Page<Note> page= iNoteDao.findAll(getPageRequest());
-        return page;
-    }
-
 
 
     @RequestMapping(value = "newNote.do")
