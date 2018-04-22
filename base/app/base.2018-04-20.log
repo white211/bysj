@@ -1,0 +1,1253 @@
+2018-04-20 11:12:01.314 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 8124 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-20 11:12:01.340 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-20 11:12:01.341 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-20 11:12:02.932 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-20 11:12:07.430 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-20 11:12:07.444 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-20 11:12:07.599 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-20 11:12:07.667 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-20 11:12:07.668 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-20 11:12:13.692 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-20 11:12:22.666 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-20 11:12:24.224 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-20 11:12:24.226 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-20 11:12:24.648 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-20 11:12:39.378 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-20 11:12:39.450 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-20 11:12:39.451 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-20 11:12:39.453 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-20 11:12:39.548 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-20 11:12:39.552 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-20 11:12:39.565 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-20 11:12:39.687 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-20 11:12:39.687 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-20 11:12:39.687 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-20 11:12:39.701 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-20 11:12:39.702 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-20 11:12:39.703 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-20 11:12:39.769 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-20 11:12:39.769 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-20 11:12:39.786 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-20 11:12:39.798 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-20 11:12:39.798 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-20 11:12:39.882 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-20 11:12:39.885 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-20 11:12:39.886 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-20 11:12:39.888 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-20 11:12:39.888 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-20 11:12:39.964 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-20 11:12:39.966 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-20 11:12:39.967 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-20 11:12:39.978 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-20 11:12:39.979 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-20 11:12:39.980 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-20 11:12:39.981 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-20 11:12:39.982 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-20 11:12:39.997 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-20 11:12:39.999 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-20 11:12:39.999 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-20 11:12:43.533 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-20 11:12:43.697 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-20 11:12:43.845 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-20 11:12:45.412 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-20 11:12:45.611 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20 11:12:45.677 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-20 11:12:45.732 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-20 11:12:45.859 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 46.591 seconds (JVM running for 52.978)
+2018-04-20 11:12:45.859 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-20 17:02:02.273 [http-nio-8080-exec-8] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-20 17:02:13.336 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.476 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:02:13.522 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:02:13.864 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.870 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:02:13.872 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:02:13.905 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.923 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.933 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.947 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.959 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:13.979 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:15.684 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:15.692 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:02:15.696 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:02:15.917 [http-nio-8080-exec-4] ERROR cn.white.bysj.admin.service.impl.INoteServiceImpl - es获取笔记失败
+2018-04-20 17:02:15.936 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select note0_.cn_note_id as cn_note_1_3_, note0_.cn_note_create_time as cn_note_2_3_, note0_.cn_note_update_time as cn_note_3_3_, note0_.cn_note_book_id as cn_note_4_3_, note0_.cn_note_content as cn_note_5_3_, note0_.cn_note_desc as cn_note_6_3_, note0_.cn_note_label_id as cn_note_7_3_, note0_.cn_note_read as cn_note_8_3_, note0_.cn_note_title as cn_note_9_3_, note0_.cn_note_type_id as cn_note10_3_, note0_.cn_user_id as cn_user11_3_ from note note0_ order by note0_.cn_note_create_time desc limit ?
+2018-04-20 17:02:16.270 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.312 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.320 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.327 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.353 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.362 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.371 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:16.377 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.885 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.888 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:02:17.891 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:02:17.902 [http-nio-8080-exec-6] ERROR cn.white.bysj.admin.service.impl.INoteServiceImpl - es获取笔记失败
+2018-04-20 17:02:17.903 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select note0_.cn_note_id as cn_note_1_3_, note0_.cn_note_create_time as cn_note_2_3_, note0_.cn_note_update_time as cn_note_3_3_, note0_.cn_note_book_id as cn_note_4_3_, note0_.cn_note_content as cn_note_5_3_, note0_.cn_note_desc as cn_note_6_3_, note0_.cn_note_label_id as cn_note_7_3_, note0_.cn_note_read as cn_note_8_3_, note0_.cn_note_title as cn_note_9_3_, note0_.cn_note_type_id as cn_note10_3_, note0_.cn_user_id as cn_user11_3_ from note note0_ order by note0_.cn_note_create_time desc limit ?
+2018-04-20 17:02:17.915 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.920 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.928 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.933 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.952 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.959 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.965 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:17.970 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:02:19.878 [http-nio-8080-exec-7] ERROR cn.white.bysj.admin.service.impl.INoteServiceImpl - es查询笔记失败
+2018-04-20 17:02:20.035 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_title LIKE ?  or cn_note_content LIKE ? ORDER BY ?, cnNoteCreateTime desc limit ?
+2018-04-20 17:02:20.113 [http-nio-8080-exec-7] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+2018-04-20 17:02:20.113 [http-nio-8080-exec-7] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'cnNoteCreateTime' in 'order clause'
+2018-04-20 17:02:20.149 [http-nio-8080-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'cnNoteCreateTime' in 'order clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2117)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1900)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2617)
+	at org.hibernate.loader.Loader.doList(Loader.java:2600)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429)
+	at org.hibernate.loader.Loader.list(Loader.java:2424)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1967)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:499)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:477)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy121.findNoteByText(Unknown Source)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl.findByText(INoteServiceImpl.java:104)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl.findByTextInEs(INoteServiceImpl.java:179)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl$$FastClassBySpringCGLIB$$3df7c7d8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl$$EnhancerBySpringCGLIB$$cc6b3fc6.findByTextInEs(<generated>)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl$$FastClassBySpringCGLIB$$3df7c7d8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at cn.white.bysj.admin.service.impl.INoteServiceImpl$$EnhancerBySpringCGLIB$$beb0a1f4.findByTextInEs(<generated>)
+	at cn.white.bysj.admin.controller.admin.system.INoteController.findByText(INoteController.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-20 17:08:31.817 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select user0_.cn_user_id as cn_user_1_12_, user0_.cn_user_create_time as cn_user_2_12_, user0_.cn_user_update_time as cn_user_3_12_, user0_.cn_user_actived as cn_user_4_12_, user0_.cn_user_actived_code as cn_user_5_12_, user0_.cn_user_address as cn_user_6_12_, user0_.cn_user_avatar as cn_user_7_12_, user0_.cn_user_birthday as cn_user_8_12_, user0_.cn_user_delete_status as cn_user_9_12_, user0_.cn_user_description as cn_user10_12_, user0_.cn_user_email as cn_user11_12_, user0_.cn_user_locked as cn_user12_12_, user0_.cn_user_name as cn_user13_12_, user0_.cn_user_nickname as cn_user14_12_, user0_.cn_user_password as cn_user15_12_, user0_.cn_user_sex as cn_user16_12_, user0_.cn_user_telephone as cn_user17_12_, user0_.cn_user_token as cn_user18_12_ from user user0_ order by user0_.cn_user_create_time desc limit ?
+2018-04-20 17:08:31.949 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:31.961 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:08:31.963 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:08:31.981 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:31.988 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:31.993 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:31.998 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.006 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.014 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.028 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.079 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.087 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.099 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.168 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.214 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.229 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.320 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.349 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.356 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.367 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.375 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.381 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.387 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.392 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:32.398 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.619 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select user0_.cn_user_id as cn_user_1_12_0_, user0_.cn_user_create_time as cn_user_2_12_0_, user0_.cn_user_update_time as cn_user_3_12_0_, user0_.cn_user_actived as cn_user_4_12_0_, user0_.cn_user_actived_code as cn_user_5_12_0_, user0_.cn_user_address as cn_user_6_12_0_, user0_.cn_user_avatar as cn_user_7_12_0_, user0_.cn_user_birthday as cn_user_8_12_0_, user0_.cn_user_delete_status as cn_user_9_12_0_, user0_.cn_user_description as cn_user10_12_0_, user0_.cn_user_email as cn_user11_12_0_, user0_.cn_user_locked as cn_user12_12_0_, user0_.cn_user_name as cn_user13_12_0_, user0_.cn_user_nickname as cn_user14_12_0_, user0_.cn_user_password as cn_user15_12_0_, user0_.cn_user_sex as cn_user16_12_0_, user0_.cn_user_telephone as cn_user17_12_0_, user0_.cn_user_token as cn_user18_12_0_ from user user0_ where user0_.cn_user_id=?
+2018-04-20 17:08:39.697 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.700 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:08:39.701 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:08:39.713 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.720 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.725 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.730 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.734 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:39.741 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.739 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select user0_.cn_user_id as cn_user_1_12_0_, user0_.cn_user_create_time as cn_user_2_12_0_, user0_.cn_user_update_time as cn_user_3_12_0_, user0_.cn_user_actived as cn_user_4_12_0_, user0_.cn_user_actived_code as cn_user_5_12_0_, user0_.cn_user_address as cn_user_6_12_0_, user0_.cn_user_avatar as cn_user_7_12_0_, user0_.cn_user_birthday as cn_user_8_12_0_, user0_.cn_user_delete_status as cn_user_9_12_0_, user0_.cn_user_description as cn_user10_12_0_, user0_.cn_user_email as cn_user11_12_0_, user0_.cn_user_locked as cn_user12_12_0_, user0_.cn_user_name as cn_user13_12_0_, user0_.cn_user_nickname as cn_user14_12_0_, user0_.cn_user_password as cn_user15_12_0_, user0_.cn_user_sex as cn_user16_12_0_, user0_.cn_user_telephone as cn_user17_12_0_, user0_.cn_user_token as cn_user18_12_0_ from user user0_ where user0_.cn_user_id=?
+2018-04-20 17:08:42.753 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.756 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:08:42.758 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:08:42.779 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.793 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.809 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.818 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.838 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:08:42.843 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.380 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select role0_.id as id1_7_, role0_.create_time as create_t2_7_, role0_.description as descript3_7_, role0_.name as name4_7_, role0_.role_key as role_key5_7_, role0_.status as status6_7_, role0_.update_time as update_t7_7_ from tb_role role0_ order by role0_.create_time desc limit ?
+2018-04-20 17:09:46.456 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.469 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:09:46.473 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:09:46.498 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.504 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.516 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.520 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.524 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.528 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.533 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.550 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.555 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.562 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.584 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.762 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:09:46.771 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.697 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.702 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:10:39.705 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:10:39.728 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_ order by resource0_.create_time desc limit ?
+2018-04-20 17:10:39.755 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(resource0_.id) as col_0_0_ from tb_resource resource0_
+2018-04-20 17:10:39.909 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.919 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.927 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.942 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.946 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.951 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.958 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.962 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.972 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.977 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.982 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.986 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.991 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.994 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:39.997 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.002 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.009 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.012 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.016 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.069 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.076 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.079 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.085 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.091 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.095 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.099 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.103 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:10:40.107 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.505 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.509 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 17:11:39.511 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 17:11:39.524 [http-nio-8080-exec-9] ERROR cn.white.bysj.admin.service.impl.INoteServiceImpl - es获取笔记失败
+2018-04-20 17:11:39.526 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select note0_.cn_note_id as cn_note_1_3_, note0_.cn_note_create_time as cn_note_2_3_, note0_.cn_note_update_time as cn_note_3_3_, note0_.cn_note_book_id as cn_note_4_3_, note0_.cn_note_content as cn_note_5_3_, note0_.cn_note_desc as cn_note_6_3_, note0_.cn_note_label_id as cn_note_7_3_, note0_.cn_note_read as cn_note_8_3_, note0_.cn_note_title as cn_note_9_3_, note0_.cn_note_type_id as cn_note10_3_, note0_.cn_user_id as cn_user11_3_ from note note0_ order by note0_.cn_note_create_time desc limit ?
+2018-04-20 17:11:39.540 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.544 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.547 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.553 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.556 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.560 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.564 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 17:11:39.568 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from user where cn_user_name=?
+2018-04-20 20:05:46.209 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 840 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-20 20:05:46.221 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-20 20:05:46.221 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-20 20:05:49.625 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-20 20:05:59.090 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-20 20:05:59.108 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-20 20:05:59.261 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-20 20:05:59.397 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-20 20:05:59.398 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-20 20:06:09.751 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-20 20:06:12.237 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:14.243 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:16.248 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:18.256 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:20.266 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:22.278 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:24.296 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:26.312 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:28.330 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:30.339 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:32.358 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:34.364 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:36.373 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:38.384 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:06:40.388 [Druid-ConnectionPool-Create-631809894] ERROR com.alibaba.druid.pool.DruidDataSource - create connection error, url: jdbc:mysql://localhost:3306/bysj
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1375)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:1857)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2018-04-20 20:07:12.733 [restartedMain] INFO  cn.white.bysj.BysjApplication - Starting BysjApplication on DESKTOP-VCSE77I with PID 5704 (E:\IDEA\bysj\target\classes started by white in E:\IDEA\bysj)
+2018-04-20 20:07:12.740 [restartedMain] DEBUG cn.white.bysj.BysjApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-04-20 20:07:12.741 [restartedMain] INFO  cn.white.bysj.BysjApplication - No active profile set, falling back to default profiles: default
+2018-04-20 20:07:14.283 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-04-20 20:07:19.440 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2018-04-20 20:07:19.445 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'cn.white.bysj'
+2018-04-20 20:07:19.759 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\IDEA\bysj\target\classes\cn\white\bysj\notebook\NoteBookDao.class]
+2018-04-20 20:07:19.844 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noteBookDao' and 'cn.white.bysj.notebook.NoteBookDao' mapperInterface
+2018-04-20 20:07:19.844 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noteBookDao'.
+2018-04-20 20:07:24.515 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-04-20 20:07:34.716 [restartedMain] DEBUG org.hibernate.SQL - select resource0_.id as id1_6_, resource0_.create_time as create_t2_6_, resource0_.description as descript3_6_, resource0_.icon as icon4_6_, resource0_.is_hide as is_hide5_6_, resource0_.level as level6_6_, resource0_.name as name7_6_, resource0_.parent_id as parent_13_6_, resource0_.sort as sort8_6_, resource0_.source_key as source_k9_6_, resource0_.source_url as source_10_6_, resource0_.type as type11_6_, resource0_.update_time as update_12_6_ from tb_resource resource0_
+2018-04-20 20:07:36.467 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-20 20:07:36.474 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-20 20:07:36.997 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-20 20:07:50.964 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2018-04-20 20:07:51.024 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2018-04-20 20:07:51.024 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2018-04-20 20:07:51.026 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\white\AppData\Local\Temp\
+2018-04-20 20:07:51.109 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2018-04-20 20:07:51.111 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2018-04-20 20:07:51.124 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2018-04-20 20:07:51.197 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-20 20:07:51.197 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-20 20:07:51.198 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-20 20:07:51.210 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2018-04-20 20:07:51.210 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2018-04-20 20:07:51.210 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2018-04-20 20:07:51.253 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\white\AppData\Local\Temp
+2018-04-20 20:07:51.253 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\white\AppData\Local\Temp\.ehcache-diskstore.lock
+2018-04-20 20:07:51.258 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-20 20:07:51.273 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\white\AppData\Local\Temp\resource%0043ache.index
+2018-04-20 20:07:51.274 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2018-04-20 20:07:51.391 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2018-04-20 20:07:51.393 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2018-04-20 20:07:51.394 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2018-04-20 20:07:51.395 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2018-04-20 20:07:51.395 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2018-04-20 20:07:51.428 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2018-04-20 20:07:51.430 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2018-04-20 20:07:51.436 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2018-04-20 20:07:51.437 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2018-04-20 20:07:51.438 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2018-04-20 20:07:51.438 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2018-04-20 20:07:51.439 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2018-04-20 20:07:51.440 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2018-04-20 20:07:51.450 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2018-04-20 20:07:51.450 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2018-04-20 20:07:51.450 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2018-04-20 20:07:54.770 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2018-04-20 20:07:54.872 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-04-20 20:07:55.019 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2018-04-20 20:07:56.850 [restartedMain] WARN  org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-04-20 20:07:57.181 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20 20:07:57.213 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-04-20 20:07:57.216 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-20 20:07:57.328 [restartedMain] INFO  cn.white.bysj.BysjApplication - Started BysjApplication in 46.228 seconds (JVM running for 49.402)
+2018-04-20 20:07:57.329 [restartedMain] DEBUG com.sun.glass.ui.Application - 启动成功
+2018-04-20 21:23:47.476 [http-nio-8080-exec-10] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-20 21:23:48.086 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:23:49.727 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:23:49.727 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.727 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-20 21:23:49.727 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:23:49.728 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:23:49.728 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_user_id =? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC 
+2018-04-20 21:23:49.743 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.746 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.758 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.764 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.766 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.770 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.775 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.779 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.782 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.783 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:23:49.784 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.784 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.786 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.787 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.788 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.790 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.792 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.796 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.799 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.801 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.803 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.805 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.810 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.814 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.824 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.825 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:23:49.825 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.826 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.827 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.828 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-20 21:23:49.828 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.828 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.830 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.830 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.832 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.832 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.834 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.835 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.836 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.838 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.838 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.839 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.841 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.841 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.842 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.843 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.843 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.844 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.844 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.844 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.846 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.846 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.847 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.903 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:23:49.918 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.923 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.935 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.939 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:49.953 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:23:49.957 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:23:59.760 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:24:18.276 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:31:11.218 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:36:37.969 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:36:45.204 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - SELECT * from tb_home where cn_home_type =0 ORDER BY cn_home_update_time DESC 
+2018-04-20 21:39:39.550 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from user where cn_user_email=? and cn_user_actived=1
+2018-04-20 21:39:39.615 [http-nio-8080-exec-7] INFO  cn.white.bysj.user.UserService - 登陆成功
+2018-04-20 21:39:39.623 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select roles0_.user_id as user_id1_11_0_, roles0_.role_id as role_id2_11_0_, role1_.id as id1_7_1_, role1_.create_time as create_t2_7_1_, role1_.description as descript3_7_1_, role1_.name as name4_7_1_, role1_.role_key as role_key5_7_1_, role1_.status as status6_7_1_, role1_.update_time as update_t7_7_1_ from tb_user_role roles0_ inner join tb_role role1_ on roles0_.role_id=role1_.id where roles0_.user_id=?
+2018-04-20 21:39:39.634 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select resources0_.role_id as role_id1_8_0_, resources0_.resource_id as resource2_8_0_, resource1_.id as id1_6_1_, resource1_.create_time as create_t2_6_1_, resource1_.description as descript3_6_1_, resource1_.icon as icon4_6_1_, resource1_.is_hide as is_hide5_6_1_, resource1_.level as level6_6_1_, resource1_.name as name7_6_1_, resource1_.parent_id as parent_13_6_1_, resource1_.sort as sort8_6_1_, resource1_.source_key as source_k9_6_1_, resource1_.source_url as source_10_6_1_, resource1_.type as type11_6_1_, resource1_.update_time as update_12_6_1_ from tb_role_resource resources0_ inner join tb_resource resource1_ on resources0_.resource_id=resource1_.id where resources0_.role_id=?
+2018-04-20 21:39:43.626 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:39:43.628 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:39:43.628 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:39:43.637 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-20 21:39:43.637 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.642 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_user_id =? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC 
+2018-04-20 21:39:43.658 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.658 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.660 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.660 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.662 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.662 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.663 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.663 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.665 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.665 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.672 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.685 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note_book where cn_user_id = ? and cn_notebook_type_id !=4 ORDER BY cn_notebook_update_time DESC 
+2018-04-20 21:39:43.685 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from note where cn_user_id = ? and cn_note_type_id = ? ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.685 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:39:43.688 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.688 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.690 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.693 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.694 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - SELECT * FROM note_book where cn_user_id = ? AND  cn_notebook_type_id = ?
+2018-04-20 21:39:43.695 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.698 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.699 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.701 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.702 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.702 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.706 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.710 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.712 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.717 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.717 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.717 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.718 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.718 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.719 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.720 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.720 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.721 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.722 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.722 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.722 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.724 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.736 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.739 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.748 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.749 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.751 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.754 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.756 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.758 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.758 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.760 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.762 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.764 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.766 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.768 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.799 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.801 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from note where cn_note_book_id = ? and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:39:43.857 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:39:43.863 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_book_id = ? and cn_note_type_id != 4
+2018-04-20 21:39:43.865 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:07.721 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:08.403 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:08.540 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:08.543 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.545 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.548 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.549 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.552 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.554 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.555 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.557 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.558 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.559 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.569 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:08.573 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.575 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.577 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.579 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.581 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.583 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.585 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.589 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:08.591 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:08.593 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:09.191 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:09.194 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:09.329 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:09.484 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:09.900 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:10.044 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:10.048 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.183 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:10.187 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.190 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.193 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.197 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.199 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.200 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.202 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.204 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.205 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.206 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.214 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:10.217 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.219 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.221 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.223 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.225 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.227 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.229 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.231 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.232 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.234 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.552 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:10.558 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.881 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:10.883 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.884 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.885 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.887 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.889 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.891 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.893 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.894 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.895 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.897 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.907 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:10.911 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.913 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.914 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.916 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.918 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.920 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.921 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.923 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:10.924 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:10.926 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:11.579 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:11.583 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:11.753 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:11.757 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:11.837 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:11.842 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:11.915 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:11.919 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.190 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:12.193 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.360 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:12.362 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.515 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select * from label where cn_user_id = ? and cn_label_name like ?
+2018-04-20 21:40:12.517 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.644 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:12.646 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.648 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.649 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.650 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.652 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.653 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.656 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.657 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.659 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.660 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.669 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from label where cn_user_id=? ORDER BY cn_label_update_time DESC 
+2018-04-20 21:40:12.672 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.673 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.675 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.677 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.679 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.682 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.684 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.687 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
+2018-04-20 21:40:12.689 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select count(*) from note where cn_note_label_id =? and cn_note_type_id !=4 
+2018-04-20 21:40:12.691 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select * from note where cn_note_label_id = ? and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC
