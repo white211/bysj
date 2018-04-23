@@ -8,14 +8,15 @@
     $(".btn-submit").click(function () {
         $.ajax({
             type: "POST",
-            url: "${ctx!}/admin/user/edit",
+            url: "${ctx!}/admin/feedback/edit",
             data: $(".form-edit").serialize(),
             dataType: "JSON",
             success: function (res) {
                 layer.msg(res.message, {
                     time: 2000
                 }, function () {
-                    location.reload();
+//                    location.reload();
+                    window.location.href = "${ctx!}/admin/feedback/index";
                 });
             }
         });

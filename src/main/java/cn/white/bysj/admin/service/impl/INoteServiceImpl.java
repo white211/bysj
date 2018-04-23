@@ -142,7 +142,7 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
      */
     @Override
     public Page<NoteVo> findByTextInEs(String text, Pageable pageable) {
-        String string = "cnNoteCreateTime";
+        String string = "cn_note_create_time";
         Sort sort = new Sort(Sort.Direction.DESC,string);
         Pageable pageable1 = new PageRequest(pageable.getPageNumber(),pageable.getPageSize(),sort);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

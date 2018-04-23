@@ -134,7 +134,7 @@
           </ul>
         </li>
 
-          <li class="treeview <#if active=="note" || active=="home" || active=="feedback" || active=="shield">active</#if>">
+          <li class="treeview <#if active=="note" || active=="main" || active=="feedback" || active=="shield">active</#if>">
               <a href="#">
                   <i class="fa fa-database"></i> <span>内容管理</span>
                   <span class="pull-right-container">
@@ -149,7 +149,7 @@
                       <li <#if active=="shield">class="active"</#if>><a href="${ctx!}/admin/shield/index"><i class="fa fa-minus-square"></i> 屏蔽词管理</a></li>
                   </@shiro.hasPermission>
                   <@shiro.hasPermission name="system:home:index">
-                      <li <#if active=="home">class="active"</#if>><a href="${ctx!}/admin/home/index"><i class="fa fa-tv"></i> 首页信息</a></li>
+                      <li <#if active=="main">class="active"</#if>><a href="${ctx!}/admin/home/index"><i class="fa fa-tv"></i> 首页信息</a></li>
                   </@shiro.hasPermission>
                   <@shiro.hasPermission name="system:feedback:index">
                       <li <#if active=="feedback">class="active"</#if>><a href="${ctx!}/admin/feedback/index"><i class="fa fa-user-circle-o"></i> 用户反馈</a></li>

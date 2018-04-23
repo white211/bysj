@@ -14,7 +14,8 @@
             success: function(res){
                 layer.msg(res.message, {time: 2000
                 }, function(){
-                    location.reload();
+//                    location.reload();
+                    window.location.href = "${ctx!}/admin/resource/index"
                 });
             }
         });

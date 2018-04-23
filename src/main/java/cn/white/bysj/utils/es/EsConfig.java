@@ -41,20 +41,5 @@ public class EsConfig {
     }
 
 
-//    public static void main(String[] args) throws Exception{
-//        SearchRequestBuilder searchRequestBuilder = client().prepareSearch("bysj").setTypes("note");
-////        QueryBuilders.matchAllQuery();
-//        SearchResponse response=searchRequestBuilder.setQuery(QueryBuilders.multiMatchQuery("学院","cnNoteTitle","cnNoteContent"))
-//                .setFrom(0).setSize(1).setExplain(true).execute().actionGet();
-//
-//        SearchHits hits = response.getHits();
-//        for (int i = 0; i < hits.getHits().length; i++) {
-////            System.out.println(hits.getHits()[i].getSourceAsString());
-//              System.out.println(hits.getHits()[i].getSource().get("cnNoteTitle"));
-//
-//        }
-//    }
-
-
 }
 

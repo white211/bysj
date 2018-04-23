@@ -15,6 +15,7 @@
                 success: function(res){
                     layer.msg(res.message, {time: 2000}, function () {
                         location.reload();
+
                     });
                 }
             });

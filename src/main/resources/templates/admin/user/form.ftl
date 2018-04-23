@@ -11,10 +11,12 @@
             url: "${ctx!}/admin/user/edit",
             data: $(".form-edit").serialize(),
             dataType: "JSON",
-            success: function(res){
-                layer.msg(res.message, {time: 2000
-                }, function(){
-                    location.reload();
+            success: function (res) {
+                layer.msg(res.message, {
+                    time: 2000
+                }, function () {
+//                    location.reload();
+                    window.location.href = "${ctx!}/admin/user/index";
                 });
             }
         });
@@ -46,67 +48,84 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">账户名：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_name" name="cn_user_name" class="form-control" type="text" value="${user.cn_user_name}" <#if user?exists> readonly="readonly"</#if> >
+                                <input id="cn_user_name" name="cn_user_name" class="form-control" type="text"
+                                       value="${user.cn_user_name}" required="required" <#if user?exists> readonly="readonly"</#if>>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">昵称：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_nickname" name="cn_user_nickname" class="form-control" type="text" value="${user.cn_user_nickname}">
+                                <input id="cn_user_nickname" name="cn_user_nickname" class="form-control" type="text"
+                                       value="${user.cn_user_nickname}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">头像URL：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_avatar" name="cn_user_avatar" class="form-control" type="url" value="${user.cn_user_avatar}">
+                                <input id="cn_user_avatar" name="cn_user_avatar" class="form-control" type="url"
+                                       value="${user.cn_user_avatar}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">性别：</label>
                             <div class="col-sm-10">
                                 <select name="cn_user_sex" class="form-control">
-                                    <option value="0" <#if user.sex == 0>selected="selected"</#if>>女</option>
-                                    <option value="1" <#if user.sex == 1>selected="selected"</#if>>男</option>
+                                    <option value="0" <#if user.cn_user_sex == 0>selected="selected"</#if>>女</option>
+                                    <option value="1" <#if user.cn_user_sex == 1>selected="selected"</#if>>男</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">出生日期：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_birthday" name="cn_user_birthday" readonly="readonly" class="laydate-icon form-control layer-date" value="${user.cn_user_birthday}">
+                                <#if user.cn_user_birthday == null>
+                                    <input id="cn_user_birthday" name="cn_user_birthday"
+                                           class="laydate-icon form-control layer-date"
+                                           value="${user.cn_user_birthday}">
+                                <#else>
+                                    <input id="cn_user_birthday" name="cn_user_birthday" readonly="readonly"
+                                           class="laydate-icon form-control layer-date"
+                                           value="${user.cn_user_birthday?date}">
+                                </#if>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">电话：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_telephone" name="cn_user_telephone" class="form-control" value="${user.cn_user_telephone}">
+                                <input id="cn_user_telephone" name="cn_user_telephone" class="form-control"
+                                       value="${user.cn_user_telephone}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">E-mail：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_email" name="cn_user_email" class="form-control" value="${user.cn_user_email}">
+                                <input id="cn_user_email" name="cn_user_email" class="form-control"
+                                       value="${user.cn_user_email}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">地址：</label>
                             <div class="col-sm-10">
-                                <input id="cn_user_address" name="cn_user_address" class="form-control" value="${user.cn_user_address}">
+                                <input id="cn_user_address" name="cn_user_address" class="form-control"
+                                       value="${user.cn_user_address}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">状态：</label>
                             <div class="col-sm-10">
                                 <select name="cn_user_locked" class="form-control">
-                                    <option value="0" <#if user.cn_user_locked == 0>selected="selected"</#if>>未锁定</option>
-                                    <option value="1" <#if user.cn_user_locked == 1>selected="selected"</#if>>锁定</option>
+                                    <option value="0" <#if user.cn_user_locked == 0>selected="selected"</#if>>未锁定
+                                    </option>
+                                    <option value="1" <#if user.cn_user_locked == 1>selected="selected"</#if>>锁定
+                                    </option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">描述：</label>
                             <div class="col-sm-10">
-                                <textarea id="cn_user_description" name="cn_user_description" class="form-control" rows="6">${user.cn_user_description}</textarea>
+                                <textarea id="cn_user_description" name="cn_user_description" class="form-control"
+                                          rows="6">${user.cn_user_description}</textarea>
                             </div>
                         </div>
                     </div>

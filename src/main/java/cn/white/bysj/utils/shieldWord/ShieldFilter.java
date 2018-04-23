@@ -116,7 +116,7 @@ public class ShieldFilter {
      * @param matchType
      * @return 如果存在，则返回敏感词字符的长度，不存在返回0
      */
-    @SuppressWarnings({ "rawtypes"})
+     @SuppressWarnings({ "rawtypes"})
     public int CheckShield(String txt,int beginIndex,int matchType){
         //敏感词结束标识位：用于敏感词只有1位的情况
         boolean  flag = false;

@@ -35,7 +35,7 @@
     }
 </script>
 </#assign>
-<@layout title="首页管理" active="home">
+<@layout title="首页管理" active="main">
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
