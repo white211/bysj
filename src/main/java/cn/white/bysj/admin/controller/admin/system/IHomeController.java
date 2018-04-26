@@ -4,6 +4,7 @@ import cn.white.bysj.admin.common.JsonResult;
 import cn.white.bysj.admin.controller.BaseController;
 import cn.white.bysj.admin.entity.Home;
 import cn.white.bysj.admin.service.IHomeServcie;
+import cn.white.bysj.admin.vo.HomeVo;
 import cn.white.bysj.commons.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -29,7 +30,7 @@ public class IHomeController extends BaseController {
     @RequestMapping(value = {"/index"})
     public String index(ModelMap map) {
         Sort sort = new Sort(Sort.Direction.DESC,"cnHomeCreateTime");
-        Page<Home> page = iHomeServcie.findAll(getPageRequest(sort));
+        Page<HomeVo> page = iHomeServcie.findHomeVo(getPageRequest(sort));
         map.put("pageInfo",page);
         return "/admin/home/index";
     }

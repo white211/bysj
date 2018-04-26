@@ -23,6 +23,6 @@ public class IndexController extends BaseController{
 	public String index(){
 		List<User> users = userService.findAll();
 		logger.debug(users.toString());
-		return "index";
+		return "admin/index";
 	}
 }

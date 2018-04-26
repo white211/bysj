@@ -1,11 +1,13 @@
 package cn.white.bysj.admin.service.impl;
 
 import cn.white.bysj.admin.dao.IHomeDao;
+import cn.white.bysj.admin.dao.IUserDao;
 import cn.white.bysj.admin.dao.support.IBaseDao;
 import cn.white.bysj.admin.entity.Home;
 import cn.white.bysj.admin.service.IHomeServcie;
 import cn.white.bysj.admin.service.support.IBaseService;
 import cn.white.bysj.admin.service.support.impl.BaseServiceImpl;
+import cn.white.bysj.admin.vo.HomeVo;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.user.User;
 import groovy.util.logging.Slf4j;
@@ -13,10 +15,15 @@ import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.websocket.server.ServerEndpoint;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Create by @author white
@@ -29,6 +36,9 @@ public class IHomeServiceImpl extends BaseServiceImpl<Home, Integer> implements 
 
     @Autowired
     private IHomeDao iHomeDao;
+
+    @Autowired
+    private IUserDao iUserDao;
 
     @Override
     public IBaseDao<Home, Integer> getBaseDao() {
@@ -89,4 +99,23 @@ public class IHomeServiceImpl extends BaseServiceImpl<Home, Integer> implements 
             return ServerResponse.createByErrorMessage("服务出现异常");
         }
     }
+
+    @Override
+    public Page<HomeVo> findHomeVo(Pageable pageable) {
+        List<HomeVo> homeVoList = new ArrayList<>();
+        Page<Home> homePage = iHomeDao.findAll(pageable);
+        for (Home home : homePage){
+            HomeVo homeVo = new HomeVo();
+            homeVo.setCnHomeId(home.getCn_home_id());
+            homeVo.setCnHomeType(home.getCn_home_type());
+            homeVo.setCnHomeCreateTime(home.getCnHomeCreateTime());
+            User user = iUserDao.findOne(home.getCn_user_id());
+            homeVo.setCnHomeUserName(user.getCn_user_name());
+            homeVoList.add(homeVo);
+        }
+         Page<HomeVo> homeVos = new PageImpl<HomeVo>(homeVoList,pageable,homePage.getTotalElements());
+        return homeVos;
+    }
+
+
 }

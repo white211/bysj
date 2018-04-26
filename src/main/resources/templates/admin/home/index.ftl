@@ -72,37 +72,37 @@
                         <#--<td>${homeInfo.cn_home_id}</td>-->
                             <td>${(pageInfo.number)*10+(homeInfo_index+1)}</td>
                         <td>
-                            <#if homeInfo.cn_home_type == 0>
+                            <#if homeInfo.cnHomeType == 0>
                                 <span class="label label-info">正在使用</span>
-                            <#elseif homeInfo.cn_home_type == 1>
+                            <#elseif homeInfo.cnHomeType == 1>
                                 <span class="label label-danger">未使用</span>
                             <#else >
                                 <span class="label label-warning">未知</span>
                             </#if>
                         </td>
-                        <td>${homeInfo.cn_user_id}</td>
+                        <td>${homeInfo.cnHomeUserName}</td>
                         <td>${homeInfo.cnHomeCreateTime?date}</td>
                         <td>
 
 
                             <@shiro.hasPermission name="system:home:edit">
-                                <a class="btn btn-sm btn-primary" href="${ctx!}/admin/home/edit/${homeInfo.cn_home_id}">编辑</a>
+                                <a class="btn btn-sm btn-primary" href="${ctx!}/admin/home/edit/${homeInfo.cnHomeId}">编辑</a>
                             </@shiro.hasPermission>
 
-                            <#if homeInfo.cn_home_type == 0>
+                            <#if homeInfo.cnHomeType == 0>
                                 <@shiro.hasPermission name="system:home:use">
-                                    <button class="btn btn-sm btn-warning" onclick="use(${homeInfo.cn_home_id},1)">取消
+                                    <button class="btn btn-sm btn-warning" onclick="use(${homeInfo.cnHomeId},1)">取消
                                     </button>
                                 </@shiro.hasPermission>
-                            <#elseif homeInfo.cn_home_type == 1>
+                            <#elseif homeInfo.cnHomeType == 1>
                                 <@shiro.hasPermission name="system:home:use">
-                                    <button class="btn btn-sm btn-warning" onclick="use(${homeInfo.cn_home_id},0)">使用
+                                    <button class="btn btn-sm btn-warning" onclick="use(${homeInfo.cnHomeId},0)">使用
                                     </button>
                                 </@shiro.hasPermission>
                             </#if>
 
                             <@shiro.hasPermission name="system:home:deleteBatch">
-                                <button class="btn btn-sm btn-danger" onclick="del(${homeInfo.cn_home_id})">删除</button>
+                                <button class="btn btn-sm btn-danger" onclick="del(${homeInfo.cnHomeId})">删除</button>
                             </@shiro.hasPermission>
                         </td>
                     </tr>

@@ -81,9 +81,13 @@ public class User extends BaseEntity {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date cnUserUpdateTime;
 
+    //笔记的阅读密码
+    private String cnNoteReadPassword;
+
     /**/
     @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinTable(name = "tb_user_role", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private Set<Role> roles;
+
 
 }

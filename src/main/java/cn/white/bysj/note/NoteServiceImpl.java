@@ -314,8 +314,8 @@ public class NoteServiceImpl implements NoteService {
                 Note note = noteDao.findNoteByIdAndTypeId(Integer.parseInt(map.get("noteId").toString()));
                 return ServerResponse.createBySuccess("查询成功", note);
             } catch (Exception e) {
-                logger.error("服务出现异常");
-                return ServerResponse.createByErrorMessage("服务出现异常");
+                logger.error("通过笔记id和类型id查找笔记，失败");
+                return ServerResponse.createByErrorMessage("通过笔记id和类型id查找笔记，失败");
             }
 
         }
@@ -375,15 +375,17 @@ public class NoteServiceImpl implements NoteService {
         } else {
             try {
                 Note note = noteDao.findOne(Integer.parseInt(map.get("noteId").toString()));
+                if(note == null){
+                    return ServerResponse.createByErrorMessage("笔记不存在");
+                }
                 int NoteRead = note.getCn_note_read() + 1;
                 noteDao.updateNoteReadById(Integer.parseInt(map.get("noteId").toString()), NoteRead);
                 updateReadToEs(Integer.parseInt(map.get("noteId").toString()),NoteRead);
                 return ServerResponse.createBySuccessMessags("修改成功");
             } catch (Exception e) {
-                logger.error("服务出现异常");
-                return ServerResponse.createByErrorMessage("服务出现异常");
+                logger.error("添加阅读量出错");
+                return ServerResponse.createByErrorMessage("添加阅读量出错");
             }
-
         }
     }
 
