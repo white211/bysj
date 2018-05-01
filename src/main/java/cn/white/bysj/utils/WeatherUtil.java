@@ -71,7 +71,7 @@ public class WeatherUtil {
     public static void main(String args[]){
         WeatherUtil demo = new WeatherUtil();
         try {
-            String url = demo.generateGetDiaryWeatherURL(
+            String url = generateGetDiaryWeatherURL(
                     "广州",
                     "zh-Hans",
                     "c",

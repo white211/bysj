@@ -41,4 +41,23 @@ public interface NoteService {
     //通过标签id查找笔记
     ServerResponse findNoteByTagId(Map<String,Object> map);
 
+    /**
+     * 更新笔记加密解密状态
+     * @param map
+     * @return
+     */
+    ServerResponse updateEncrypt(Map<String,Object> map);
+
+    /**
+     * 判断输入的密码是否正确
+     * @param map
+     * @return
+     */
+    ServerResponse checkReadPassword(Map<String,Object> map);
+
+    /**
+     * 修改笔记分享的状态
+     * @return
+     */
+    ServerResponse updateNoteIsShare(Map<String,Object> map);
 }

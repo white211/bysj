@@ -182,6 +182,28 @@ public class NoteController
         Map<String, Object> map = ComponentHelper.requestToMap(request);
         return noteService.findNoteByTagId(map);
     }
+
+    @RequestMapping(value = "updateEncrypt.do")
+    @ResponseBody
+    public ServerResponse updateEncrypt(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.updateEncrypt(map);
+    }
+
+    @RequestMapping(value = "checkReadPassword.do")
+    @ResponseBody
+    public ServerResponse checkReadPassword(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.checkReadPassword(map);
+    }
+
+    @RequestMapping(value = "updateNoteIsShare.do")
+    @ResponseBody
+    public ServerResponse updateNoteIsShare(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.updateNoteIsShare(map);
+    }
+
 }
 
 

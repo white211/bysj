@@ -39,7 +39,7 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "UPDATE note SET cn_note_read =?2 where cn_note_id = ?1",nativeQuery = true)
     void updateNoteReadById(int noteId,int read);
 
-    @Query(value = "select * from note where cn_user_id = ?1 and cn_note_type_id = ?2 ORDER BY cn_note_update_time DESC" ,nativeQuery = true)
+    @Query(value = "select * from note where cn_user_id = ?1 and cn_note_type_id = ?2  ORDER BY cn_note_update_time DESC" ,nativeQuery = true)
     List<Note> findNoteByTypeId(int userId,int typeId);
 
     @Transactional
@@ -55,8 +55,18 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "select * from note where cn_note_label_id = ?1 and cn_note_type_id !=4 ORDER BY cn_note_update_time DESC",nativeQuery = true)
     List<Note> findNoteByLabelId(int labelId);
 
-    @Query(value = "select * from note where cn_note_id = ?1 and cn_note_type_id != 4",nativeQuery = true)
-    Note findNoteByIdAndTypeId(int id);
+    @Query(value = "select * from note where cn_note_id = ?1 and cn_note_is_share = 0 and cn_note_type_id !=4",nativeQuery = true)
+    Note findNoteByIdAndCnNoteIsShare(int id);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "UPDATE note SET cn_note_is_encrypt =?2 where cn_note_id = ?1",nativeQuery = true)
+   void updateEncrypt(int noteId,int TypeId);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "UPDATE note SET cn_note_is_share =?2 where cn_note_id = ?1",nativeQuery = true)
+    void updateNoteIsShare(int noteId,int type);
 
 
 }

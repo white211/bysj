@@ -34,11 +34,17 @@ public interface UserDao extends JpaRepository<User,Integer>{
     @Query(value = "select * from user where cn_user_email=?1 and cn_user_actived=1",nativeQuery = true)
     User selectUserByAccount(String account);
 
-    //通过邮箱更新密码
+    //通过Id更新密码
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query(value = "update user set cn_user_password =?1 where cn_user_email = ?2",nativeQuery = true)
-    void forgetResetPassword(String password,String email);
+    @Query(value = "update user set cn_user_password =?1 where cn_user_id = ?2",nativeQuery = true)
+    void forgetResetPassword(String password,int userId);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update user set cn_note_read_password =?1 where cn_user_id = ?2",nativeQuery = true)
+    void updateReadPass(String password,int userId);
+
 
     @Query(value = "select cn_user_password from user where cn_user_email=?1",nativeQuery = true)
     String findPasswordByCn_user_email(String email);

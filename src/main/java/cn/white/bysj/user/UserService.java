@@ -91,6 +91,9 @@ public class UserService {
                         return ServerResponse.createByErrorMessage("登陆失败，该用户已被锁定");
                     } else {
                         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
+                        if (!user.getCnNoteReadPassword().equals(MD5.md5("111111"))) {
+                            user.setCnNoteReadPassword(org.apache.commons.lang3.StringUtils.EMPTY);
+                        }
                         logger.info("登陆成功");
                         return ServerResponse.createBySuccess("登陆成功", user);
                     }
@@ -177,15 +180,15 @@ public class UserService {
         user.setCn_user_actived_code(UUIDutils.getUUID());
         user.setCn_user_actived("0");
         user.setCn_user_email(map.get("email").toString());
-
         try {
             if (redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
                 //发送邮件
                 user.setCn_user_password(MD5.md5(map.get("password").toString()));
+                user.setCnNoteReadPassword(MD5.md5("111111"));
                 user.setCn_user_telephone(map.get("telephone").toString());
                 user.setCn_user_locked(0);
                 String content = "";
-                executor.execute(new EmailUtil(user.getCn_user_actived_code(), user.getCn_user_email(), javaMailSender, content,1));
+                executor.execute(new EmailUtil(user.getCn_user_actived_code(), user.getCn_user_email(), javaMailSender, content, 1));
                 userDao.save(user);
             } else {
                 System.out.println(redisService.get(map.get("telephone").toString()));
@@ -312,10 +315,10 @@ public class UserService {
                         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
                         return ServerResponse.createBySuccess("存在该注册邮箱", user);
                     } else {
-                        return ServerResponse.createBySuccessMessags("邮箱验证正确");
+                        return ServerResponse.createByErrorMessage("不存在该邮箱");
                     }
                 } catch (Exception e) {
-                    logger.error("服务出现异常");
+                    logger.error("服务出错--判读邮箱是否存在");
                     return ServerResponse.createByErrorMessage("服务出现异常");
                 }
             }
@@ -357,28 +360,30 @@ public class UserService {
     /**
      * TODO: 未登陆状态下 更新密码
      *
-     * @param "email", "password"
+     * @param "userId", "password"
      * @return
      * @throws
      * @author white
      * @date 2018-03-19 13:35
      */
     public ServerResponse<User> forgetResetPassword(Map<String, Object> map) {
-        List<String> list = Arrays.asList("email", "password");
+        List<String> list = Arrays.asList("userId", "password");
         User user = null;
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数,参数包括email，password");
+            return ServerResponse.createByErrorMessage("缺少参数,参数包括userId，password");
         }
         if (StringUtils.isEmpty(map.get("password").toString())) {
             return ServerResponse.createByErrorMessage("输入密码不能为空");
-        } else if (StringUtils.isEmpty(map.get("email").toString())) {
+        } else if (StringUtils.isEmpty(map.get("userId").toString())) {
             return ServerResponse.createByErrorMessage("修改账号不能为空");
         } else {
             try {
-                if (userDao.findPasswordByCn_user_email(map.get("email").toString()).equals(map.get("password").toString())) {
+                User user1 = userDao.findOne(Integer.parseInt(map.get("userId").toString()));
+
+                if (user1.getCn_user_password().equals(MD5.md5(map.get("password").toString()))) {
                     return ServerResponse.createByErrorMessage("新密码不能与旧密码重复");
                 } else {
-                    userDao.forgetResetPassword(map.get("password").toString(), map.get("email").toString());
+                    userDao.forgetResetPassword(MD5.md5(map.get("password").toString()), Integer.parseInt(map.get("userId").toString()));
                     return ServerResponse.createBySuccessMessags("修改密码成功");
                 }
             } catch (Exception e) {
@@ -390,20 +395,20 @@ public class UserService {
     }
 
     /**
-     * TODO: 登陆状态下更新密码
+     * TODO: 登陆状态下更新密码(登陆密码；阅读密码)
      *
-     * @param "email", "oldPassword", "newPassword"
+     * @param "userId", "oldPassword", "newPassword","type"
      * @return
      * @throws
      * @author white
      * @date 2018-03-19 13:35
      */
     public ServerResponse<User> resetPassword(Map<String, Object> map) {
-        List<String> list = Arrays.asList("email", "oldPassword", "newPassword");
+        List<String> list = Arrays.asList("userId", "oldPassword", "newPassword","type");
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数，应包括email，oldPassword，newPassword");
+            return ServerResponse.createByErrorMessage("缺少参数，应包括userId，oldPassword，newPassword,type");
         }
-        if (StringUtils.isEmpty(map.get("email").toString())) {
+        if (StringUtils.isEmpty(map.get("userId").toString())) {
             return ServerResponse.createByErrorMessage("邮箱不能为空");
         } else if (StringUtils.isBlank(map.get("oldPassword").toString())) {
             return ServerResponse.createByErrorMessage("旧密码不能为空");
@@ -414,8 +419,15 @@ public class UserService {
                 if (map.get("oldPassword").toString().equals(map.get("newPassword").toString())) {
                     return ServerResponse.createByErrorMessage("新密码不能与旧密码相同");
                 } else {
-                    userDao.forgetResetPassword(MD5.md5(map.get("newPassword").toString()), map.get("email").toString());
-                    return ServerResponse.createBySuccessMessags("修改密码成功");
+                    if (map.get("type").toString().equals("1")){
+                        userDao.forgetResetPassword(MD5.md5(map.get("newPassword").toString()), Integer.parseInt(map.get("userId").toString()));
+                        return ServerResponse.createBySuccessMessags("修改密码成功");
+                    }else{
+                        userDao.updateReadPass(MD5.md5(map.get("newPassword").toString()),Integer.parseInt(map.get("userId").toString()));
+                        User user = userDao.findOne(Integer.parseInt(map.get("userId").toString()));
+                        user.setCnNoteReadPassword(org.apache.commons.lang3.StringUtils.EMPTY);
+                        return ServerResponse.createBySuccess("修改密码成功",user);
+                    }
                 }
             } catch (Exception e) {
                 logger.error("更新密码出错");
@@ -490,32 +502,42 @@ public class UserService {
     /**
      * TODO: 对比输入旧密码是否正确
      *
-     * @param "email",'oldPassword'
+     * @param "userId",'oldPassword','type'
      * @return
      * @throws
      * @author white
      * @date 2018-03-19 15:53
      */
     public ServerResponse checkOldPassword(Map<String, Object> map) {
-        List<String> list = Arrays.asList("email", "oldPassword");
+        List<String> list = Arrays.asList("userId", "oldPassword", "type");
         if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数，必须包括email,oldPassword");
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括userId,oldPassword,type");
         }
-        if (StringUtils.isBlank(map.get("email").toString())) {
+        if (StringUtils.isBlank(map.get("userId").toString())) {
             return ServerResponse.createByErrorMessage("邮箱不能为空");
         } else if (StringUtils.isBlank(map.get("oldPassword").toString())) {
             return ServerResponse.createByErrorMessage("旧密码不能为空");
         } else {
+            User user = userDao.findOne(Integer.parseInt(map.get("userId").toString()));
             try {
-                String password = userDao.findPasswordByCn_user_email(map.get("email").toString());
-                if (!password.equals(MD5.md5(map.get("oldPassword").toString()))) {
-                    return ServerResponse.createByErrorMessage("旧密码错误");
+                if (map.get("type").toString().equals("1")) {
+                    String password = user.getCn_user_password();
+                    if (!password.equals(MD5.md5(map.get("oldPassword").toString()))) {
+                        return ServerResponse.createByErrorMessage("旧密码错误");
+                    } else {
+                        return ServerResponse.createBySuccessMessags("密码正确");
+                    }
                 } else {
-                    return ServerResponse.createBySuccessMessags("密码正确");
+                    String password = user.getCnNoteReadPassword();
+                    if (!password.equals(MD5.md5(map.get("oldPassword").toString()))) {
+                        return ServerResponse.createByErrorMessage("旧密码错误");
+                    } else {
+                        return ServerResponse.createBySuccessMessags("密码正确");
+                    }
                 }
-            } catch (NoSuchAlgorithmException e) {
-                logger.error("服务出现异常");
-                return ServerResponse.createByErrorMessage("服务出现异常");
+            } catch (Exception e) {
+                logger.error("验证旧密码----服务出现异常");
+                return ServerResponse.createByErrorMessage("验证旧密码-----服务出现异常");
             }
         }
     }

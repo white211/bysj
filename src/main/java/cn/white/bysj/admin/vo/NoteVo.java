@@ -47,4 +47,9 @@ public class NoteVo {
     //分享笔记阅读量
     private Integer cn_note_read=0;
 
+    /**
+     *笔记时候加密
+     */
+    private Integer cnNoteIsEncrypt;
+
 }

@@ -79,7 +79,7 @@ public class UserController extends Cors  {
         return userService.checkTelephoneCheckNum(map);
     }
     //未登陆状态下-忘记密码
-    @RequestMapping(value = "fogetResetPassword.do")
+    @RequestMapping(value = "forgetResetPassword.do")
     @ResponseBody
     public ServerResponse forgetResetPassword(HttpServletRequest request) {
         Map<String, Object> map = ComponentHelper.requestToMap(request);

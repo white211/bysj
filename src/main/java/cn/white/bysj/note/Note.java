@@ -54,8 +54,13 @@ public class Note  extends BaseEntity{
     private Integer cn_note_label_id = null;
 
     //分享笔记阅读量
-    private Integer cn_note_read=1;
+    private Integer cn_note_read=0;
 
-    //笔记是否加密
-    private Integer cnNoteIsEncrypt= 0;
+    //笔记是否加密 1 不加密 0 加密
+    private Integer cnNoteIsEncrypt= 1;
+
+    //笔记是否分享状态中 0 是 1 否
+    private Integer cnNoteIsShare=1;
+
+
 }

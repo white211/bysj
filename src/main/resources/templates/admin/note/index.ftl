@@ -73,7 +73,7 @@
                     <th>笔记本</th>
                     <th>标签</th>
                     <th>作者</th>
-                    <th>类型</th>
+                    <th>状态</th>
                     <th>阅读量</th>
                     <th>创建时间</th>
                     <th>操作</th>
@@ -89,9 +89,11 @@
                         <td>${noteInfo.cn_note_read}次</td>
                         <td>${noteInfo.cn_note_creatTime?date}</td>
                         <td>
-                            <@shiro.hasPermission name="system:note:see">
-                                <a class="btn btn-sm btn-primary" href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>
-                            </@shiro.hasPermission>
+                            <#if noteInfo.cnNoteIsEncrypt == 1>
+                                <@shiro.hasPermission name="system:note:see">
+                                    <a class="btn btn-sm btn-primary" href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>
+                                </@shiro.hasPermission>
+                            </#if>
                             <@shiro.hasPermission name="system:note:deleteBatch">
                                 <button class="btn btn-sm btn-danger" onclick="del(${noteInfo.cn_note_id})">删除</button>
                             </@shiro.hasPermission>

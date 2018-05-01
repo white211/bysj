@@ -113,7 +113,7 @@ public class GetCityUtil {
 
 
     public static void main(String[] args) throws IOException, JSONException {
-        JSONObject json = readJsonFromUrl("http://api.map.baidu.com/location/ip?ak=3HU6oASoHn1Bv85BY83oBrhVTvr99ekt&ip=192.168.92.12");
+        JSONObject json = readJsonFromUrl("http://api.map.baidu.com/location/ip?ak=3HU6oASoHn1Bv85BY83oBrhVTvr99ekt&ip=118.196.5.73");
         System.out.println(json.toString());
         System.out.println(((JSONObject) json.get("content")).get("address"));
     }

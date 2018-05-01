@@ -79,6 +79,7 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
             noteVo.setCn_note_creatTime(note.getCnNoteCreateTime());
             noteVo.setCn_note_desc(note.getCn_note_desc());
             noteVo.setCn_notebook_lastupdateTime(note.getCnNoteUpdateTime());
+            noteVo.setCnNoteIsEncrypt(note.getCnNoteIsEncrypt());
             String email = iUserDao.findEmailById(note.getCn_user_id());
             noteVo.setCn_user_email(email);
             if (!(note.getCn_note_book_id()==null)){
@@ -113,6 +114,7 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
             noteVo.setCn_note_desc(note.getCn_note_desc());
             noteVo.setCn_notebook_lastupdateTime(note.getCnNoteUpdateTime());
             String email = iUserDao.findEmailById(note.getCn_user_id());
+            noteVo.setCnNoteIsEncrypt(note.getCnNoteIsEncrypt());
             noteVo.setCn_user_email(email);
             if (!(note.getCn_note_book_id()==null)){
                 String notebook = iNoteBookDao.findNoteBook(note.getCn_note_book_id());
@@ -170,6 +172,7 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 noteVo.setCn_notebook_name(hits.getHits()[i].getSource().get("cnNoteBookName").toString());
                 noteVo.setCn_note_read(Integer.parseInt(hits.getHits()[i].getSource().get("cnNoteRead").toString()));
                 noteVo.setCn_note_creatTime(sdf.parse(hits.getHits()[i].getSource().get("cnNoteCreateTime").toString()));
+                noteVo.setCnNoteIsEncrypt(Integer.parseInt(hits.getHits()[i].getSource().get("cnNoteIsEncrypt").toString()));
                 noteVoList.add(noteVo);
             }
             Page<NoteVo> noteVos = new PageImpl<>(noteVoList,pageable,hits.getTotalHits());
@@ -216,6 +219,7 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 noteVo.setCn_notebook_name(hits.getHits()[i].getSource().get("cnNoteBookName").toString());
                 noteVo.setCn_note_read(Integer.parseInt(hits.getHits()[i].getSource().get("cnNoteRead").toString()));
                 noteVo.setCn_note_creatTime(sdf.parse(hits.getHits()[i].getSource().get("cnNoteCreateTime").toString()));
+                noteVo.setCnNoteIsEncrypt(Integer.parseInt(hits.getHits()[i].getSource().get("cnNoteIsEncrypt").toString()));
                 noteVoList.add(noteVo);
             }
             Page<NoteVo> noteVos = new PageImpl<>(noteVoList,pageable,hits.getTotalHits());

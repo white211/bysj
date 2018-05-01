@@ -21,7 +21,7 @@ public class MD5 {
     }
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        String out = md5("admin");
+        String out = md5("111111");
         System.out.println(out);
     }
 

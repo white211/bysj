@@ -14,7 +14,7 @@
             success: function (res) {
                 layer.msg(res.message, {time: 2000}, function () {
 //                    location.reload();
-                    window.location.href = "{ctx!}/admin/user/index";
+                    window.location.href = "${ctx!}/admin/user/index";
                 });
             }
         });
