@@ -118,7 +118,7 @@ public class LabelServiceImpl implements LabelService {
     }
 
     /**
-     * TODO: 删除标签
+     * TODO: 删除标签(同时将该标签下的笔记所属标签id置为空)
      *
      * @param "userId,labelId"
      * @return
@@ -140,14 +140,13 @@ public class LabelServiceImpl implements LabelService {
             try {
                 int userId = Integer.parseInt(map.get("userId").toString());
                 int labelId = Integer.parseInt(map.get("labelId").toString());
-
                 labelDao.deleteLabelByUserIdAndLabelId(userId, labelId);
+                noteDao.updateLabelIdNull(labelId);
                 return ServerResponse.createBySuccessMessags("删除成功");
             } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
-
         }
 
     }

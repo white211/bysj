@@ -55,6 +55,11 @@ public class NoteController
     @Autowired
     private INoteDao iNoteDao;
 
+    /**
+     * 笔记列表
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "noteList.do")
     @ResponseBody
     public ServerResponse noteList(HttpServletRequest request) {
@@ -62,7 +67,11 @@ public class NoteController
         return noteService.noteList(map);
     }
 
-
+    /**
+     * 新建笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "newNote.do")
     @ResponseBody
     public ServerResponse newNote(HttpServletRequest request) {
@@ -70,6 +79,11 @@ public class NoteController
         return noteService.newNote(map);
     }
 
+    /**
+     * 更新笔记的类型id
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "updateNoteTypeId.do")
     @ResponseBody
     public ServerResponse updateNoteTypeId(HttpServletRequest request) {
@@ -77,6 +91,11 @@ public class NoteController
         return noteService.updateNoteTypeId(map);
     }
 
+    /**
+     * 通过标题或内容模糊查找笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "findNoteByTitleOrContent.do")
     @ResponseBody
     public ServerResponse findNoteByTitleOrContent(HttpServletRequest request) {
@@ -84,6 +103,11 @@ public class NoteController
         return noteService.findNoteByTitleOrContent(map);
     }
 
+    /**
+     * 更新笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "updateNote.do")
     @ResponseBody
     public ServerResponse updateNote(HttpServletRequest request) {
@@ -91,6 +115,11 @@ public class NoteController
         return noteService.updateNote(map);
     }
 
+    /**
+     * 通过id查找笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "findNoteById.do")
     @ResponseBody
     public ServerResponse findNoteById(HttpServletRequest request) {
@@ -98,6 +127,11 @@ public class NoteController
         return noteService.findNoteById(map);
     }
 
+    /**
+     * 添加阅读量
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "addRead.do")
     @ResponseBody
     public ServerResponse addRead(HttpServletRequest request) {
@@ -105,6 +139,11 @@ public class NoteController
         return noteService.addRead(map);
     }
 
+    /**
+     * 通过类型id查找笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "findNoteByTypeId.do")
     @ResponseBody
     public ServerResponse findNoteByTypeId(HttpServletRequest request) {
@@ -112,6 +151,11 @@ public class NoteController
         return noteService.findNoteByTypeId(map);
     }
 
+    /**
+     * 通过id删除笔记
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "deleteByNoteId.do")
     @ResponseBody
     public ServerResponse deleteByNoteId(HttpServletRequest request) {
@@ -120,13 +164,9 @@ public class NoteController
     }
 
     /**
-     * TODO: 用于上传图片到七牛云
-     *
-     * @param "图片文件file"
+     * 用于上传图片到七牛云
+     * @param file
      * @return
-     * @throws
-     * @author white
-     * @date 2018-03-22 21:27
      */
     @RequestMapping(value = "uploadFile.do")
     @ResponseBody
@@ -151,14 +191,10 @@ public class NoteController
         }
     }
 
-
     /**
-     * TODO: 通过笔记本id查找笔记
-     *
+     * 通过笔记本id查找笔记
+     * @param request
      * @return
-     * @throws
-     * @author white
-     * @date 2018-04-04 13:39
      */
     @RequestMapping(value = "findNoteByBookId.do")
     @ResponseBody
@@ -167,14 +203,10 @@ public class NoteController
         return noteService.findNoteByBookId(map);
     }
 
-
     /**
-     * TODO: 通过标签id查找笔记
-     *
+     * 通过标签id查找笔记
+     * @param request
      * @return
-     * @throws
-     * @author white
-     * @date 2018-04-04 14:56
      */
     @RequestMapping(value = "findNoteByTagId.do")
     @ResponseBody
@@ -183,6 +215,11 @@ public class NoteController
         return noteService.findNoteByTagId(map);
     }
 
+    /**
+     * 更新加解密状态
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "updateEncrypt.do")
     @ResponseBody
     public ServerResponse updateEncrypt(HttpServletRequest request){
@@ -190,6 +227,11 @@ public class NoteController
         return noteService.updateEncrypt(map);
     }
 
+    /**
+     * 验证输入验证密码是否正确
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "checkReadPassword.do")
     @ResponseBody
     public ServerResponse checkReadPassword(HttpServletRequest request){
@@ -197,12 +239,18 @@ public class NoteController
         return noteService.checkReadPassword(map);
     }
 
+    /**
+     * 更新笔记分享的状态
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "updateNoteIsShare.do")
     @ResponseBody
     public ServerResponse updateNoteIsShare(HttpServletRequest request){
         Map<String,Object> map = ComponentHelper.requestToMap(request);
         return noteService.updateNoteIsShare(map);
     }
+
 
 }
 

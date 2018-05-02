@@ -55,8 +55,8 @@ public class NoteBookServiceImpl implements NoteBookService {
             return ServerResponse.createByErrorMessage("笔记本名称不能为空");
         } else {
             int userId = Integer.parseInt(map.get("userId").toString());
-            try{
-                int count = noteBookDao.findNoteBookByName(map.get("noteBookName").toString(),userId);
+            try {
+                int count = noteBookDao.findNoteBookByName(map.get("noteBookName").toString(), userId);
                 if (count > 0) {
                     return ServerResponse.createByErrorMessage("该笔记本已经存在，请重新起个名字");
                 } else {
@@ -69,7 +69,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteBookDao.save(noteBook);
                     return ServerResponse.createBySuccessMessags("创建成功");
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -94,7 +94,7 @@ public class NoteBookServiceImpl implements NoteBookService {
         if (StringUtils.isBlank(map.get("userId").toString())) {
             return ServerResponse.createByErrorMessage("用户id不能为空");
         } else {
-            try{
+            try {
                 List<NoteListVo> noteList = new ArrayList<>();
                 List<NoteBook> noteBookList = noteBookDao.findNoteBookByUserId(Integer.parseInt(map.get("userId").toString()));
                 for (NoteBook notebooklist : noteBookList) {
@@ -112,7 +112,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteList.add(noteListVo);
                 }
                 return ServerResponse.createBySuccess("笔记本列表", noteList);
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -121,7 +121,7 @@ public class NoteBookServiceImpl implements NoteBookService {
     }
 
     /**
-     * TODO: 通过用户id和笔记本id删除笔记本
+     * TODO: 通过笔记本id删除笔记本(同时删除笔记本下的笔记)
      *
      * @param "noteBookId"
      * @return
@@ -141,8 +141,9 @@ public class NoteBookServiceImpl implements NoteBookService {
             try {
                 int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
                 noteBookDao.deleteByNoteBookId(noteBookId);
+                noteDao.deleteByNoteBookId(noteBookId);
                 return ServerResponse.createBySuccessMessags("删除成功");
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("删除失败");
                 return ServerResponse.createByErrorMessage("删除失败");
             }
@@ -172,7 +173,7 @@ public class NoteBookServiceImpl implements NoteBookService {
         } else if (StringUtils.isBlank(map.get("newName").toString())) {
             return ServerResponse.createByErrorMessage("新名称不能为空");
         } else {
-            try{
+            try {
                 int notebookId = Integer.parseInt(map.get("noteBookId").toString());
                 String newName = map.get("newName").toString();
                 int userId = Integer.parseInt(map.get("userId").toString());
@@ -184,7 +185,7 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteBookDao.UpdateNoteBookName(userId, noteBookId, newName);
                     return ServerResponse.createBySuccessMessags("重命名成功");
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
@@ -194,7 +195,7 @@ public class NoteBookServiceImpl implements NoteBookService {
     }
 
     /**
-     * TODO: 更新笔记本类型
+     * TODO: 更新笔记本类型(同时修改笔记本下的笔记类型)
      *
      * @param "userId", "noteBookId", "noteBookType"
      * @return
@@ -220,9 +221,20 @@ public class NoteBookServiceImpl implements NoteBookService {
                 int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
                 int noteBookType = Integer.parseInt(map.get("noteBookType").toString());
                 noteBookDao.updateNoteBookType(userId, noteBookId, noteBookType);
-                noteDao.updateNoteTypeIdByNoteBookId(noteBookType,noteBookId);
+                if (map.containsKey("updateType") && map.get("updateType").toString().equals("1")) {
+                    switch (noteBookType) {
+                        case 1:
+                            noteDao.updateNoteTypeIdByNoteBookId(noteBookType, noteBookId);
+                            break;
+                        case 4:
+                            noteDao.updateNoteTypeIdByNoteBookId(5, noteBookId);
+                            break;
+                        default:
+                            break;
+                    }
+                }
                 return ServerResponse.createBySuccessMessags("修改成功");
-            }catch (Exception e){
+            } catch (Exception e) {
                 return ServerResponse.createByErrorMessage("服务出现异常");
             }
 
@@ -250,7 +262,7 @@ public class NoteBookServiceImpl implements NoteBookService {
         } else if (StringUtils.isBlank(map.get("searchText").toString())) {
             return ServerResponse.createByErrorMessage("查找内容不能为空");
         } else {
-            try{
+            try {
                 List<NoteListVo> noteList = new ArrayList<>();
                 List<NoteBook> noteBookList = noteBookDao.SearchNoteBook(map.get("searchText").toString(), Integer.parseInt(map.get("userId").toString()), 4);
                 for (NoteBook notebooklist : noteBookList) {
@@ -268,9 +280,9 @@ public class NoteBookServiceImpl implements NoteBookService {
                     noteList.add(noteListVo);
                 }
                 return ServerResponse.createBySuccess("查询结果", noteList);
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("服务出现异常");
-                return  ServerResponse.createByErrorMessage("服务出现异常");
+                return ServerResponse.createByErrorMessage("服务出现异常");
             }
         }
     }
@@ -306,7 +318,6 @@ public class NoteBookServiceImpl implements NoteBookService {
             }
         }
     }
-
 
 
 }

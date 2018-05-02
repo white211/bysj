@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface NoteDao  extends JpaRepository<Note,Integer>{
 
-    @Query(value = "select * from note where  cn_user_id = ?2 and cn_note_book_id = ?3 and (cn_note_title LIKE %?1%  or cn_note_content like %?1% ) ORDER BY cn_note_update_time DESC ",nativeQuery = true)
+    @Query(value = "select * from note where  cn_user_id = ?2 and cn_note_book_id = ?3 and cn_note_type_id !=4 and cn_note_type_id !=5 and (cn_note_title LIKE %?1%  or cn_note_content like %?1% ) ORDER BY cn_note_update_time DESC ",nativeQuery = true)
     List<Note> findNoteByTitleOrContent(String searchText,int userId,int noteBookId);
 
     @Query(value = "select * from note where cn_note_book_id = ?1 and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC",nativeQuery = true)
@@ -49,6 +49,11 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
 
     @Transactional
     @Modifying(clearAutomatically = true)
+    @Query(value = "delete from note where cn_note_book_id = ?1",nativeQuery = true)
+    void deleteByNoteBookId(int noteBookId);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
     @Query(value = "UPDATE note SET  cn_note_type_id = ?1 WHERE cn_note_book_id =?2",nativeQuery = true)
     void updateNoteTypeIdByNoteBookId(int noteTypeId,int noteBookId);
 
@@ -67,6 +72,15 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Modifying(clearAutomatically = true)
     @Query(value = "UPDATE note SET cn_note_is_share =?2 where cn_note_id = ?1",nativeQuery = true)
     void updateNoteIsShare(int noteId,int type);
+
+    @Query(value = "select * from note where cn_note_id = ?1 and cn_note_type_id !=4",nativeQuery = true)
+    Note findNoteByIdAndTypeId(int noteId);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update note set cn_note_label_id = null where  cn_note_label_id = ?1",nativeQuery = true)
+    void updateLabelIdNull(int lableId);
+
 
 
 }

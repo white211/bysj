@@ -313,14 +313,21 @@ public class NoteServiceImpl implements NoteService {
         if (StringUtils.isBlank(map.get("noteId").toString())) {
             return ServerResponse.createByErrorMessage("笔记id不能为空");
         } else {
+            Note note;
             try {
-                Note note = noteDao.findNoteByIdAndCnNoteIsShare(Integer.parseInt(map.get("noteId").toString()));
-                return ServerResponse.createBySuccess("查询成功", note);
+                if(map.get("type").toString().equals("1")){
+                     note = noteDao.findNoteByIdAndTypeId(Integer.parseInt(map.get("noteId").toString()));
+                     return ServerResponse.createBySuccess("查询成功",note);
+                }else if (map.get("type").toString().equals("2")){
+                     note = noteDao.findNoteByIdAndCnNoteIsShare(Integer.parseInt(map.get("noteId").toString()));
+                    return ServerResponse.createBySuccess("查询成功", note);
+                }else{
+                    return ServerResponse.createByErrorMessage("未知错误,查询失败");
+                }
             } catch (Exception e) {
                 logger.error("通过笔记id和类型id查找笔记，失败");
                 return ServerResponse.createByErrorMessage("通过笔记id和类型id查找笔记，失败");
             }
-
         }
     }
 
