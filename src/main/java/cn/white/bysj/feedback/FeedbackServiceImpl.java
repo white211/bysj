@@ -48,6 +48,7 @@ public class FeedbackServiceImpl implements FeedbackService {
                 feedback.setCn_feedback_content(map.get("content").toString());
                 feedback.setCn_feedback_isReturn(1);
                 feedback.setCn_feedback_type(map.get("type").toString());
+                feedback.setImageURL(map.get("imageUrl").toString());
                 feedback.setCn_user_id(Integer.parseInt(map.get("userId").toString()));
                 feedbackDao.save(feedback);
                 return ServerResponse.createBySuccess("新增成功", feedback);
@@ -55,7 +56,6 @@ public class FeedbackServiceImpl implements FeedbackService {
                 logger.error("新增失败");
                 return ServerResponse.createByErrorMessage("创建失败");
             }
-
         }
     }
 }

@@ -1,5 +1,6 @@
 package cn.white.bysj.admin.config;
 
+import cn.white.bysj.admin.config.interceptor.ApiInterceptor;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
@@ -21,6 +22,9 @@ import java.util.List;
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	@Autowired
 	private CommonInterceptor commonInterceptor;
+
+	@Autowired
+	private ApiInterceptor apiInterceptor;
 
 	/**
 	 * fastJson相关设置
@@ -71,7 +75,29 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(commonInterceptor).addPathPatterns("/**");
+
+		/**
+		 * 后台管理员操作拦截器
+		 */
+		registry.addInterceptor(commonInterceptor).addPathPatterns("/admin/**","/","/index");
+
+		/**前台调用api接口拦截器
+		 * 添加拦截路径
+		 */
+		registry.addInterceptor(apiInterceptor)
+				.addPathPatterns("/user/**","/notebook/**","/home/**","/note/**","/home/**",
+				"/comment/**","/label/**","/feedback/**")
+				.excludePathPatterns("/user/login.do","/user/logout.do","/user/register.do","/user/updataAvatar.do",
+				"/user/activate.do","/user/sendCheckNum.do","/user/checkEmailIsExist.do",
+				"/user/checkTelephoneCheckNum.do","/user/getWeather.do","/user/getCity.do","/home/findHome.do");
+
+		/**
+		 *
+		 * 放行无须验证的路径
+		 */
+//		registry.addInterceptor(apiInterceptor).excludePathPatterns("/user/login.do","/user/logout.do","/user/register.do",
+//				"/user/activate.do","/user/sendCheckNum.do","/user/checkEmailIsExist.do",
+//				"/user/checkTelephoneCheckNum.do","/user/getWeather.do","/user/getCity.do");
 		super.addInterceptors(registry);
 	}
 	

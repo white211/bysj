@@ -2,6 +2,7 @@ package cn.white.bysj.feedback;
 
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.utils.ComponentHelper;
+import cn.white.bysj.utils.Cors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(value = "/feedback")
-public class FeedbackController {
+public class FeedbackController extends Cors {
 
     @Autowired
     private FeedbackService feedbackService;

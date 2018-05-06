@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.*;
 import java.nio.charset.Charset;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Create by @author white
@@ -18,7 +20,57 @@ import java.nio.charset.Charset;
 public class GetCityUtil {
 
     /**
-     * TODO: 获取客户端访问ip
+     * TODO: 获取客户端ip地址（外网）
+     * @author white
+     * @date 2018-05-06 11:28
+
+     * @return
+     * @throws
+     */
+    public static String getV4IP(HttpServletRequest request){
+        String ip = getIpAddr(request);
+        String chinaz = "http://ip.chinaz.com";
+
+        StringBuilder inputLine = new StringBuilder();
+        String read = "";
+        URL url = null;
+        HttpURLConnection urlConnection = null;
+        BufferedReader in = null;
+        try {
+            url = new URL(chinaz);
+            urlConnection = (HttpURLConnection) url.openConnection();
+            in = new BufferedReader( new InputStreamReader(urlConnection.getInputStream(),"UTF-8"));
+            while((read=in.readLine())!=null){
+                inputLine.append(read+"\r\n");
+            }
+            //System.out.println(inputLine.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            if(in!=null){
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+        Pattern p = Pattern.compile("\\<dd class\\=\"fz24\">(.*?)\\<\\/dd>");
+        Matcher m = p.matcher(inputLine.toString());
+        if(m.find()){
+            String ipstr = m.group(1);
+            ip = ipstr;
+        }
+        return ip;
+    }
+
+    /**
+     * TODO: 获取客户端访问ip(内网)
      * @author white
      * @date 2018-03-30 19:21
        @param request
@@ -59,12 +111,11 @@ public class GetCityUtil {
             ipAddress = "";
         }
         // ipAddress = this.getRequest().getRemoteAddr();
-
         return ipAddress;
     }
 
     /**
-     * TODO: 通过ip地址 调用百度地体获取ip所在城市
+     * TODO: 通过ip地址 调用百度地图获取ip所在城市
      * @author white
      * @date 2018-03-30 19:22
 
@@ -72,12 +123,14 @@ public class GetCityUtil {
      * @throws
      */
     public static String getCity(HttpServletRequest request) throws IOException {
-        String ip = getIpAddr(request);
+        String ip = getV4IP(request);
         System.out.println(ip);
         String url = "http://api.map.baidu.com/location/ip?ak=3HU6oASoHn1Bv85BY83oBrhVTvr99ekt&ip=" + ip;
         JSONObject json = readJsonFromUrl(url);
         System.out.println(json.toString());
-        String city = ((JSONObject) json.get("content")).get("address").toString();
+        String address_detail = ((JSONObject)json.get("content")).get("address_detail").toString();
+        JSONObject jsonObject = new JSONObject(address_detail);
+        String city = jsonObject.get("city").toString();
         return city;
     }
 
@@ -115,7 +168,10 @@ public class GetCityUtil {
     public static void main(String[] args) throws IOException, JSONException {
         JSONObject json = readJsonFromUrl("http://api.map.baidu.com/location/ip?ak=3HU6oASoHn1Bv85BY83oBrhVTvr99ekt&ip=118.196.5.73");
         System.out.println(json.toString());
-        System.out.println(((JSONObject) json.get("content")).get("address"));
+        String address_detail = ((JSONObject)json.get("content")).get("address_detail").toString();
+        JSONObject jsonObject = new JSONObject(address_detail);
+        String city = jsonObject.get("city").toString();
+        System.out.println(city);
     }
 
 

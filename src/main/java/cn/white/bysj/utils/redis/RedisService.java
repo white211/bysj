@@ -22,4 +22,6 @@ public interface RedisService {
     public RedisTemplate<String,Object> getRedisTemplate();
 
     public void setRedisTemplate(RedisTemplate<String,Object> redisTemplate);
+
+    public boolean containKey(String key);
 }

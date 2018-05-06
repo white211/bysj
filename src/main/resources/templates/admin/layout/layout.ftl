@@ -62,13 +62,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="<@shiro.principal property="cn_user_avatar"/>" class="user-image" alt="User Image">
+                      <img src="<@shiro.principal property="cn_user_avatar"/>" class="user-image" alt="">
                       <span class="hidden-xs"><@shiro.principal property="cn_user_nickname"/></span>
                   </a>
                   <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
-                          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="User Image">
+                          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="">
 
                           <p>
                               <@shiro.principal property="cn_user_description"/>
@@ -100,7 +100,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="User Image">
+          <img src="<@shiro.principal property="cn_user_avatar"/>" class="img-circle" alt="">
         </div>
         <div class="pull-left info">
           <p><@shiro.principal property="cn_user_nickname"/></p>

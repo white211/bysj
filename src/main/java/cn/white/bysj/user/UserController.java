@@ -34,7 +34,7 @@ public class UserController extends Cors  {
     @ResponseBody
     public ServerResponse<User> login(HttpServletRequest request) {
         Map<String, Object> map = ComponentHelper.requestToMap(request);
-        return userService.login(request.getSession(), map);
+        return userService.login(map);
     }
     //退出登录
     @RequestMapping(value = "logout.do")
@@ -147,8 +147,7 @@ public class UserController extends Cors  {
     @RequestMapping(value = "getWeather.do")
     @ResponseBody
     public ServerResponse<String> getWeather(HttpServletRequest request){
-       Map<String,Object> map = ComponentHelper.requestToMap(request);
-       return userService.weatherJson(map);
+       return userService.weatherJson(request);
     }
 
     //获取当前所在城市
@@ -157,7 +156,6 @@ public class UserController extends Cors  {
     public ServerResponse getCity(HttpServletRequest request) {
         return userService.getCity(request);
     }
-
 
 
 }

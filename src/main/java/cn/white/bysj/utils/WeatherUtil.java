@@ -72,7 +72,7 @@ public class WeatherUtil {
         WeatherUtil demo = new WeatherUtil();
         try {
             String url = generateGetDiaryWeatherURL(
-                    "广州",
+                    "广东省广州市",
                     "zh-Hans",
                     "c",
                     "1",

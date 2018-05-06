@@ -33,6 +33,9 @@ public class Feedback extends BaseEntity {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date cnFeedbackCreateTime=null;
 
+    //图片链接
+    private String imageURL = null;
+
     //回复内容
     private String cn_feedback_returnContent=null;
 

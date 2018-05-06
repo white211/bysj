@@ -49,26 +49,23 @@ public class UserService {
     private UserDao userDao;
     @Autowired
     private RedisService redisService;
-    @Autowired
-    private JavaMailSender javaMailSender;
-    @Autowired
-    private Executor executor;
-//
-//    @Autowired
-//    private HttpClient httpClient;
 
     @Autowired
-//    private BaseService baseService;
+    private JavaMailSender javaMailSender;
+
+    @Autowired
+    private Executor executor;
 
     /**
      * TODO: 用户登陆
+     *
+     * @return cn.white.bysj.commons.ServerResponse<cn.white.bysj.user.User>
+     * @throws
      * @author white
      * @date 2018-03-19 13:24
-     @params "account", "password"
-      * @return cn.white.bysj.commons.ServerResponse<cn.white.bysj.user.User>
-     * @throws
+     * @params "account", "password"
      */
-    public ServerResponse<User> login(HttpSession session, Map<String, Object> map) {
+    public ServerResponse<User> login(Map<String, Object> map) {
 
         List<String> list = Arrays.asList("account", "password");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -90,6 +87,10 @@ public class UserService {
                         logger.error("登陆失败，该用户已经被锁定");
                         return ServerResponse.createByErrorMessage("登陆失败，该用户已被锁定");
                     } else {
+                        String token = UUID.randomUUID().toString();
+                        user.setCn_user_token(token);
+                        logger.info("登陆成功生成的token--------" + token);
+                        redisService.set(token, user, 60*60*2);
                         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
                         if (!user.getCnNoteReadPassword().equals(MD5.md5("111111"))) {
                             user.setCnNoteReadPassword(org.apache.commons.lang3.StringUtils.EMPTY);
@@ -97,13 +98,8 @@ public class UserService {
                         logger.info("登陆成功");
                         return ServerResponse.createBySuccess("登陆成功", user);
                     }
-//                    session.setAttribute(Constant.CURRENT_USER_ACCOUNT, map.get("account").toString());
-//                    session.setAttribute(Constant.CURRENT_USER_ID, user.getCn_user_id().toString());
-//                    session.setAttribute(Constant.CURRENT_USER, user);
-//                    System.out.println("获取session用户:" + session.getAttribute(Constant.CURRENT_USER_ACCOUNT));
-//                    System.out.println("获取session用户id:" + session.getAttribute(Constant.CURRENT_USER_ID));
-
                 } else {
+                    logger.error("登陆密码错误");
                     return ServerResponse.createByErrorMessage("登陆密码错误");
                 }
             }
@@ -124,9 +120,6 @@ public class UserService {
      * @date 2018-03-19 13:25
      */
     public ServerResponse<User> logout(Map<String, Object> map, HttpSession session) {
-        session.removeAttribute("cn_user_id");
-        session.removeAttribute("account");
-//        System.out.println(session.getAttribute("account"));
         System.out.println("注销成功");
         return ServerResponse.createBySuccessMessags("注销成功");
     }
@@ -181,27 +174,30 @@ public class UserService {
         user.setCn_user_actived("0");
         user.setCn_user_email(map.get("email").toString());
         try {
-            if (redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
+            logger.info("redis开始获取验证码");
+            if (redisService.containKey(map.get("telephone").toString())) {
+                if (!redisService.get(map.get("telephone").toString()).equals(map.get("checkNum").toString())) {
+                    return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码错误,请重新输入"));
+                }
                 //发送邮件
                 user.setCn_user_password(MD5.md5(map.get("password").toString()));
                 user.setCnNoteReadPassword(MD5.md5("111111"));
                 user.setCn_user_telephone(map.get("telephone").toString());
                 user.setCn_user_locked(0);
+                user.setCnUserUpdateTime(new Date());
+                user.setCnUserCreateTime(new Date());
                 String content = "";
                 executor.execute(new EmailUtil(user.getCn_user_actived_code(), user.getCn_user_email(), javaMailSender, content, 1));
                 userDao.save(user);
             } else {
-                System.out.println(redisService.get(map.get("telephone").toString()));
-                logger.error("验证码错误");
-                return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码输入错误，请重新输入"));
+                logger.error("验证码过期");
+                return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("验证码过期，请重新获取"));
             }
         } catch (Exception e) {
-            logger.error("注册失败");
-            logger.error(e.getMessage());
-            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("注册失败"));
+            e.printStackTrace();
+            logger.error("注册失败--服务异常");
+            return new AsyncResult<ServerResponse<User>>(ServerResponse.createByErrorMessage("注册失败--服务异常"));
         }
-
-
         logger.info("注册成功");
         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
         return new AsyncResult<ServerResponse<User>>(ServerResponse.createBySuccess("注册成功,请到邮箱激活", user));
@@ -273,14 +269,16 @@ public class UserService {
             try {
                 String random = SmsUtil.getSms();
                 long timeout = 60;
+                logger.info("redis保存验证码60秒");
                 redisService.set(map.get("telephone").toString(), random, timeout);
-//                throw  new MyException(401,"链接redis出错");
-                re = SmsUtil.getCode(map.get("telephone").toString(), random);
-                if (re.containsKey("code")) {
-                    return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
-                } else {
-                    return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
-                }
+                return ServerResponse.createBySuccessMessags("验证码为" + random + " " + "有效期为60s");
+//                短信发送验证码
+//                re = SmsUtil.getCode(map.get("telephone").toString(), random);
+//                if (re.containsKey("code")) {
+//                    return ServerResponse.createBySuccess(re.get("respDesc").toString(), re.get("code").toString());
+//                } else {
+//                    return ServerResponse.createByErrorMessage(re.get("respDesc").toString());
+//                }
             } catch (Exception e) {
                 logger.error(e.getMessage());
                 return ServerResponse.createByErrorCodeMessage(-1, "服务器出现异常");
@@ -404,7 +402,7 @@ public class UserService {
      * @date 2018-03-19 13:35
      */
     public ServerResponse<User> resetPassword(Map<String, Object> map) {
-        List<String> list = Arrays.asList("userId", "oldPassword", "newPassword","type");
+        List<String> list = Arrays.asList("userId", "oldPassword", "newPassword", "type");
         if (ValidatorUtil.validator(map, list).size() > 0) {
             return ServerResponse.createByErrorMessage("缺少参数，应包括userId，oldPassword，newPassword,type");
         }
@@ -419,14 +417,14 @@ public class UserService {
                 if (map.get("oldPassword").toString().equals(map.get("newPassword").toString())) {
                     return ServerResponse.createByErrorMessage("新密码不能与旧密码相同");
                 } else {
-                    if (map.get("type").toString().equals("1")){
+                    if (map.get("type").toString().equals("1")) {
                         userDao.forgetResetPassword(MD5.md5(map.get("newPassword").toString()), Integer.parseInt(map.get("userId").toString()));
                         return ServerResponse.createBySuccessMessags("修改密码成功");
-                    }else{
-                        userDao.updateReadPass(MD5.md5(map.get("newPassword").toString()),Integer.parseInt(map.get("userId").toString()));
+                    } else {
+                        userDao.updateReadPass(MD5.md5(map.get("newPassword").toString()), Integer.parseInt(map.get("userId").toString()));
                         User user = userDao.findOne(Integer.parseInt(map.get("userId").toString()));
                         user.setCnNoteReadPassword(org.apache.commons.lang3.StringUtils.EMPTY);
-                        return ServerResponse.createBySuccess("修改密码成功",user);
+                        return ServerResponse.createBySuccess("修改密码成功", user);
                     }
                 }
             } catch (Exception e) {
@@ -581,10 +579,11 @@ public class UserService {
     public ServerResponse<String> getCity(HttpServletRequest request) {
         try {
             String city = GetCityUtil.getCity(request);
-            return ServerResponse.createBySuccess("获取成功", city);
+            return ServerResponse.createBySuccess("获取城市成功", city);
         } catch (IOException e) {
             e.printStackTrace();
-            return ServerResponse.createByErrorMessage("获取失败");
+            logger.error("获取城市失败");
+            return ServerResponse.createByErrorMessage("获取城市失败");
         }
     }
 
@@ -597,27 +596,35 @@ public class UserService {
      * @author white
      * @date 2018-03-25 10:20
      */
-    public ServerResponse weatherJson(Map<String, Object> map) {
-        List<String> list = Arrays.asList("city");
-        if (ValidatorUtil.validator(map, list).size() > 0) {
-            return ServerResponse.createByErrorMessage("缺少参数city");
-        }
-        if (StringUtils.isBlank(map.get("city").toString())) {
-            return ServerResponse.createByErrorMessage("城市不能为空");
+    public ServerResponse weatherJson(HttpServletRequest request) {
+
+        String city;
+        if (this.getCity(request).getStatus() == 0) {
+            city = this.getCity(request).getData();
+            logger.info(city);
         } else {
-            String city = map.get("city").toString();
-            try {
-                String url = WeatherUtil.generateGetDiaryWeatherURL(city, "", "c", "1", "1");
-                DefaultHttpClient httpClient = new DefaultHttpClient();
-                HttpGet httpGet = new HttpGet(url);
-                ResponseHandler<String> responseHandler = new BasicResponseHandler();
-                String responseBody = httpClient.execute(httpGet, responseHandler);
-                JSONObject jsonObject = JSONObject.parseObject(responseBody);
-                return ServerResponse.createBySuccess("请求成功", jsonObject);
-            } catch (Exception e) {
-                logger.error("获取天气url失败");
-                return ServerResponse.createByErrorMessage("查找失败");
-            }
+            return this.getCity(request);
+        }
+//        List<String> list = Arrays.asList("city");
+//        if (ValidatorUtil.validator(map, list).size() > 0) {
+//            return ServerResponse.createByErrorMessage("缺少参数city");
+//        }
+//        if (StringUtils.isBlank(map.get("city").toString())) {
+//            return ServerResponse.createByErrorMessage("城市不能为空");
+//        } else {
+//            String city = map.get("city").toString();
+        try {
+            String url = WeatherUtil.generateGetDiaryWeatherURL(city, "", "c", "1", "1");
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet(url);
+            ResponseHandler<String> responseHandler = new BasicResponseHandler();
+            String responseBody = httpClient.execute(httpGet, responseHandler);
+            JSONObject jsonObject = JSONObject.parseObject(responseBody);
+            return ServerResponse.createBySuccess("获取天气成功", jsonObject);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("获取天气数据失败");
+            return ServerResponse.createByErrorMessage("获取天气数据失败------查找失败");
         }
     }
 

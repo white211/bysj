@@ -41,9 +41,9 @@
     <!-- Default box -->
     <div class="box box-primary">
         <div class="box-header">
-        <@shiro.hasPermission name="system:user:add">
-            <a class="btn btn-sm btn-success" href="${ctx!}/admin/user/add">新增</a>
-        </@shiro.hasPermission>
+            <@shiro.hasPermission name="system:user:add">
+                <a class="btn btn-sm btn-success" href="${ctx!}/admin/user/add">新增</a>
+            </@shiro.hasPermission>
         </div>
         <div class="box-body">
             <table class="table table-striped">
@@ -61,51 +61,56 @@
                     <th>操作</th>
                 </tr>
                 <#list pageInfo.content as userInfo>
-                <tr>
-                    <td>${(pageInfo.number)*10+(userInfo_index+1)}</td>
-                    <#--<td>${userInfo.cn_user_id}</td>-->
-                    <td>${userInfo.cn_user_name}</td>
-                    <td>${userInfo.cn_user_nickname}</td>
-                    <td>
-                        <#if userInfo.cn_user_sex == 1>
-                            <span class="label label-info">男</span>
-                        <#elseif userInfo.cn_user_sex == 0>
-                            <span class="label label-danger">女</span>
-                        <#else >
-                            <span class="label label-warning">未知</span>
-                        </#if>
-                    </td>
-                    <td>${userInfo.cn_user_telephone}</td>
-                    <td>${userInfo.cn_user_email}</td>
-                    <td>${userInfo.cn_user_address}</td>
-                    <td>
-                        <#if userInfo.cn_user_deleteStatus == 1>
-                            <span class="label label-danger">已删除</span>
-                        <#else>
-                            <span class="label label-info">未删除</span>
-                        </#if>
-                    </td>
-                    <td>
-                        <#if userInfo.cn_user_locked == 1>
-                            <span class="label label-danger">已锁定</span>
-                        <#else>
-                            <span class="label label-info">未锁定</span>
-                        </#if>
+                    <#if userInfo.cn_user_actived == 1>
+                        <tr>
+                            <td>${(pageInfo.number)*10+(userInfo_index+1)}</td>
+                        <#--<td>${userInfo.cn_user_id}</td>-->
+                            <td>${userInfo.cn_user_name}</td>
+                            <td>${userInfo.cn_user_nickname}</td>
+                            <td>
+                                <#if userInfo.cn_user_sex == 1>
+                                    <span class="label label-info">男</span>
+                                <#elseif userInfo.cn_user_sex == 0>
+                                    <span class="label label-danger">女</span>
+                                <#else >
+                                    <span class="label label-warning">未知</span>
+                                </#if>
+                            </td>
+                            <td>${userInfo.cn_user_telephone}</td>
+                            <td>${userInfo.cn_user_email}</td>
+                            <td>${userInfo.cn_user_address}</td>
+                            <td>
+                                <#if userInfo.cn_user_deleteStatus == 1>
+                                    <span class="label label-danger">已删除</span>
+                                <#else>
+                                    <span class="label label-info">未删除</span>
+                                </#if>
+                            </td>
+                            <td>
+                                <#if userInfo.cn_user_locked == 1>
+                                    <span class="label label-danger">已锁定</span>
+                                <#else>
+                                    <span class="label label-info">未锁定</span>
+                                </#if>
 
-                    </td>
-                    <td>${userInfo.cnUserCreateTime?date}</td>
-                    <td>
-                    <@shiro.hasPermission name="system:user:edit">
-                        <a class="btn btn-sm btn-primary" href="${ctx!}/admin/user/edit/${userInfo.cn_user_id}">编辑</a>
-                    </@shiro.hasPermission>
-                    <@shiro.hasPermission name="system:user:grant">
-                        <a class="btn btn-sm btn-warning" href="${ctx!}/admin/user/grant/${userInfo.cn_user_id}">分配角色</a>
-                    </@shiro.hasPermission>
-                    <@shiro.hasPermission name="system:user:deleteBatch">
-                        <button class="btn btn-sm btn-danger" onclick="del(${userInfo.cn_user_id})">删除</button>
-                    </@shiro.hasPermission>
-                    </td>
-                </tr>
+                            </td>
+                            <td>${userInfo.cnUserCreateTime?date}</td>
+                            <td>
+                                <@shiro.hasPermission name="system:user:edit">
+                                    <a class="btn btn-sm btn-primary"
+                                       href="${ctx!}/admin/user/edit/${userInfo.cn_user_id}">编辑</a>
+                                </@shiro.hasPermission>
+                                <@shiro.hasPermission name="system:user:grant">
+                                    <a class="btn btn-sm btn-warning"
+                                       href="${ctx!}/admin/user/grant/${userInfo.cn_user_id}">分配角色</a>
+                                </@shiro.hasPermission>
+                                <@shiro.hasPermission name="system:user:deleteBatch">
+                                    <button class="btn btn-sm btn-danger" onclick="del(${userInfo.cn_user_id})">删除
+                                    </button>
+                                </@shiro.hasPermission>
+                            </td>
+                        </tr>
+                    </#if>
                 </#list>
             </table>
         </div>

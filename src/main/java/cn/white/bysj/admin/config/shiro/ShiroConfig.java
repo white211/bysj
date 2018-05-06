@@ -46,7 +46,6 @@ public class ShiroConfig {
     @ConditionalOnMissingBean
     public DefaultSecurityManager securityManager() {
         DefaultSecurityManager sm = new DefaultWebSecurityManager();
-//        sm.setRealm(realm());
         sm.setCacheManager(cacheManager());
         return sm;
     }
@@ -64,8 +63,15 @@ public class ShiroConfig {
 		shiroFilter.setUnauthorizedUrl("/previlige/no");
 		Map<String, String> filterChainDefinitionMap = new HashMap<String, String>();
 		filterChainDefinitionMap.put("/assets/**", "anon");
-		
 		filterChainDefinitionMap.put("/admin/login", "anon");
+
+//		filterChainDefinitionMap.put("/user/**","anon");
+//		filterChainDefinitionMap.put("/notebook/**","anon");
+//		filterChainDefinitionMap.put("/note/**","anon");
+//		filterChainDefinitionMap.put("/label/**","anon");
+//		filterChainDefinitionMap.put("/home/**","anon");
+//		filterChainDefinitionMap.put("/comment/**","anon");
+//		filterChainDefinitionMap.put("/feedback/**","anon");
 		
 		List<cn.white.bysj.admin.entity.Resource> list = resourceService.findAll();
 		for (cn.white.bysj.admin.entity.Resource resource : list) {
