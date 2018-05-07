@@ -109,6 +109,7 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
             feedBackVo.setCn_feedback_content(feedback.getCn_feedback_content());
             feedBackVo.setCn_feedback_createTime(feedback.getCnFeedbackCreateTime());
             feedBackVo.setCn_feedback_isReturn(feedback.getCn_feedback_isReturn());
+            feedBackVo.setImageurl(feedback.getImageURL());
             User user = iUserDao.findOne(StringUtils.isBlank(feedback.getCn_user_id().toString()) ? 0 : feedback.getCn_user_id());
             feedBackVo.setCn_user_email(user.getCn_user_email());
             if (feedback.getCn_userReturn_id() == null) {
@@ -128,6 +129,14 @@ public class IFeedBackServiceImpl extends BaseServiceImpl<Feedback, Integer> imp
 
     }
 
+    /**
+     * TODO: 回复反馈信心的操作
+     * @author white
+     * @date 2018-05-06 18:18
+
+     * @return
+     * @throws
+     */
     @Override
     @Async("myExecutor")
     public void UpdateAndSendEmail(FeedBackVo feedBackVo) {

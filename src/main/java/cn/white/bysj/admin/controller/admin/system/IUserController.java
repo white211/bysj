@@ -3,6 +3,7 @@ package cn.white.bysj.admin.controller.admin.system;
 import cn.white.bysj.admin.common.JsonResult;
 import cn.white.bysj.admin.controller.BaseController;
 import cn.white.bysj.admin.entity.Role;
+import cn.white.bysj.admin.vo.NoteVo;
 import cn.white.bysj.user.User;
 import cn.white.bysj.admin.service.IRoleService;
 import cn.white.bysj.admin.service.IUserService;
@@ -13,10 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +34,7 @@ public class IUserController extends BaseController {
         Sort sort = new Sort(Sort.Direction.DESC,"cnUserCreateTime");
         Page<User> page = userService.findAll(getPageRequest(sort));
         modelMap.put("pageInfo", page);
+        modelMap.put("type",0);
         return "admin/user/index";
     }
 
@@ -124,4 +123,23 @@ public class IUserController extends BaseController {
         }
         return JsonResult.success();
     }
+
+//    @GetMapping(value = "/findUserByTextInES")
+//    public String findUserByTextInES(@RequestParam String text,ModelMap map){
+//        Page<User> page = userService.findUserByTextInEs(text,getPageRequest());
+//        map.put("pageInfo",page);
+//        map.put("type",1);
+//        map.put("text",text);
+//        return "/admin/user/index";
+//    }
+
+    @RequestMapping(value = "/findUserByLike")
+    public String findUserByLike(@RequestParam String text,ModelMap map){
+        Page<User> page = userService.findUserByLike(text,getPageRequest());
+        map.put("pageInfo",page);
+        map.put("type",1);
+        map.put("text",text);
+        return "/admin/user/index";
+    }
+
 }

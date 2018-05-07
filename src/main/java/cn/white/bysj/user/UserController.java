@@ -157,6 +157,13 @@ public class UserController extends Cors  {
         return userService.getCity(request);
     }
 
+    //清除回收站
+    @RequestMapping(value = "clearTrash.do")
+    @ResponseBody
+    public ServerResponse clearTrash(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return userService.clearTrash(map);
+    }
 
 }
 

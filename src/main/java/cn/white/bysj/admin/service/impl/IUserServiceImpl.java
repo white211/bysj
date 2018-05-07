@@ -9,20 +9,24 @@ import cn.white.bysj.admin.entity.Role;
 import cn.white.bysj.admin.service.IRoleService;
 import cn.white.bysj.admin.service.IUserService;
 import cn.white.bysj.admin.service.support.impl.BaseServiceImpl;
+import cn.white.bysj.feedback.FeedbackServiceImpl;
 import cn.white.bysj.user.User;
 import cn.white.bysj.utils.MD5;
+import groovy.util.logging.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * <p>
@@ -33,7 +37,11 @@ import java.util.Set;
  * @since 2016-12-28
  */
 @Service
+@Slf4j
 public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements IUserService {
+
+
+	private static org.slf4j.Logger logger = LoggerFactory.getLogger(IUserServiceImpl.class);
 
 	@Autowired
 	private IUserDao userDao;
@@ -109,7 +117,6 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 		return userDao.findAllByCn_user_nicknameContaining(searchText,pageRequest);
 	}
 
-	
 	@Override
 	public void updatePwd(User user, String oldPassword, String password1, String password2) throws NoSuchAlgorithmException {
 		Assert.notNull(user, "用户不能为空");
@@ -125,5 +132,40 @@ public class IUserServiceImpl extends BaseServiceImpl<User, Integer> implements 
 		dbUser.setCn_user_password(MD5.md5(password1));
 		userDao.saveAndFlush(dbUser);
 	}
-	
+
+	@Override
+	public Page<User> findUserByLike(String text, Pageable pageable) {
+		try{
+			Page<User> page = userDao.findUserByLike(text,pageable);
+			logger.error("模糊查询正确");
+			logger.error(page.toString());
+			return page;
+		}catch (Exception e){
+			e.printStackTrace();
+            logger.error("查询失败");
+            return null;
+		}
+	}
+
+//----------------------------------------ES上相关操作---------------------------------------------
+	/**
+	 * TODO: 从ES上面分页查询用户数据
+	 * @author white
+	 * @date 2018-05-07 21:50
+
+	 * @return
+	 * @throws
+	 */
+	@Override
+	public Page<User> findUserByTextInEs(String searchText, Pageable pageable) {
+
+		String order = "cn_user_create_time";
+        Sort sort = new Sort(Sort.Direction.DESC,order);
+		Pageable pageable1 = new PageRequest(pageable.getPageNumber(),pageable.getPageSize(),sort);
+        List<User> userList = new ArrayList<User>();
+		return null;
+	}
+
+
+
 }

@@ -30,6 +30,9 @@ public class FeedBackVo {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date cn_feedback_createTime=null;
 
+    //反馈图片url
+    private String imageurl = null;
+
     //回复内容
     private String cn_feedback_returnContent=null;
 

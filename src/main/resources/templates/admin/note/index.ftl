@@ -25,10 +25,10 @@
     function checkText() {
         var text = $("#text").val();
         if (text === '' || text === null) {
-            layer.msg("请输入关键词",{time:2000},function () {
+            layer.msg("请输入关键词", {time: 2000}, function () {
             });
             return false;
-        }else{
+        } else {
             return true;
         }
     }
@@ -55,7 +55,8 @@
     <div class="box box-primary">
         <div class="box-header">
             <@shiro.hasPermission name="system:note:find">
-                <form id="searchForm" class="form-horizontal" action="${ctx!}/admin/note/findByTextInEs" method="get" onsubmit="return checkText()">
+                <form id="searchForm" class="form-horizontal" action="${ctx!}/admin/note/findByTextInEs" method="get"
+                      onsubmit="return checkText()">
                     <div class="form-group">
                         <div class="col-sm-8 col-xs-12 ">
                             <input type="text" name="text" class="form-control" id="text" placeholder="请输入查找内容">
@@ -91,7 +92,8 @@
                         <td>
                             <#if noteInfo.cnNoteIsEncrypt == 1>
                                 <@shiro.hasPermission name="system:note:see">
-                                    <a class="btn btn-sm btn-primary" href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>
+                                    <a class="btn btn-sm btn-primary"
+                                       href="${ctx!}/admin/note/see/${noteInfo.cn_note_id}">查看笔记</a>
                                 </@shiro.hasPermission>
                             </#if>
                             <@shiro.hasPermission name="system:note:deleteBatch">
@@ -104,7 +106,17 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer clearfix">
-            <@macro.page pageInfo=pageInfo url="${ctx!}/admin/note/index?" />
+
+            <#if type==0>
+
+                <@macro.page pageInfo=pageInfo url="${ctx!}/admin/note/index?" />
+
+                <#elseif type==1>
+
+                <@macro.page pageInfo=pageInfo url="${ctx!}/admin/note/findByTextInEs?text="+text/>
+
+            </#if>
+
         </div>
     </div>
     <!-- /.box -->

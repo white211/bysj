@@ -50,7 +50,6 @@ public class IFeedBackController extends BaseController {
 
     @PostMapping(value = "/return")
     public JsonResult Return(FeedBackVo feedBackVo, ModelMap modelMap){
-
         try {
             iFeedBackService.UpdateAndSendEmail(feedBackVo);
         } catch (Exception e) {

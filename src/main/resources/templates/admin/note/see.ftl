@@ -2,9 +2,21 @@
 <#import "/admin/layout/macro.ftl" as macro>
 <#assign css>
 
+  <style type="text/css">
+    .cn_note_content{
+        /*max-height: 500px;*/
+        /*border: 1px solid black;*/
+    }
+
+  </style>
+
 </#assign>
+
 <#assign js>
+
+<script src="/assets/plugins/marked/marked.min.js"></script>
 <script>
+
     $(".btn-submit").click(function () {
         $.ajax({
             type: "POST",
@@ -19,6 +31,9 @@
             }
         });
     });
+
+    $('#cn_note_content').html(marked($('#cn_note_content').text().trim()));
+
 </script>
 </#assign>
 <@layout title="笔记查看" active="note">
@@ -45,7 +60,10 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">内容：</label>
                             <div class="col-sm-10">
-                                <textarea id="cn_user_description" name="cn_user_description" class="form-control" rows="20">${note.cn_note_content}</textarea>
+                                <div id="cn_note_content" class="cn_note_content">
+                                   ${note.cn_note_content}
+                                </div>
+                                <#--<textarea id="cn_user_description" name="cn_user_description" class="form-control" rows="20"></textarea>-->
                             </div>
                         </div>
                     </div>

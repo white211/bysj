@@ -2,6 +2,8 @@ package cn.white.bysj.user;
 
 
 import cn.white.bysj.commons.ServerResponse;
+import cn.white.bysj.note.NoteDao;
+import cn.white.bysj.notebook.NoteBookDao;
 import cn.white.bysj.utils.*;
 
 import cn.white.bysj.utils.GetCityUtil;
@@ -47,8 +49,15 @@ public class UserService {
 
     @Autowired
     private UserDao userDao;
+
     @Autowired
     private RedisService redisService;
+
+    @Autowired
+    private NoteDao noteDao;
+
+    @Autowired
+    private NoteBookDao noteBookDao;
 
     @Autowired
     private JavaMailSender javaMailSender;
@@ -90,7 +99,7 @@ public class UserService {
                         String token = UUID.randomUUID().toString();
                         user.setCn_user_token(token);
                         logger.info("登陆成功生成的token--------" + token);
-                        redisService.set(token, user, 60*60*2);
+                        redisService.set(token, user, 60 * 60 * 2);
                         user.setCn_user_password(org.apache.commons.lang3.StringUtils.EMPTY);
                         if (!user.getCnNoteReadPassword().equals(MD5.md5("111111"))) {
                             user.setCnNoteReadPassword(org.apache.commons.lang3.StringUtils.EMPTY);
@@ -104,7 +113,7 @@ public class UserService {
                 }
             }
         } catch (Exception e) {
-            logger.error("服务器出错");
+            logger.error("登陆操作----服务器出错");
             return ServerResponse.createByErrorMessage("服务器异常");
         }
 
@@ -628,6 +637,26 @@ public class UserService {
         }
     }
 
+
+    public ServerResponse clearTrash(Map<String, Object> map) {
+        List<String> list = Arrays.asList("userId");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括userId");
+        }
+        if (StringUtils.isBlank(map.get("userId").toString())) {
+            return ServerResponse.createByErrorMessage("用户id不能为空");
+        } else {
+            int userId = Integer.parseInt(map.get("userId").toString());
+            try {
+                noteDao.deleteAllByCn_user_id(userId);
+                noteBookDao.deleteAllByCn_user_id(userId);
+                return ServerResponse.createBySuccessMessags("清除回收站成功");
+            } catch (Exception e) {
+               logger.error("清除回收站失败------服务出现异常");
+               return ServerResponse.createByErrorMessage("服务出现异常");
+            }
+        }
+    }
 
 }
 

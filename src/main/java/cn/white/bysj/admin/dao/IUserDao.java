@@ -19,5 +19,10 @@ public interface IUserDao extends IBaseDao<User, Integer> {
     @Query(value = "select cn_user_email from user where cn_user_id = ?1",nativeQuery = true)
 	String findEmailById(int userId);
 
+    @Query(value = "SELECT * from user where (cn_user_email LIKE %?1% or cn_user_address LIKE %?1% " +
+			"or cn_user_telephone LIKE %?1% or cn_user_name LIKE %?1% or cn_user_nickname LIKE %?1%)" +
+			"ORDER BY ?#{#pageable}",nativeQuery = true)
+    Page<User> findUserByLike(String text,Pageable pageable);
+
 
 }

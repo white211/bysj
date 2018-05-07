@@ -45,6 +45,7 @@ public class INoteController extends BaseController {
     public String index(ModelMap modelMap) {
         Page<NoteVo> page = iNoteService.findNoteInEs(getPageRequest());
         modelMap.put("pageInfo", page);
+        modelMap.put("type",0);
         return "admin/note/index";
     }
 
@@ -83,6 +84,8 @@ public class INoteController extends BaseController {
     public String findByText(@RequestParam String text,ModelMap map){
         Page<NoteVo> page = iNoteService.findByTextInEs(text,getPageRequest());
         map.put("pageInfo",page);
+        map.put("type",1);
+        map.put("text",text);
         return "/admin/note/index";
     }
 

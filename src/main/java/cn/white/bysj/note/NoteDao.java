@@ -23,7 +23,7 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "select count(*) from note where cn_note_book_id = ?1 and cn_note_type_id != 4",nativeQuery = true)
     int countByNoteBookId(Integer notebookid);
 
-    @Query(value = "select * from note where cn_user_id =?1 and cn_note_type_id != 4 ORDER BY cn_note_update_time DESC ",nativeQuery = true)
+    @Query(value = "select * from note where cn_user_id =?1 and cn_note_type_id != 4 and cn_note_type_id !=5 ORDER BY cn_note_update_time DESC ",nativeQuery = true)
     List<Note> findNoteByUserId(int userId);
 
     @Transactional
@@ -81,7 +81,10 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "update note set cn_note_label_id = null where  cn_note_label_id = ?1",nativeQuery = true)
     void updateLabelIdNull(int lableId);
 
-
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "delete from note where cn_user_id =?1 and (cn_note_type_id = 4 OR cn_note_type_id=5)",nativeQuery = true)
+    void deleteAllByCn_user_id(int userId);
 
 }
 

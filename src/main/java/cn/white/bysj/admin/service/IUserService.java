@@ -6,6 +6,7 @@ import cn.white.bysj.admin.service.support.IBaseService;
 import cn.white.bysj.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -55,5 +56,22 @@ public interface IUserService extends IBaseService<User, Integer> {
 	 * @param password2
 	 */
 	void updatePwd(User user, String oldPassword, String password1, String password2) throws NoSuchAlgorithmException;
+
+	/**
+	 * 通过关键词从ES搜索用户
+	 * @param searchText
+	 * @param pageable
+	 * @return
+	 */
+	Page<User> findUserByTextInEs(String searchText, Pageable pageable);
+
+	/**
+	 * 搜索数据库中的用户
+	 * @param text
+	 * @param pageable
+	 * @return
+	 */
+    Page<User> findUserByLike(String text,Pageable pageable);
+
 
 }

@@ -1,7 +1,13 @@
 <#include "/admin/layout/layout.ftl">
 <#import "/admin/layout/macro.ftl" as macro>
 <#assign css>
+<style type="text/css">
+    .url {
+        height:200px;
+        width:500px;
+    }
 
+</style>
 </#assign>
 <#assign js>
 <script>
@@ -77,17 +83,25 @@
                             </div>
                         </div>
 
+                        <#if feedback.imageurl != null && feedback.imageurl != ''>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">图片</label>
+                                <div class="col-sm-10">
+                                    <img src="${feedback.imageurl}" class="url">
+                                </div>
+                            </div>
+                        </#if>
+
                         <div class="form-group">
                             <label class="col-sm-2 control-label">已回复：</label>
                             <div class="col-sm-10">
                                 <#if feedback.cn_feedback_isReturn == 0>
-                                    <input id="cn_feedback_isReturn" name="cn_feedback_isReturn"
-                                           class="form-control"
-                                           type="text" value="是">
+                                    <span id="cn_feedback_isReturn" name="cn_feedback_isReturn"
+                                          class="form-control label label-info"
+                                    >是</span>
                                 <#elseif feedback.cn_feedback_isReturn == 1>
-                                    <input id="cn_feedback_isReturn" name="cn_feedback_isReturn"
-                                           class="form-control"
-                                           type="text" value="否">
+                                    <label id="cn_feedback_isReturn" name="cn_feedback_isReturn"
+                                           class="form-control label label-danger">否</label>
                                 </#if>
                             </div>
 

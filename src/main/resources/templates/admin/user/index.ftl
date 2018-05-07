@@ -1,11 +1,19 @@
 <#include "/admin/layout/layout.ftl">
 <#import "/admin/layout/macro.ftl" as macro>
 <#assign css>
-<style>
+
+<style type="text/css">
+    .add {
+        display: block;
+    }
+
 </style>
+
 </#assign>
 <#assign js>
+
 <script>
+
     function del(id) {
         layer.confirm('确定删除吗?', {icon: 3, title: '提示'}, function (index) {
             $.ajax({
@@ -20,7 +28,20 @@
             });
         });
     }
+
+    function checkText() {
+        var text = $("#text").val();
+        if (text === '' || text === null) {
+            layer.msg("请输入关键词", {time: 2000}, function () {
+            });
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 </script>
+
 </#assign>
 <@layout title="用户管理" active="user">
 <!-- Content Header (Page header) -->
@@ -38,13 +59,45 @@
 
 <!-- Main content -->
 <section class="content">
+
     <!-- Default box -->
     <div class="box box-primary">
+
         <div class="box-header">
-            <@shiro.hasPermission name="system:user:add">
-                <a class="btn btn-sm btn-success" href="${ctx!}/admin/user/add">新增</a>
+
+            <@shiro.hasPermission name="system:user:search">
+
+                <form id="searchForm" class="form-horizontal" action="${ctx!}/admin/user/findUserByLike"
+                      method="get" onsubmit="return checkText()">
+
+                    <div class="form-group">
+
+                        <div class="col-sm-8 col-xs-12 ">
+
+                            <input type="text" name="text" class="form-control" id="text" placeholder="请输入查找内容" />
+
+                        </div>
+
+                        <button type="submit" class="btn btn-success col-sm-1 col-xs-3">查找</button>
+
+                    </div>
+
+                </form>
+
             </@shiro.hasPermission>
+
+            <@shiro.hasPermission name="system:user:add">
+
+                <div class="add">
+
+                    <a class="btn btn-sm btn-success" href="${ctx!}/admin/user/add">新增</a>
+
+                </div>
+
+            </@shiro.hasPermission>
+
         </div>
+
         <div class="box-body">
             <table class="table table-striped">
                 <tr>
@@ -64,7 +117,6 @@
                     <#if userInfo.cn_user_actived == 1>
                         <tr>
                             <td>${(pageInfo.number)*10+(userInfo_index+1)}</td>
-                        <#--<td>${userInfo.cn_user_id}</td>-->
                             <td>${userInfo.cn_user_name}</td>
                             <td>${userInfo.cn_user_nickname}</td>
                             <td>
@@ -114,10 +166,22 @@
                 </#list>
             </table>
         </div>
+
         <!-- /.box-body -->
         <div class="box-footer clearfix">
-            <@macro.page pageInfo=pageInfo url="${ctx!}/admin/user/index?" />
+
+            <#if type==0>
+
+                <@macro.page pageInfo=pageInfo url="${ctx!}/admin/user/index?" />
+
+              <#elseif type==1>
+
+                <@macro.page pageInfo=pageInfo url="${ctx!}/admin/user/findUserByLike?text="+text />
+
+            </#if>
+
         </div>
+
     </div>
     <!-- /.box -->
 

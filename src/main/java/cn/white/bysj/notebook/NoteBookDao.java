@@ -48,4 +48,10 @@ public interface NoteBookDao extends JpaRepository<NoteBook,Integer> {
 
    @Query(value = "SELECT * FROM note_book where cn_user_id = ?1 AND  cn_notebook_type_id = ?2",nativeQuery = true)
     List<NoteBook> findNoteBookByTypeId(int userId,int noteBookTypeId);
+
+   @Transactional
+   @Modifying(clearAutomatically = true)
+   @Query(value = "delete  from note_book where  cn_user_id =?1 and  cn_notebook_type_id = 4",nativeQuery = true)
+    void deleteAllByCn_user_id(int userId);
+
 }

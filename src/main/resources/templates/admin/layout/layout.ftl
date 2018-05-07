@@ -174,7 +174,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="http://whoismy8023.gitee.io">Cloud Note</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="http://127.0.0.1:8082" target="_blank">Cloud Note</a>.</strong> All rights
     reserved.
   </footer>
 </div>
