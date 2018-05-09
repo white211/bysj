@@ -8,22 +8,18 @@ import cn.white.bysj.admin.vo.NoteVo;
 import cn.white.bysj.commons.Constant;
 import cn.white.bysj.note.Note;
 import groovy.util.logging.Slf4j;
-import org.apache.ibatis.io.ResolverUtil;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHits;
-import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.elasticsearch.search.sort.ScoreSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
+import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -176,7 +172,12 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 noteVoList.add(noteVo);
             }
             Page<NoteVo> noteVos = new PageImpl<>(noteVoList,pageable,hits.getTotalHits());
-            return noteVos;
+
+            if(StringUtils.isBlank(noteVos.toString())){
+               return this.findByText(text,pageable1);
+            }else{
+                return noteVos;
+            }
         }catch (Exception e){
             logger.error("es查询笔记失败");
             return this.findByText(text,pageable1);
@@ -223,7 +224,11 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 noteVoList.add(noteVo);
             }
             Page<NoteVo> noteVos = new PageImpl<>(noteVoList,pageable,hits.getTotalHits());
-            return noteVos;
+            if(StringUtils.isBlank(noteVos.toString())){
+                return this.findNote(pageable1);
+            }else {
+                return noteVos;
+            }
         }catch (Exception e){
             logger.error("es获取笔记失败");
             return this.findNote(pageable1);
