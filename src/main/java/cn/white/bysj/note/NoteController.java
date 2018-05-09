@@ -251,6 +251,18 @@ public class NoteController
         return noteService.updateNoteIsShare(map);
     }
 
+    /**
+     * 笔记分享中通过id获取笔记
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "findNoteByIdFromShareNote.do")
+    @ResponseBody
+    public ServerResponse findNoteByIdFromShareNote(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return noteService.findNoteByIdFromShareNote(map);
+    }
+
 
 }
 

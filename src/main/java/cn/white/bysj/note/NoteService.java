@@ -60,4 +60,34 @@ public interface NoteService {
      * @return
      */
     ServerResponse updateNoteIsShare(Map<String,Object> map);
+
+    /**
+     * 用户笔记分享获取笔记内容
+     * @param map
+     * @return
+     */
+    ServerResponse findNoteByIdFromShareNote(Map<String,Object> map);
+
+
+    /*#################################################################################*/
+    //-------------------------es上面相关操作-------------------------------------------
+
+    ServerResponse addNoteToEs(Map<String, Object> map);//添加笔记
+
+    ServerResponse updateNoteToEs(Map<String, Object> map);//更新笔记
+
+    ServerResponse deleteNoteToEs(String noteId);//彻底删除笔记
+
+    ServerResponse updateNoteTypeToEs(Map<String, Object> map);//更新笔记类型
+
+    ServerResponse updateReadToEs(int noteId, int noteRead);//更新笔记阅读量
+
+    ServerResponse updateEncryptToEs(int noteId, int encrypyType);//更新笔记加解密状态
+
+    ServerResponse updateNoteTypeByNoteBookNameToEs(int bookType, int bookId);//更新笔记类型通过笔记本名称
+
+    ServerResponse deleteNoteByNoteBookIdToEs(int bookId);//通过笔记本删除笔记
+
+    ServerResponse deleteNoteByUserIdToEs(int userId);//通过笔记类型删除笔记
+
 }

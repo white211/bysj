@@ -65,6 +65,13 @@ public class ShiroConfig {
 		filterChainDefinitionMap.put("/assets/**", "anon");
 		filterChainDefinitionMap.put("/admin/login", "anon");
 
+		filterChainDefinitionMap.put("/static/**","anon");
+//		filterChainDefinitionMap.put("/static/img/**","anon");
+//		filterChainDefinitionMap.put("/static/fonts/**","anon");
+//		filterChainDefinitionMap.put("/static/js/**","anon");
+//		filterChainDefinitionMap.put("/index.html","anon");
+//		filterChainDefinitionMap.put("");
+
 //		filterChainDefinitionMap.put("/user/**","anon");
 //		filterChainDefinitionMap.put("/notebook/**","anon");
 //		filterChainDefinitionMap.put("/note/**","anon");

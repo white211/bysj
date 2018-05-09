@@ -179,6 +179,8 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 return noteVos;
             }
         }catch (Exception e){
+            e.printStackTrace();
+            logger.error(e.getMessage());
             logger.error("es查询笔记失败");
             return this.findByText(text,pageable1);
         }
@@ -230,6 +232,8 @@ public class INoteServiceImpl extends BaseServiceImpl<Note, Integer>  implements
                 return noteVos;
             }
         }catch (Exception e){
+            e.printStackTrace();
+            logger.error(e.getMessage());
             logger.error("es获取笔记失败");
             return this.findNote(pageable1);
         }

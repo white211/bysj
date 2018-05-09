@@ -3,11 +3,13 @@ package cn.white.bysj.user;
 
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.note.NoteDao;
+import cn.white.bysj.note.NoteService;
 import cn.white.bysj.notebook.NoteBookDao;
 import cn.white.bysj.utils.*;
 
 import cn.white.bysj.utils.GetCityUtil;
 import cn.white.bysj.utils.redis.RedisService;
+import cn.white.bysj.vo.UserVo;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import groovy.util.logging.Slf4j;
@@ -64,6 +66,9 @@ public class UserService {
 
     @Autowired
     private Executor executor;
+
+    @Autowired
+    private NoteService noteService;
 
     /**
      * TODO: 用户登陆
@@ -571,11 +576,43 @@ public class UserService {
                 User user = userDao.findOne(userId);
                 return ServerResponse.createBySuccess("用户信息", user);
             } catch (Exception e) {
-                logger.error("服务出现异常");
-                return ServerResponse.createByErrorMessage("服务出现异常");
+                logger.error("通过用户查找笔记----服务出现异常");
+                return ServerResponse.createByErrorMessage("通过用户查找笔记----服务出现异常");
             }
         }
     }
+
+    /**
+     * TODO: 通过id获取用户信息（笔记分享）
+     * @author white
+     * @date 2018-05-09 16:47
+
+     * @return
+     * @throws
+     */
+    public ServerResponse<UserVo> findUserByIdFromShareNote(Map<String, Object> map){
+        UserVo userVo = new UserVo();
+        List<String> list = Arrays.asList("userId");
+        if (ValidatorUtil.validator(map, list).size() > 0) {
+            return ServerResponse.createByErrorMessage("缺少参数，必须包括userId");
+        }
+        if (StringUtils.isBlank(map.get("userId").toString())) {
+            return ServerResponse.createByErrorMessage("用户id不能为空");
+        } else {
+            try {
+                int userId = Integer.parseInt(map.get("userId").toString());
+                User user = userDao.findOne(userId);
+                userVo.setCn_user_email(user.getCn_user_email());
+                userVo.setCn_user_avatar(user.getCn_user_avatar());
+                userVo.setCn_user_nickname(user.getCn_user_nickname());
+                return ServerResponse.createBySuccess("用户信息", userVo);
+            } catch (Exception e) {
+                logger.error("通过用户查找笔记----服务出现异常");
+                return ServerResponse.createByErrorMessage("通过用户查找笔记----服务出现异常");
+            }
+        }
+    }
+
 
     /**
      * TODO: 通过用户访问ip获取当前所在城市
@@ -637,7 +674,14 @@ public class UserService {
         }
     }
 
+   /**
+    * TODO: 清空回收站操作
+    * @author white
+    * @date 2018-05-09 19:18
 
+    * @return
+    * @throws
+    */
     public ServerResponse clearTrash(Map<String, Object> map) {
         List<String> list = Arrays.asList("userId");
         if (ValidatorUtil.validator(map, list).size() > 0) {
@@ -648,6 +692,7 @@ public class UserService {
         } else {
             int userId = Integer.parseInt(map.get("userId").toString());
             try {
+                noteService.deleteNoteByUserIdToEs(userId);
                 noteDao.deleteAllByCn_user_id(userId);
                 noteBookDao.deleteAllByCn_user_id(userId);
                 return ServerResponse.createBySuccessMessags("清除回收站成功");
@@ -657,6 +702,8 @@ public class UserService {
             }
         }
     }
+
+
 
 }
 

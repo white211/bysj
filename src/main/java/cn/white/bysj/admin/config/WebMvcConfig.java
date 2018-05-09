@@ -87,9 +87,14 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		registry.addInterceptor(apiInterceptor)
 				.addPathPatterns("/user/**","/notebook/**","/home/**","/note/**","/home/**",
 				"/comment/**","/label/**","/feedback/**")
-				.excludePathPatterns("/user/login.do","/user/logout.do","/user/register.do","/user/updataAvatar.do",
+				.excludePathPatterns(
+						"/user/login.do",
+						"/user/logout.do","/user/register.do","/user/updataAvatar.do",
 				"/user/activate.do","/user/sendCheckNum.do","/user/checkEmailIsExist.do",
-				"/user/checkTelephoneCheckNum.do","/user/getWeather.do","/user/getCity.do","/home/findHome.do","/note/uploadFile.do");
+				"/user/checkTelephoneCheckNum.do","/user/getWeather.do","/user/getCity.do","/home/findHome.do",
+				"/note/uploadFile.do"
+				,"/note/findNoteByIdFromShareNote.do","/user/findUserByIdFromShareNote.do","/note/addRead.do","/comment/CommentListByNoteId.do"
+				);
 
 		/**
 		 *

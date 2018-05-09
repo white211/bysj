@@ -86,5 +86,10 @@ public interface NoteDao  extends JpaRepository<Note,Integer>{
     @Query(value = "delete from note where cn_user_id =?1 and (cn_note_type_id = 4 OR cn_note_type_id=5)",nativeQuery = true)
     void deleteAllByCn_user_id(int userId);
 
+    @Query(value = "select cn_note_id from note where cn_note_book_id = ?1",nativeQuery = true)
+    List<Integer> findIdsByBookId(int bookId);
+
+    @Query(value = "select cn_note_id from note where cn_user_id =?1 and (cn_note_type_id = 4 OR cn_note_type_id =5)",nativeQuery = true)
+    List<Integer> findIdsByUserId(int userId);
 }
 

@@ -3,6 +3,7 @@ package cn.white.bysj.notebook;
 import cn.white.bysj.commons.ServerResponse;
 import cn.white.bysj.note.Note;
 import cn.white.bysj.note.NoteDao;
+import cn.white.bysj.note.NoteService;
 import cn.white.bysj.user.UserService;
 import cn.white.bysj.utils.ValidatorUtil;
 import cn.white.bysj.vo.NoteListVo;
@@ -31,6 +32,9 @@ public class NoteBookServiceImpl implements NoteBookService {
 
     @Autowired
     private NoteDao noteDao;
+
+    @Autowired
+    private NoteService noteService;
 
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
 
@@ -140,9 +144,10 @@ public class NoteBookServiceImpl implements NoteBookService {
         } else {
             try {
                 int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
+                noteService.deleteNoteByNoteBookIdToEs(noteBookId);
                 noteBookDao.deleteByNoteBookId(noteBookId);
                 noteDao.deleteByNoteBookId(noteBookId);
-                return ServerResponse.createBySuccessMessags("删除成功");
+                return ServerResponse.createBySuccessMessags("删除笔记本成功");
             } catch (Exception e) {
                 logger.error("删除失败");
                 return ServerResponse.createByErrorMessage("删除失败");
@@ -221,13 +226,18 @@ public class NoteBookServiceImpl implements NoteBookService {
                 int noteBookId = Integer.parseInt(map.get("noteBookId").toString());
                 int noteBookType = Integer.parseInt(map.get("noteBookType").toString());
                 noteBookDao.updateNoteBookType(userId, noteBookId, noteBookType);
+                //判断是否是属于删除或恢复或彻底删除
                 if (map.containsKey("updateType") && map.get("updateType").toString().equals("1")) {
                     switch (noteBookType) {
+                        //从回收站恢复笔记本
                         case 1:
                             noteDao.updateNoteTypeIdByNoteBookId(noteBookType, noteBookId);
+                            noteService.updateNoteTypeByNoteBookNameToEs(1,noteBookId);
                             break;
+                        //笔记本列表删除笔记本
                         case 4:
                             noteDao.updateNoteTypeIdByNoteBookId(5, noteBookId);
+                            noteService.updateNoteTypeByNoteBookNameToEs(4,noteBookId);
                             break;
                         default:
                             break;

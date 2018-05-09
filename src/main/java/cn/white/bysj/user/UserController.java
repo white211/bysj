@@ -118,6 +118,14 @@ public class UserController extends Cors  {
         return userService.findUserById(map);
     }
 
+    //通过用户id查找个人信息(笔记分享部分)
+    @RequestMapping(value = "findUserByIdFromShareNote.do")
+    @ResponseBody
+    public ServerResponse findUserByIdFromShareNote(HttpServletRequest request){
+        Map<String,Object> map = ComponentHelper.requestToMap(request);
+        return  userService.findUserByIdFromShareNote(map);
+    }
+
     //通过id更新个人头像
     @RequestMapping(value = "updataAvatar.do")
     @ResponseBody
